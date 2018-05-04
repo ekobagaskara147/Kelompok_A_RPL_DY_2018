@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)https://www.kioscoding.com/2018/04/tutorial-membuat-cart-dengan-codeigniter.html -->
+<html amp="amp" lang="en" amp-version="1524862012167" class="i-amphtml-singledoc i-amphtml-standalone" style="padding-top: 0px !important;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style amp-runtime="">html{overflow-x:hidden!important}body,html{height:auto!important}html.i-amphtml-fie{height:100%!important;width:100%!important}body{margin:0!important;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%}[hidden]{display:none!important}html.i-amphtml-singledoc.i-amphtml-embedded{-ms-touch-action:pan-y;touch-action:pan-y}html.i-amphtml-fie>body,html.i-amphtml-singledoc>body{overflow:visible!important;position:relative!important}html.i-amphtml-webview>body{overflow-x:hidden!important;overflow-y:visible!important}html.i-amphtml-ios-embed-legacy>body{overflow-x:hidden!important;overflow-y:auto!important;position:absolute!important}html.i-amphtml-ios-embed{overflow-y:auto!important;position:static}#i-amphtml-wrapper{overflow-x:hidden!important;overflow-y:auto!important;position:absolute!important;top:0!important;left:0!important;right:0!important;bottom:0!important;margin:0!important;display:block!important}html.i-amphtml-ios-embed.i-amphtml-ios-overscroll,html.i-amphtml-ios-embed.i-amphtml-ios-overscroll>#i-amphtml-wrapper{-webkit-overflow-scrolling:touch!important}#i-amphtml-wrapper>body{position:relative!important;border-top:1px solid transparent!important}.i-amphtml-element{display:inline-block}.i-amphtml-layout-fixed,[layout=fixed][width][height]:not(.i-amphtml-layout-fixed){display:inline-block;position:relative}.i-amphtml-layout-responsive,[layout=responsive][width][height]:not(.i-amphtml-layout-responsive),[width][height][sizes]:not(.i-amphtml-layout-responsive){display:block;position:relative}.i-amphtml-layout-intrinsic{display:inline-block;position:relative;max-width:100%}.i-amphtml-intrinsic-sizer{max-width:100%;display:block!important}.i-amphtml-layout-container,.i-amphtml-layout-fixed-height,[layout=container],[layout=fixed-height][height]{display:block;position:relative}.i-amphtml-layout-fill,[layout=fill]:not(.i-amphtml-layout-fill){display:block;overflow:hidden!important;position:absolute;top:0;left:0;bottom:0;right:0}.i-amphtml-layout-flex-item,[layout=flex-item]:not(.i-amphtml-layout-flex-item){display:block;position:relative;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto}.i-amphtml-layout-fluid{position:relative}.i-amphtml-layout-size-defined{overflow:hidden!important}.i-amphtml-layout-awaiting-size{position:absolute!important;top:auto!important;bottom:auto!important}i-amphtml-sizer{display:block!important}.i-amphtml-fill-content{display:block;height:0;max-height:100%;max-width:100%;min-height:100%;min-width:100%;width:0;margin:auto}.i-amphtml-layout-size-defined .i-amphtml-fill-content{position:absolute;top:0;left:0;bottom:0;right:0}.i-amphtml-layout-intrinsic .i-amphtml-sizer{max-width:100%}.i-amphtml-replaced-content,.i-amphtml-screen-reader{padding:0!important;border:none!important}.i-amphtml-screen-reader{position:fixed!important;top:0px!important;left:0px!important;width:4px!important;height:4px!important;opacity:0!important;overflow:hidden!important;margin:0!important;display:block!important;visibility:visible!important}.i-amphtml-screen-reader~.i-amphtml-screen-reader{left:8px!important}.i-amphtml-screen-reader~.i-amphtml-screen-reader~.i-amphtml-screen-reader{left:12px!important}.i-amphtml-screen-reader~.i-amphtml-screen-reader~.i-amphtml-screen-reader~.i-amphtml-screen-reader{left:16px!important}.i-amphtml-unresolved{position:relative;overflow:hidden!important}#i-amphtml-wrapper.i-amphtml-scroll-disabled,.i-amphtml-scroll-disabled{overflow-x:hidden!important;overflow-y:hidden!important}.i-amphtml-notbuilt,[layout]:not(.i-amphtml-element){position:relative;overflow:hidden!important;color:transparent!important}.i-amphtml-notbuilt:not(.i-amphtml-layout-container)>*,[layout]:not([layout=container]):not(.i-amphtml-element)>*{display:none}.i-amphtml-ghost{visibility:hidden!important}[layout=nodisplay]:not(.i-amphtml-display){display:none!important}.i-amphtml-element>[placeholder],[layout]:not(.i-amphtml-element)>[placeholder]{display:block}.i-amphtml-element>[placeholder].amp-hidden,.i-amphtml-element>[placeholder].hidden{visibility:hidden}.i-amphtml-element:not(.amp-notsupported)>[fallback]{display:none}.i-amphtml-layout-size-defined>[fallback],.i-amphtml-layout-size-defined>[placeholder]{position:absolute!important;top:0!important;left:0!important;right:0!important;bottom:0!important;z-index:1}.i-amphtml-notbuilt>[placeholder]{display:block!important}.i-amphtml-hidden-by-media-query{display:none!important}.i-amphtml-element-error{background:red!important;color:#fff!important;position:relative!important}.i-amphtml-element-error:before{content:attr(error-message)}i-amp-scroll-container,i-amphtml-scroll-container{position:absolute;top:0;left:0;right:0;bottom:0;display:block}i-amp-scroll-container.amp-active,i-amphtml-scroll-container.amp-active{overflow:auto;-webkit-overflow-scrolling:touch}.i-amphtml-loading-container{display:block!important;z-index:1}.i-amphtml-notbuilt>.i-amphtml-loading-container{display:block!important}.i-amphtml-loading-container.amp-hidden{visibility:hidden}.i-amphtml-loader-line{position:absolute;top:0;left:0;right:0;height:1px;overflow:hidden!important;background-color:hsla(0,0%,59%,0.2);display:block}.i-amphtml-loader-moving-line{display:block;position:absolute;width:100%;height:100%!important;background-color:hsla(0,0%,59%,0.65);z-index:2}@-webkit-keyframes i-amphtml-loader-line-moving{0%{-webkit-transform:translateX(-100%);transform:translateX(-100%)}to{-webkit-transform:translateX(100%);transform:translateX(100%)}}@keyframes i-amphtml-loader-line-moving{0%{-webkit-transform:translateX(-100%);transform:translateX(-100%)}to{-webkit-transform:translateX(100%);transform:translateX(100%)}}.i-amphtml-loader-line.amp-active .i-amphtml-loader-moving-line{-webkit-animation:i-amphtml-loader-line-moving 4s ease infinite;animation:i-amphtml-loader-line-moving 4s ease infinite}.i-amphtml-loader{position:absolute;display:block;height:10px;top:50%;left:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;white-space:nowrap}.i-amphtml-loader.amp-active .i-amphtml-loader-dot{-webkit-animation:i-amphtml-loader-dots 2s infinite;animation:i-amphtml-loader-dots 2s infinite}.i-amphtml-loader-dot{position:relative;display:inline-block;height:10px;width:10px;margin:2px;border-radius:100%;background-color:rgba(0,0,0,0.3);box-shadow:2px 2px 2px 1px rgba(0,0,0,0.2);will-change:transform}.i-amphtml-loader .i-amphtml-loader-dot:first-child{-webkit-animation-delay:0s;animation-delay:0s}.i-amphtml-loader .i-amphtml-loader-dot:nth-child(2){-webkit-animation-delay:.1s;animation-delay:.1s}.i-amphtml-loader .i-amphtml-loader-dot:nth-child(3){-webkit-animation-delay:.2s;animation-delay:.2s}@-webkit-keyframes i-amphtml-loader-dots{0%,to{-webkit-transform:scale(.7);transform:scale(.7);background-color:rgba(0,0,0,0.3)}50%{-webkit-transform:scale(.8);transform:scale(.8);background-color:rgba(0,0,0,0.5)}}@keyframes i-amphtml-loader-dots{0%,to{-webkit-transform:scale(.7);transform:scale(.7);background-color:rgba(0,0,0,0.3)}50%{-webkit-transform:scale(.8);transform:scale(.8);background-color:rgba(0,0,0,0.5)}}.i-amphtml-element>[overflow]{cursor:pointer;position:relative;z-index:2;visibility:hidden}.i-amphtml-element>[overflow].amp-visible{visibility:visible}template{display:none!important}.amp-border-box,.amp-border-box *,.amp-border-box :after,.amp-border-box :before{box-sizing:border-box}amp-pixel{display:none!important}amp-instagram{padding:64px 0px 0px!important;background-color:#fff}amp-analytics,amp-story-auto-ads{position:fixed!important;top:0!important;width:1px!important;height:1px!important;overflow:hidden!important;visibility:hidden}amp-iframe iframe{box-sizing:border-box!important}[amp-access][amp-access-hide]{display:none}[subscriptions-dialog],html:not(.i-amphtml-subs-ready) [subscriptions-action],html:not(.i-amphtml-subs-ready) [subscriptions-section]{display:none!important}[visible-when-invalid],amp-experiment,amp-live-list>[update],amp-share-tracking,form [submit-error],form [submit-success],form [submitting]{display:none}.i-amphtml-jank-meter{position:fixed;background-color:rgba(232,72,95,0.5);bottom:0;right:0;color:#fff;font-size:16px;z-index:1000;padding:5px}i-amp-video-mask,i-amphtml-video-mask{z-index:1}.amp-video-eq{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;bottom:7px;display:-webkit-box;display:-ms-flexbox;display:flex;height:12px;opacity:0.8;overflow:hidden;position:absolute;right:7px;width:20px;z-index:1}.amp-video-eq .amp-video-eq-col{-webkit-box-flex:1;-ms-flex:1;flex:1;height:100%;margin-right:1px;position:relative}.amp-video-eq .amp-video-eq-col div{-webkit-animation-name:amp-video-eq-animation;animation-name:amp-video-eq-animation;-webkit-animation-timing-function:linear;animation-timing-function:linear;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-direction:alternate;animation-direction:alternate;background-color:#fafafa;height:100%;position:absolute;width:100%;will-change:transform;-webkit-animation-play-state:paused;animation-play-state:paused}.amp-video-eq[unpausable] .amp-video-eq-col div{-webkit-animation-name:none;animation-name:none}.amp-video-eq[unpausable].amp-video-eq-play .amp-video-eq-col div{-webkit-animation-name:amp-video-eq-animation;animation-name:amp-video-eq-animation}.amp-video-eq.amp-video-eq-play .amp-video-eq-col div{-webkit-animation-play-state:running;animation-play-state:running}.amp-video-eq-1-1{-webkit-animation-duration:0.3s;animation-duration:0.3s}.amp-video-eq-1-1,.amp-video-eq-1-2{-webkit-transform:translateY(60%);transform:translateY(60%)}.amp-video-eq-1-2{-webkit-animation-duration:0.45s;animation-duration:0.45s}.amp-video-eq-2-1{-webkit-animation-duration:0.5s;animation-duration:0.5s}.amp-video-eq-2-1,.amp-video-eq-2-2{-webkit-transform:translateY(30%);transform:translateY(30%)}.amp-video-eq-2-2{-webkit-animation-duration:0.4s;animation-duration:0.4s}.amp-video-eq-3-1{-webkit-animation-duration:0.3s;animation-duration:0.3s}.amp-video-eq-3-1,.amp-video-eq-3-2{-webkit-transform:translateY(70%);transform:translateY(70%)}.amp-video-eq-3-2{-webkit-animation-duration:0.35s;animation-duration:0.35s}.amp-video-eq-4-1{-webkit-animation-duration:0.4s;animation-duration:0.4s}.amp-video-eq-4-1,.amp-video-eq-4-2{-webkit-transform:translateY(50%);transform:translateY(50%)}.amp-video-eq-4-2{-webkit-animation-duration:0.25s;animation-duration:0.25s}@-webkit-keyframes amp-video-eq-animation{0%{-webkit-transform:translateY(100%);transform:translateY(100%)}to{-webkit-transform:translateY(0);transform:translateY(0)}}@keyframes amp-video-eq-animation{0%{-webkit-transform:translateY(100%);transform:translateY(100%)}to{-webkit-transform:translateY(0);transform:translateY(0)}}amp-accordion{display:block!important}amp-accordion>section{float:none!important}amp-accordion>section>*{float:none!important;display:block!important;overflow:hidden!important;position:relative!important}.i-amphtml-accordion-content,.i-amphtml-accordion-header,amp-accordion,amp-accordion>section{margin:0}.i-amphtml-accordion-header{cursor:pointer;background-color:#efefef;padding-right:20px;border:1px solid #dfdfdf}amp-accordion>section>:last-child{display:none!important}amp-accordion>section[expanded]>:last-child{display:block!important}amp-story-page,amp-story[standalone]{display:block!important;height:100%!important;margin:0!important;padding:0!important;overflow:hidden!important;width:100%!important}amp-story[standalone]{background-color:#fff!important;position:relative!important}amp-story-page{background-color:#757575}amp-story .i-amphtml-loader{display:none!important}
+/*# sourceURL=/css/amp.css*/</style><style amp-extension="amp-fx-flying-carpet">amp-fx-flying-carpet{position:relative!important;box-sizing:border-box!important}amp-fx-flying-carpet>.i-amphtml-fx-flying-carpet-clip{position:absolute!important;top:0!important;left:0!important;width:100%!important;height:100%!important;border:0!important;margin:0!important;padding:0!important;clip:rect(0,auto,auto,0)!important;-webkit-clip-path:polygon(0px 0px,100% 0px,100% 100%,0px 100%)!important;clip-path:polygon(0px 0px,100% 0px,100% 100%,0px 100%)!important}amp-fx-flying-carpet>.i-amphtml-fx-flying-carpet-clip>.i-amphtml-fx-flying-carpet-container{position:fixed!important;top:0!important;width:100%;height:100%;-webkit-transform:translateZ(0)!important;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.i-amphtml-fx-flying-carpet-container>.i-amphtml-layout-fixed-height,.i-amphtml-fx-flying-carpet-container>.i-amphtml-layout-responsive{-ms-flex-item-align:stretch;align-self:stretch}
+/*# sourceURL=/extensions/amp-fx-flying-carpet/0.1/amp-fx-flying-carpet.css*/</style><style amp-extension="amp-user-notification">amp-user-notification{position:fixed!important;bottom:0;left:0;overflow:hidden!important;visibility:hidden;background:hsla(0,0%,100%,0.7);z-index:1000;width:100%}amp-user-notification.amp-active{visibility:visible}amp-user-notification.amp-hidden{visibility:hidden}
+/*# sourceURL=/extensions/amp-user-notification/0.1/amp-user-notification.css*/</style><style amp-extension="amp-carousel">.amp-carousel-slide>.i-amphtml-replaced-content{-o-object-fit:contain;object-fit:contain}.amp-carousel-button{position:absolute;box-sizing:border-box;top:50%;height:34px;width:34px;border-radius:2px;opacity:0;pointer-events:all;background-color:rgba(0,0,0,0.5);background-position:50% 50%;background-repeat:no-repeat;-webkit-transform:translateY(-50%);transform:translateY(-50%);visibility:hidden;z-index:10}.amp-mode-mouse .amp-carousel-button,amp-carousel[controls] .amp-carousel-button{opacity:1;visibility:visible}.amp-carousel-button-prev{left:16px;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='%23fff' viewBox='0 0 18 18'%3E%3Cpath d='M15 8.25H5.87l4.19-4.19L9 3 3 9l6 6 1.06-1.06-4.19-4.19H15v-1.5z'/%3E%3C/svg%3E");background-size:18px 18px}.amp-carousel-button-next{right:16px;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='%23fff' viewBox='0 0 18 18'%3E%3Cpath d='M9 3L7.94 4.06l4.19 4.19H3v1.5h9.13l-4.19 4.19L9 15l6-6z'/%3E%3C/svg%3E");background-size:18px 18px}.i-amphtml-carousel-button-start-hint .amp-carousel-button:not(.amp-disabled){-webkit-animation:i-amphtml-carousel-hint 1s ease-in 3s 1 normal both;animation:i-amphtml-carousel-hint 1s ease-in 3s 1 normal both}.amp-mode-mouse .i-amphtml-carousel-button-start-hint .amp-carousel-button:not(.amp-disabled){-webkit-animation:none;animation:none}@-webkit-keyframes i-amphtml-carousel-hint{0%{opacity:1;visibility:visible}to{opacity:0;visibility:hidden}}@keyframes i-amphtml-carousel-hint{0%{opacity:1;visibility:visible}to{opacity:0;visibility:hidden}}amp-carousel .amp-carousel-button.amp-disabled{-webkit-animation:none;animation:none;opacity:0;visibility:hidden}.i-amphtml-slides-container{display:-webkit-box!important;display:-ms-flexbox!important;display:flex!important;-ms-flex-wrap:nowrap;flex-wrap:nowrap;height:100%!important;left:0;overflow-x:auto!important;overflow-y:hidden!important;position:absolute!important;top:0;width:100%!important;-webkit-scroll-snap-type:x mandatory!important;scroll-snap-type:x mandatory!important;padding-bottom:20px!important;box-sizing:content-box!important;-webkit-overflow-scrolling:touch!important}.i-amphtml-slides-container.i-amphtml-no-scroll{overflow-x:hidden!important}.i-amphtml-slide-item{-webkit-box-align:center!important;-ms-flex-align:center!important;align-items:center!important;display:none!important;-webkit-box-flex:0!important;-ms-flex:0 0 100%!important;flex:0 0 100%!important;height:100%!important;-webkit-box-pack:center!important;-ms-flex-pack:center!important;justify-content:center!important;position:relative!important;scroll-snap-align:center!important;width:100%!important}.i-amphtml-slide-item>*{height:100%;width:100%;overflow:hidden!important}.i-amphtml-slide-item-show{display:-webkit-box!important;display:-ms-flexbox!important;display:flex!important}.i-amphtml-carousel-end-marker,.i-amphtml-carousel-start-marker{background-color:transparent!important;display:block!important;-webkit-box-flex:0!important;-ms-flex:0 0 1px!important;flex:0 0 1px!important;height:100%!important;position:relative!important;scroll-snap-align:center!important;width:1px!important}.i-amphtml-carousel-start-marker{-webkit-box-ordinal-group:0!important;-ms-flex-order:-1!important;order:-1!important;margin-left:-1px!important}.i-amphtml-carousel-end-marker{-webkit-box-ordinal-group:100000001!important;-ms-flex-order:100000000!important;order:100000000!important;margin-right:-1px!important}.i-amphtml-slidescroll-no-snap.i-amphtml-slides-container{-webkit-scroll-snap-type:none!important;scroll-snap-type:none!important}.i-amphtml-slidescroll-no-snap .i-amphtml-slide-item{scroll-snap-align:none!important}.i-amphtml-slidescroll-no-snap.i-amphtml-slides-container.i-amphtml-no-scroll{-webkit-overflow-scrolling:auto!important}.amp-scrollable-carousel-slide{display:inline-block!important;margin-left:8px}.amp-scrollable-carousel-slide:first-child{margin-left:0px}.i-amphtml-scrollable-carousel-container{white-space:nowrap!important;overflow-x:auto!important;overflow-y:hidden!important;-webkit-overflow-scrolling:touch!important}
+/*# sourceURL=/extensions/amp-carousel/0.1/amp-carousel.css*/</style><style amp-extension="amp-form">form.amp-form-submit-error [submit-error],form.amp-form-submit-success [submit-success],form.amp-form-submitting [submitting]{display:block}.i-amphtml-validation-bubble{-webkit-transform:translate(-50%,-100%);transform:translate(-50%,-100%);background-color:#fff;box-shadow:0 5px 15px 0 rgba(0,0,0,0.5);max-width:200px;position:absolute;display:none;box-sizing:border-box;padding:10px;border-radius:5px}.i-amphtml-validation-bubble:after{content:" ";position:absolute;bottom:-8px;left:30px;width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:8px solid #fff}[visible-when-invalid]{display:none;color:red}[visible-when-invalid].visible{display:initial}
+/*# sourceURL=/extensions/amp-form/0.1/amp-form.css*/</style><style amp-extension="amp-ad">amp-ad iframe,amp-embed iframe{border:0!important;margin:0!important;padding:0!important}.i-amphtml-ad-default-holder{position:absolute;left:0;right:0;top:0;bottom:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;background-color:hsla(0,0%,78%,0.05)}.i-amphtml-ad-default-holder:after{content:"Ad";content:attr(data-ad-holder-text);background-color:transparent;border-radius:2px;color:#696969;font-size:10px;line-height:1;font-family:Arial,sans-serif;padding:3px 4px 1px;border:1px solid #696969}amp-ad[data-a4a-upgrade-type=amp-ad-network-doubleclick-impl]>iframe,amp-ad[type=adsense]>iframe{top:50%!important;left:50%!important;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}[dir=rtl] amp-ad[data-a4a-upgrade-type=amp-ad-network-doubleclick-impl]>iframe,[dir=rtl] amp-ad[type=adsense]>iframe{left:0!important;right:50%!important;-webkit-transform:translate(50%,-50%);transform:translate(50%,-50%)}amp-ad[data-a4a-upgrade-type=amp-ad-network-adsense-impl]>iframe,amp-ad[data-a4a-upgrade-type=amp-ad-network-doubleclick-impl]>iframe{min-height:0;min-width:0}amp-ad[data-a4a-upgrade-type=amp-ad-network-doubleclick-impl][height=fluid]>iframe{height:100%!important;width:100%!important;position:relative}amp-ad[data-a4a-upgrade-type=amp-ad-network-doubleclick-impl][height=fluid]{width:100%!important}
+/*# sourceURL=/extensions/amp-ad/0.1/amp-ad.css*/</style><style amp-extension="amp-social-share">.amp-social-share-facebook{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23fff' d='M211.9 197.4h-36.7v59.9h36.7v175.8h70.5V256.5h49.2l5.2-59.1h-54.4v-33.7c0-13.9 2.8-19.5 16.3-19.5h38.2V82.9h-48.8c-52.5 0-76.1 23.1-76.1 67.3-.1 38.6-.1 47.2-.1 47.2z'/%3E%3C/svg%3E")}.amp-social-share-pinterest{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23fff' d='M266.6 76.5c-100.2 0-150.7 71.8-150.7 131.7 0 36.3 13.7 68.5 43.2 80.6 4.8 2 9.2.1 10.6-5.3 1-3.7 3.3-13 4.3-16.9 1.4-5.3.9-7.1-3-11.8-8.5-10-13.9-23-13.9-41.3 0-53.3 39.9-101 103.8-101 56.6 0 87.7 34.6 87.7 80.8 0 60.8-26.9 112.1-66.8 112.1-22.1 0-38.6-18.2-33.3-40.6 6.3-26.7 18.6-55.5 18.6-74.8 0-17.3-9.3-31.7-28.4-31.7-22.5 0-40.7 23.3-40.7 54.6 0 19.9 6.7 33.4 6.7 33.4s-23.1 97.8-27.1 114.9c-8.1 34.1-1.2 75.9-.6 80.1.3 2.5 3.6 3.1 5 1.2 2.1-2.7 28.9-35.9 38.1-69 2.6-9.4 14.8-58 14.8-58 7.3 14 28.7 26.3 51.5 26.3 67.8 0 113.8-61.8 113.8-144.5-.1-62.6-53.1-120.8-133.6-120.8z'/%3E%3C/svg%3E")}.amp-social-share-linkedin{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23fff' d='M186.4 142.4c0 19-15.3 34.5-34.2 34.5-18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5 18.9 0 34.2 15.5 34.2 34.5zm-5 58.9h-57.8v186.8h57.8V201.3zm92.4 0h-55.4v186.8h55.4v-98c0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9v98H398V269.8c0-50-28.3-74.2-68-74.2-39.6 0-56.3 30.9-56.3 30.9v-25.2h.1z'/%3E%3C/svg%3E")}.amp-social-share-gplus{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23fff' d='M179.7 237.6v46.6h77c-3.1 20-23.3 58.7-77 58.7-46.3 0-84.1-38.5-84.1-85.9 0-47.4 37.8-85.9 84.1-85.9 26.4 0 44 11.3 54.1 21l36.8-35.5C247 134.4 216.4 121 179.7 121 104.7 121 44 181.8 44 257s60.7 136 135.7 136C258 393 310 337.8 310 260.1c0-8.9-1-15.7-2.1-22.5H179.7zm288.3-.9h-38.7V198h-38.6v38.7H352v38.6h38.7V314h38.6v-38.7H468'/%3E%3C/svg%3E")}.amp-social-share-email{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23fff' d='M101.3 141.6v228.9h309.5V141.6H101.3zm274.4 26.2L256 259.3l-119.6-91.5h239.3zm-248.1 26.3l64.1 49.1-64.1 64.1V194.1zm.2 150.1l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7H127.8zm256.6-36.4L320 243.4l64.4-49.3v113.7z'/%3E%3C/svg%3E")}.amp-social-share-twitter{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h400v400H0z'/%3E%3Cpath fill='%23FFF' fill-rule='nonzero' d='M153.62 301.59c94.34 0 145.94-78.16 145.94-145.94 0-2.22 0-4.43-.15-6.63A104.36 104.36 0 0 0 325 122.47a102.38 102.38 0 0 1-29.46 8.07 51.47 51.47 0 0 0 22.55-28.37 102.79 102.79 0 0 1-32.57 12.45c-15.9-16.906-41.163-21.044-61.625-10.093-20.461 10.95-31.032 34.266-25.785 56.873A145.62 145.62 0 0 1 92.4 107.81c-13.614 23.436-6.66 53.419 15.88 68.47A50.91 50.91 0 0 1 85 169.86v.65c.007 24.416 17.218 45.445 41.15 50.28a51.21 51.21 0 0 1-23.16.88c6.72 20.894 25.976 35.208 47.92 35.62a102.92 102.92 0 0 1-63.7 22 104.41 104.41 0 0 1-12.21-.74 145.21 145.21 0 0 0 78.62 23'/%3E%3C/g%3E%3C/svg%3E")}.amp-social-share-tumblr{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23fff' d='M210.8 80.3c-2.3 18.3-6.4 33.4-12.4 45.2-6 11.9-13.9 22-23.9 30.5-9.9 8.5-21.8 14.9-35.7 19.5v50.6h38.9v124.5c0 16.2 1.7 28.6 5.1 37.1 3.4 8.5 9.5 16.6 18.3 24.2 8.8 7.6 19.4 13.4 31.9 17.5s26.8 6.1 43 6.1c14.3 0 27.6-1.4 39.9-4.3 12.3-2.9 26-7.9 41.2-15v-55.9c-17.8 11.7-35.7 17.5-53.7 17.5-10.1 0-19.1-2.4-27-7.1-5.9-3.5-10-8.2-12.2-14-2.2-5.8-3.3-19.1-3.3-39.7v-91.1h84.6v-55.8h-84.4v-90h-50.3z'/%3E%3C/svg%3E")}.amp-social-share-whatsapp{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46'%3E%3Cpath fill='%23FFF' d='M35.4 10.4C32 6.9 27.3 5 22.5 5 12.3 5 4.1 13.3 4.2 23.4c0 3.2.9 6.3 2.4 9.1L4 42l9.7-2.5c2.7 1.5 5.7 2.2 8.7 2.2 10.1 0 18.3-8.3 18.3-18.4 0-4.9-1.9-9.5-5.3-12.9zM22.5 38.6c-2.7 0-5.4-.7-7.7-2.1l-.6-.3-5.8 1.5L9.9 32l-.4-.6c-4.4-7.1-2.3-16.5 4.9-20.9 7.2-4.4 16.5-2.3 20.9 4.9 4.4 7.2 2.3 16.5-4.9 20.9-2.3 1.5-5.1 2.3-7.9 2.3zm8.8-11.1l-1.1-.5s-1.6-.7-2.6-1.2c-.1 0-.2-.1-.3-.1-.3 0-.5.1-.7.2 0 0-.1.1-1.5 1.7-.1.2-.3.3-.5.3h-.1c-.1 0-.3-.1-.4-.2l-.5-.2c-1.1-.5-2.1-1.1-2.9-1.9-.2-.2-.5-.4-.7-.6-.7-.7-1.4-1.5-1.9-2.4l-.1-.2c-.1-.1-.1-.2-.2-.4 0-.2 0-.4.1-.5 0 0 .4-.5.7-.8.2-.2.3-.5.5-.7.2-.3.3-.7.2-1-.1-.5-1.3-3.2-1.6-3.8-.2-.3-.4-.4-.7-.5h-1.1c-.2 0-.4.1-.6.1l-.1.1c-.2.1-.4.3-.6.4-.2.2-.3.4-.5.6-.7.9-1.1 2-1.1 3.1 0 .8.2 1.6.5 2.3l.1.3c.9 1.9 2.1 3.6 3.7 5.1l.4.4c.3.3.6.5.8.8 2.1 1.8 4.5 3.1 7.2 3.8.3.1.7.1 1 .2h1c.5 0 1.1-.2 1.5-.4.3-.2.5-.2.7-.4l.2-.2c.2-.2.4-.3.6-.5.2-.2.4-.4.5-.6.2-.4.3-.9.4-1.4v-.7s-.1-.1-.3-.2z'/%3E%3C/svg%3E")}.amp-social-share-sms{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg width='30' height='29' viewBox='0 0 30 29' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23FFF' stroke-width='3' d='M8.73 26v-5.658H2V2h25.97L28 20.355l-12.062.042z' fill='none' fill-rule='evenodd'/%3E%3C/svg%3E")}.amp-social-share-system{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%23fff' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z'/%3E%3C/svg%3E")}amp-social-share{background-repeat:no-repeat;background-position:50%;background-size:contain;text-decoration:none;cursor:pointer;position:relative}.amp-social-share-twitter{background-color:#1da1f2}.amp-social-share-facebook{background-color:#3b5998}.amp-social-share-pinterest{background-color:#bd081c}.amp-social-share-linkedin{background-color:#0077b5}.amp-social-share-gplus{background-color:#dc4e41}.amp-social-share-tumblr{background-color:#3c5a77}.amp-social-share-email{background-color:#000}.amp-social-share-whatsapp{background-color:#25d366}.amp-social-share-sms{background-color:#ca2b63}.amp-social-share-system{background-color:#000}
+/*# sourceURL=/extensions/amp-social-share/0.1/amp-social-share.css*/</style>
+
+<meta content="width=device-width,minimum-scale=1,initial-scale=1" name="viewport">
+<meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible">
+<meta content="blogger" name="generator">
+<link href="https://www.kioscoding.com/2018/04/tutorial-membuat-cart-dengan-codeigniter.html" hreflang="x-default" rel="alternate">
+<meta content="id_ID" property="og:locale:alternate">
+<meta content="Indonesia" name="geo.placename">
+<meta content="id" name="geo.country">
+<link href="https://www.kioscoding.com/favicon.ico" rel="icon" type="image/x-icon">
+<link href="https://www.kioscoding.com/2018/04/tutorial-membuat-cart-dengan-codeigniter.html" rel="canonical">
+<link href="https://www.kioscoding.com/feeds/posts/default" rel="alternate" title="KiosCoding- Atom" type="application/atom+xml">
+<link href="https://www.kioscoding.com/feeds/posts/default?alt=rss" rel="alternate" title="KiosCoding- RSS" type="application/rss+xml">
+<link href="https://www.blogger.com/feeds/6110852922316004041/posts/default" rel="alternate" title="KiosCoding- Atom" type="application/atom+xml">
+<link href="https://www.blogger.com/openid-server.g" rel="openid.server">
+<link href="https://www.kioscoding.com/" rel="openid.delgate">
+<meta content="Tutorial seputar programming seperti Php | Android Studio | Java | Css | Html | Spring Boot | CodeIgniter dan tutorial lain seputar programming" name="keywords">
+<!--[if IE]> <script> (function() { var html5 = ("abbr,article,aside,audio,canvas,datalist,details," + "figure,footer,header,hgroup,mark,amp-goom,meter,nav,output," + "progress,section,time,video").split(','); for (var i = 0; i < html5.length; i++) { document.createElement(html5[i]); } try { document.execCommand('BackgroundImageCache', false, true); } catch(e) {} })(); </script> <![endif]-->
+<title>Membuat Shopping Cart Dengan CodeIgniter Part 1 | CodeIgniter</title>
+<link href="https://2.bp.blogspot.com/-aGFpAnri_90/Wt27XewxYjI/AAAAAAAAA_s/-alwqN50hv0c89nppQuvkPFOT5aP4-SJgCLcBGAs/s72-c/tutorial%2Bcart%2Bsederhana%2Bmenggunakan%2Bcodeigniter%2Bci.png" rel="image_src">
+<meta content="Membuat Shopping Cart Dengan CodeIgniter Part 1 | CodeIgniter" property="og:title">
+<meta content="https://www.kioscoding.com/2018/04/tutorial-membuat-cart-dengan-codeigniter.html" property="og:url">
+<meta content="article" property="og:type">
+<meta content="KiosCoding" property="og:site_name">
+<meta content="https://2.bp.blogspot.com/-aGFpAnri_90/Wt27XewxYjI/AAAAAAAAA_s/-alwqN50hv0c89nppQuvkPFOT5aP4-SJgCLcBGAs/s1600/tutorial%2Bcart%2Bsederhana%2Bmenggunakan%2Bcodeigniter%2Bci.png" property="og:image">
+<link href="https://plus.google.com/101061887657544929491" rel="me">
+<link href="https://plus.google.com/101061887657544929491" rel="publisher">
+<meta content="OBEUnhy89HHNJFVkPz9VoCRWTs7wcghQQ1S12UoJU3A" name="google-site-verification">
+<meta content="Szv7C23BMKGcrm8KwOcg-mfFJ2SfH7IWjrY0N24vm28" name="google-site-verification">
+<meta content="nwmRRraDxZOBv5EEanK1vi0WAXgk9wOefns8sUaa86A" name="google-site-verification">
+<meta content="mrqLXMfBS3RLz6uD7bDCEy-223K9rAciMCnI960kR44" name="google-site-verification">
+<meta content="mrqLXMfBS3RLz6uD7bDCEy-223K9rAciMCnI960kR44" name="google-site-verification">
+<meta content="D92ABF27FC0229AD946BACEEFD53AB9F" name="msvalidate.01">
+<meta content="100008576502848" property="fb:admins">
+<meta content="100008576502848" property="fb:profile_id">
+<meta content="Haris Lukman Hakim" name="Author">
+<meta content="https://www.facebook.com/profile.php?id=100008576502848" property="article:author">
+<!-- Bar theme color -->
+<meta content="#3b6ca0" name="theme-color">
+<meta content="#f95633" name="msapplication-navbutton-color">
+<meta content="#ef991a" name="apple-mobile-web-app-status-bar-style">
+<!-- <style id='page-skin-1' type='text/css'><!--
+.amp-basri{width:40%;}
+.main-wrapper{width:660px;margin:0;float:left;word-wrap:break-word;overflow:hidden;}
+.sidebar-amp{width:310px;float:right;word-wrap:break-word;overflow:hidden;margin-top:10px;}
+.amp-wrapper{width:980px}
+.widged-ads{width:728px;max-width:100%;margin:0 auto;word-wrap:break-word;overflow:hidden;}
+.adsv .widget-content{;margin:0 auto;padding:0}
+.adsv .widget{margin:0 auto 20px;padding:0}
+#layout ul,ol,li{list-style:none}
+*/
+-->
+<style amp-custom="amp-custom">
+
+ *{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+.notifbox{display:block}
+.notif_box{position:relative;background:#fff;color:#555;font-family:Roboto,sans-serif;padding:0;transition:all .3s ease-in-out;width:100%;margin:0 auto;border-radius:4px;overflow:hidden}
+.notif_box p.note{margin:0;padding:15px 20px;font-size:16px;font-weight:400;line-height:1.1}
+.notif_box p.close_note{margin:0;padding:10px 20px;font-size:12px;font-weight:400;line-height:1.3}
+.notif_box p a{color:red;text-decoration:none}
+.notif_box p a:hover{color:#000}
+.notifbox .close_notifbox{background:0 0;border:none;padding:0;color:#333;font-size:30px;position:absolute;top:7px;right:5px;cursor:pointer;width:20px;height:20px;line-height:20px;text-align:center;z-index:2}
+.notifbox .close_notifbox:focus,.notifbox .done_notifbox:focus{outline:0}
+.notifbox .close_notifbox:hover{color:red}
+hr.note_block{margin:0;height:0;border:0;border-top:1px solid #ddd}
+
+
+
+.post { -webkit-touch-callout:none; -webkit-user-select:none; -khtml-user-select:none; -ms-user-select:none; -moz-user-select:none; }
+.post blockquote,.post pre,.post code { -webkit-touch-callout:text; -webkit-user-select:text; -khtml-user-select:text; -ms-user-select:text; -moz-user-select:text; } 
+
+
+
+
+ .above_post {
+  padding-top: 8px;
+  width: 300px;
+  margin: 0 20px 5px 0;
+  display: inline;
+  float: left
+}
+
+@media screen and (max-width:414px) {
+  .above_post {
+    padding-top: 10px;
+    width: 100%;
+    height: auto;
+    margin: 0 0 10px;
+    display: block;
+    float: none
+  }
+}
+
+
+/* CSS Syntax Highlighter */
+pre{-webkit-user-select:text;-khtml-user-select:text;-moz-user-select:text;-ms-user-select:text;user-select:text;padding:0;margin:.5em auto;white-space:pre;word-wrap:break-word;overflow:auto;background-color:#443e50;position:relative;padding-top:33px;width:98%;-moz-tab-size:2;-o-tab-size:2;tab-size:2;word-break:normal;-webkit-user-select:text;-khtml-user-select:text;-moz-user-select:text;-ms-user-select:text;user-select:text;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;border-radius:3px;}
+pre::-webkit-scrollbar,pre::-moz-scrollbar,pre code::-webkit-scrollbar,pre code::-moz-scrollbar,code::-webkit-scrollbar,code::-moz-scrollbar {display:none;}
+pre::before{font-size:15px;font-weight:700;content:attr(title);position:absolute;top:0;padding:9px 0;left:0;right:0;color:#ffffff;display:block;margin:0;text-indent:15px}
+pre:after{display:inline-block;content:"\f121";font-family:fontAwesome;font-style:normal;font-weight:normal;font-size:18px;color:#ffffff;top:0;right:0;padding:9px 14px;position:absolute}
+pre code{display:block;background:none;border:none;color:#bec3ce;padding:25px 20px 20px 20px;font-family:'Source Code Pro',Menlo,Consolas,Monaco,monospace;font-size:.83rem;white-space:pre;overflow:auto}
+code .token.important {font-weight:bold;}
+code .token.entity {cursor:help;}
+code {font-family:Consolas,Monaco,'Andale Mono',monospace;white-space:initial;word-spacing:normal;word-break:normal;font-size:14px;line-height:1.3em}
+code{color:#BC587E}
+pre mark,code mark,pre code mark {background-color:#3498db;color:#fff;padding:2px;margin:0 2px;border-radius:2px;}
+pre[data-codetype="CSSku"]:before,pre[data-codetype="HTMLku"]:before,
+pre[data-codetype="JavaScriptku"]:before,pre[data-codetype="JQueryku"]:before{background-color:#22A7F0;box-shadow:inset 0 0 0 1px #ffffff;}
+
+/*Blockquote Catatan*/
+.post-body blockquote {
+text-align: left;
+background: #6591c2;
+position: relative;
+display: block;
+padding: 55px 20px 20px;
+color: #fff;
+margin: 10px 0;
+border-radius: 3px;
+}
+.post-body blockquote:before {
+position: absolute;
+content: 'Note';
+background: rgba(255,255,255,1);
+right: 3px;
+left: 3px;
+top: 3px;
+padding: 5px 20px;
+display: block;
+font-weight: 700;
+border-radius: 3px 3px 0 0;
+color: #6591c2;
+
+}
+.post-body blockquote:after {
+position: absolute;
+content: '\f027';
+right: 10px;
+bottom: 5px;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+font-size: 160%;
+color: rgba(255,255,255,.6);
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Poppins'), local('Poppins-Regular'), url(https://fonts.gstatic.com/s/poppins/v1/HLBysyo0MQBO_7E-DWLwzg.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Poppins Medium'), local('Poppins-Medium'), url(https://fonts.gstatic.com/s/poppins/v1/yQWaOD4iNU5NTY0apN-qj_k_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Poppins SemiBold'), local('Poppins-SemiBold'), url(https://fonts.gstatic.com/s/poppins/v1/zO07Oxe3SOlw0l2YX2sdIfk_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Poppins Bold'), local('Poppins-Bold'), url(https://fonts.gstatic.com/s/poppins/v1/57TQ-anwthzkETEIO4jESPk_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+}
+
+/**********************************POST TAGE*****************************
+
+Nama theme: Goomsite V.2.04 AMP HTML
+Author: Basri Matindas
+Design: http://www.goomsite.net
+
+Descript Privacy Theme:
+Template Goomsite V.2.04 AMP HTML ini saya tidak bagikan secara gratis atau 
+diperjual belikan, jika suatu saat Anda kebetulan melihat situs-situs lain 
+dengan tampilan yang sama atau mirip, maka itu adalah desain yang ilegal. 
+Apapun yang terjadi pada situs tersebut sama sekali tidak ada kaitannya dengan
+situs ini dan sama sekali tidak ada tanggung jawab yang mengikat pada situs 
+ini terhadap mereka.
+**************************************************************************/
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v16/Hgo13k-tfSpn0qi1SFdUfVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v16/CWB0XYA8bzo0kSThX0UTuA.woff2) format('woff2');
+}
+@font-face {
+   font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v16/RxZJdnzeo3R5zSexge8UUVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v16/d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Roboto Black'), local('Roboto-Black'), url(https://fonts.gstatic.com/s/roboto/v16/mnpfi9pxYH-Go5UiibESIltXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+}
+/* FontAwesome */
+@font-face{font-family:FontAwesome;src:url(//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?v=4.7.0);src:url(//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?#iefixamp;v=4.7.0)format('embedded-opentype'),url(//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0)format('woff2'),url(//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0)format('woff'),url(//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf?v=4.7.0)format('truetype'),url(//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular)format('svg');font-weight:400;font-style:normal}
+.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;}
+
+/* Material Icon */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v12/2fcrYFNaTjcS6g4U3t-Y5ewrjPiaoEww8AihgqWRJAo.woff) format('woff'), url(https://fonts.gstatic.com/s/materialicons/v12/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2'), url(https://fonts.gstatic.com/s/materialicons/v12/2fcrYFNaTjcS6g4U3t-Y5bbKic1PW3nceB3q24YFOMg.ttf) format('truetype');
+}
+
+.material-icons {font-family:'Material Icons';font-weight:normal;font-style:normal;font-size:inherit;display:inline-block;line-height:1;text-transform:none;letter-spacing:normal;word-wrap:normal;white-space:nowrap;direction:ltr;vertical-align:middle;text-rendering: optimizeLegibility;font-feature-settings: 'liga';}
+
+#amp-content,.amp-content{max-width:1024px}#amp-goom,#amp-goom li,#amp-nav ul,.amp-basri,img{position:relative}#amp-nav li a,caption,th{text-align:center}#amp-goom li,#amp-nav li{text-transform:uppercase}.Label ul,.sidebar ul,dl,ul,ul li{list-style:none}a,abbr,acronym,address,applet,b,big,blockquote,body,caption,center,cite,code,dd,del,dfn,div,dl,dt,em,fieldset,font,form,h1,h2,h3,h4,h5,h6,html,i,iframe,img,ins,kbd,label,legend,li,object,p,pre,q,s,samp,small,span,strike,strong,sub,sup,table,tbody,td,tfoot,th,thead,tr,tt,u,ul,var{padding:0;border:0;outline:0;vertical-align:baseline;background:0}ins{text-decoration:underline}del{text-decoration:line-through}blockquote{font-size:17px;line-height:1.5em;font-style:normal;color:#1c1c1c}dl,ul{font-weight:500}img{border:0}a,a:visited{text-decoration:none}.section,.widget,.widget ul{margin:0;padding:0}:focus{outline:0}a img{border:0}brc{color:#aaa}#amp-nav li ul,#blog-pager,#header .description,#items-thumbnail amp-img,.box-wrap,.box-wrapp,.post-meta,h2.date-header{display:none}::selection{background:#f95633;color:#fff}#amp-goom,#amp-nav ul{float:right;position:relative}#navbar-iframe,.quickedit{height:0;visibility:hidden;display:none}body{background:#f2f4fb;font-family:Roboto,sans-serif;font-size:14px;font-weight:300;line-height:22px;text-decoration:none;margin:0}a,a:link,a:visited{color:#f99837}a:active,a:hover{color:#555;text-decoration:none}.amp-basri{color:#000;padding:0;height:70px;z-index:1000}#amp-goom,#amp-goom ul{height:60px}#header{float:left;overflow:hidden;margin:0;padding:0}#header-inner{margin:10px 40px 0 0;padding:0}#header h1,#header h1 a,#header p,.titlewrapper a{font-size:38px;text-transform:uppercase;line-height:38px;color:#444;margin:0;font-weight:900}#header h1.title a:hover{color:#f95633;text-decoration:none}#header amp-img{border:0;background:0;width:auto;height:auto;margin:0 auto}#amp-nav ul{list-style-type:none;margin:0;padding:10px 0}#amp-nav li{display:inline-block;float:left}#amp-nav li a{font-weight:700;height:49px;line-height:49px;color:#555;padding:20px 0 0 25px}#amp-nav li a:hover{color:#aaa}#amp-nav li:hover ul a{background:#f3f3f3;color:#2f3036;height:40px;line-height:40px}#amp-goom,#amp-goom li a,#amp-goom li a:hover,#amp-goom li:hover>a,.amp-go{color:#fff}#amp-nav li:hover ul a:hover{background:#fe9800;color:#fff}#amp-nav li ul li{display:block;float:none}#amp-nav li ul li a{width:auto;min-width:100px;padding:0 20px;text-align:left}#amp-nav ul li a:hover+.hidden,.hidden:hover{display:block}#amp-nav input[type=checkbox]{display:none}#amp-nav input[type=checkbox]:checked~#amp-gooms{display:block}#amp-nav .material-icons{font-size:20px}.amp-wp{width:100%;padding:30px 0 45px;display:inline-block;margin:0 auto 20px;background:#3b6ca0}.amp-word{width:1024px;margin:0 auto}#amp-goom{width:223px;margin-top:17px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background:#ef991a}#amp-goom li,#amp-goom ul{margin:0;padding:0;list-style:none}#amp-goom li{float:left;display:inline;font-size:13px;font-weight:400;width:100%}#amp-goom a{display:block;line-height:60px;padding:0 20px;text-decoration:none;-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;-ms-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out}#amp-goom li:last-child a{border-right:none}#amp-goom input{display:none;margin:0;padding:0;width:80px;height:50px;opacity:0;cursor:pointer}#amp-goom ul.amp-gooms{visibility:hidden;margin-top:10px;opacity:0;height:auto;overflow:hidden;min-width:166px;background:rgba(0,0,0,.84);position:absolute;z-index:99;-webkit-border-radius:0;border-radius:0;top:48px;-moz-transform:scale(.8);-webkit-transform:scale(.8);-o-transform:scale(.8);-ms-transform:scale(.8);transform:scale(.8);-webkit-transition:all .3s ease-in-out;-moz-transition:all .3s ease-in-out;-ms-transition:all .3s ease-in-out;-o-transition:all .3s ease-in-out;transition:all .3s ease-in-out}#amp-goom li:hover>ul.amp-gooms{visibility:visible;opacity:1;transform:scale(1)}#amp-goom a.ai{padding:0 27px 0 20px;-webkit-transition:all .3s linear;-moz-transition:all .3s linear;-ms-transition:all .3s linear;-o-transition:all .3s linear;transition:all .3s linear;font-size:14px;font-weight:700}.btn-slide,.btn-slide span.circle,.btn-slide2,.btn-slide2 span.circle2{-webkit-transition:.5s;-moz-transition:.5s;-ms-transition:.5s;-o-transition:.5s}#amp-goom li>a.ai::after{content:"\f078";font-family:FontAwesome;margin:0 auto;width:10px;height:10px;line-height:60px;position:absolute;top:0;right:20px}#amp-gooms i.material-icons{margin-top:-3px}.amp-go{text-decoration:none;text-align:left;padding:10px 5px;display:none}.amp-search{height:48px;float:left;display:inline;padding:0;margin-top:17px}#ampsearch{width:780px;height:48px;float:right;padding:0;margin:0;position:relative}.search-form{background:#f8f8f8;width:81%;color:#000;padding-left:20px;height:60px;font-size:13px;font-weight:400;margin:0;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;border:1px solid #f3f3f3;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}.search-button{background:#f95633;width:auto;height:auto;text-align:center;margin:0;top:0;padding:22px 35px;right:0;font-weight:700;font-size:14px;color:#fff;position:absolute;border:0;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;text-shadow:none;box-shadow:none}.comments,.post{-webkit-box-shadow:0 0 3px 0 rgba(199,199,199,.51);-moz-box-shadow:0 0 3px 0 rgba(199,199,199,.51);-moz--webkit-box-shadow:0 0 3px 0 rgba(199,199,199,.51)}.amp-outer,.post{padding:0}.amp-outer,.amp-wrapper,.box-wrap,.box-wrapper,.box-wraps{width:100%}.amp-content,.amp-info,.amp-outer,.post-inner{position:relative}.search-button:focus,.search-button:hover{border:0;outline:0;cursor:pointer}.box-wraps{background:#fff;height:80px}.box-wrapper{width:100%;background:#3b6ca0;margin-top:40px}.amp-content,.amp-wrapper{margin:0 auto;padding:0;overflow:hidden}#amp-content{margin:0 auto}#amp-footer,.Label li,pre{max-width:100%}.main-wrapper{width:702px;margin:0;float:left;overflow:hidden}.clear{clear:both}h3.date-header{text-transform:none;font:400 12px Arial;color:#666;line-height:1.2em;margin:.1em 0}#amp-credit,#amp-subs .emailfield .submitbutton,#amp-subs .title,.amp-goo,.amp-goo ul,.author,.hide-count,.item-text,.post-body table th,.related-post-amp h2,.sidebar h3{text-transform:uppercase}.post{margin:3px;background:#fff;box-shadow:0 0 3px 0 rgba(199,199,199,.51)}.post-inner{padding:20px 20px 5px;margin:0 auto}.post h1,.post h2{line-height:1.2em;margin:0;padding:4px 0}.post h1{font-size:260%;font-weight:900}.post h2{font-size:20px;font-weight:700;color:#333}.post h1 a,.post h1 a:visited,.post h1 strong{display:block;text-decoration:none;color:#333}.post h1 a:hover,.post h1 strong{color:#a7a7a7}.post .post-title{margin-bottom:15px}#wrap,pre{margin:10px auto}.post-body{font-size:17px;color:rgba(51,51,51,.81);line-height:1.8em;font-weight:400}.et,.hide-count,.item-count,.item-text{font-weight:700}.screenshoot400{max-width:400px;min-width:400px}pre,pre code{color:#f1f9f0}pre {padding:.5em 1em;margin:1.3em 0;white-space:pre;word-wrap:normal;overflow:auto;background-color:#0F0F0F;font-size:12px;clear:both;color:#84999b;}
+pre code {display: block; padding: 0.5em;color: #839496;line-height:1.4em;}.breadcrumbs,.label-count{white-space:nowrap}#wrap{text-align:center}#wrap br{display:none}.btn-slide,.btn-slide2{position:relative;display:inline-block;height:60px;line-height:60px;padding:0;margin:10px;transition:.5s;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}.btn-slide{width:291px;background:#15a144;border:2px solid #15a144}.btn-slide2{width:280px;background:#ff552a;border:2px solid #ff552a}.btn-slide span.circle,.btn-slide2 span.circle2{display:block;background-color:#1e823f;color:#fff;position:absolute;float:left;margin:5px;line-height:48px;height:50px;width:50px;top:0;left:0;transition:.5s;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%}.btn-slide2 span.circle2{background-color:#e6380c}.btn-slide span.title,.btn-slide span.title-hover,.btn-slide2 span.title-hover2,.btn-slide2 span.title2{position:absolute;left:60px;text-align:center;margin:0 auto;font-size:14px;text-transform:uppercase;font-weight:700;color:#fff;-webkit-transition:.5s;-moz-transition:.5s;-ms-transition:.5s;-o-transition:.5s;transition:.5s}.btn-slide2 span.title-hover2,.btn-slide2 span.title2{color:#fff;left:60px}.btn-slide span.title-hover,.btn-slide2 span.title-hover2{left:60px;opacity:0;color:#fff}.et{float:right;background:#fff;padding:0 20px;color:#000}.btn-slide span.circle:before,.btn-slide2 span.circle2:before{content:"\f0d6";font-family:FontAwesome;margin:0 auto}.item-count,.item-icon{line-height:36px;float:left;display:inline-block}.item-count,.item-icon,.item-text{display:inline-block}.pur-counter,.pur-counter ul{padding:0;overflow:hidden;margin-bottom:10px}.pur-counter ul li{background:#15a144;width:50%;float:left;text-align:left;margin:0 0 5px;position:relative;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;padding:1px}.center,.item-icon{text-align:center}.hide-count{overflow:hidden;float:left;padding-left:10px;color:#fff;padding-top:12px}.pur-counter ul li a{margin:0;padding:0}.item-icon{position:relative;color:#1ab54e;width:36px;height:36px;margin:10px 10px 0;font-size:20px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px}.item-count{color:#333;font-size:14px;padding-left:10px}.item-text{float:right;color:#000;background-color:#fff;font-size:18px;line-height:55px;padding:0 30px}.item-pur.purchasing .item-icon{background:#167b38}.item-pur.purchasing .item-icon:before{content:"\f0d6"}code{color:#fd854e}pre code code{color:#ffaa2a}i.clik-url,pre{user-select:all}.adspost1{padding-top:25px;width:336px;height:250px;margin:0 20px 5px 0;display:inline}.comments{background:#fff;margin:30px 3px 5px;padding:15px;box-shadow:0 0 3px 0 rgba(199,199,199,.51)}.breadcrumbs{background:#fff;font-size:11px;padding:25px 20px 5px;color:#ccc;margin-top:30px;text-overflow:ellipsis;overflow:hidden;display:none}.breadcrumbs a{color:#ddd;font-weight:400}.breadcrumbs span a{color:#768187;padding:0}.image-wrapper{margin-left:-20px;margin-right:-20px;margin-bottom:20px}.amp-info{color:#999;line-height:1.3em;font-size:12.3px;background:#222;margin:20px auto;display:block;padding:35px 25px 25px;overflow:hidden}.amp-info:before{content:'';display:block;width:100%;height:88px;background:#3b6ca0;position:absolute;top:0;left:0;right:0;z-index:0}.amp-admin,.amp-selfi{position:relative;display:inline-block}.amp-selfi{float:left;z-index:1}.amp-admin{z-index:1;float:right;width:calc(100% - 125px)}.amp-selfi amp-img{width:90px;height:90px;-webkit-border-radius:99em;-moz-border-radius:99em;border-radius:99em;z-index:1;border:5px solid #3b6ca0}.author{font-size:20px;font-weight:700;padding:0;display:block;margin:17px 0 32px}.author a,.author a:hover{color:#fff}.amp-mesengers{font-size:15px;font-weight:300;line-height:1.6em;color:#ddefee}a.btn-primary{color:#fff;font-size:18px;padding:15px 40px;font-weight:700;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px}.btn-primary{background:#f95633}.btn-primary:hover{color:#fff;background:#ed5331;border:#ed5331}.ampsoc{margin-top:30px}amp-social-share[type=facebook],amp-social-share[type=gplus],amp-social-share[type=linkedin],amp-social-share[type=pinterest],amp-social-share[type=twitter]{-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background-size:18px 18px;-webkit-transition:all .4s ease-out;-moz-transition:all .4s ease-out;-ms-transition:all .4s ease-out;-o-transition:all .4s ease-out;transition:all .4s ease-out}.Label li,.Label li a,.label-size a{position:relative;-webkit-transition:all .3s ease-out;-moz-transition:all .3s ease-out;-ms-transition:all .3s ease-out;-o-transition:all .3s ease-out;transition:all .3s ease-out}amp-social-share[type=twitter]{background-color:#55acee}amp-social-share[type=gplus]{background-color:#dc4e41}amp-social-share[type=facebook]{background-color:#3b5998}amp-social-share[type=linkedin]{background-color:#0077b5}amp-social-share[type=pinterest]{background-color:#bd081c}#header2 amp-img,.sidebar amp-img{max-width:100%;width:auto;border:0;max-height:100%}.PopularPosts .widget-content ul{width:100%;padding:10px;list-style-type:none}.PopularPosts .widget-content ul li{margin:0 0 -5px;padding-bottom:10px;position:relative;overflow:hidden}.PopularPosts .widget-content ul li .item-title{line-height:1.4em;padding:6px 10px 0 0}.PopularPosts .widget-content ul li .item-title a{text-decoration:none;font-size:14px;font-weight:700;color:#333}.PopularPosts .widget-content ul li a:hover,.PopularPosts .widget-content ul li:hover a{color:#f95633}.PopularPosts .widget-content ul li img{width:100px;height:72px;padding-right:0}.PopularPosts .item-thumbnail{float:left;margin:0 10px 0 0;width:100px;height:72px;overflow:hidden}.PopularPosts .item-snippet{display:none}#PopularPosts2 amp-img{-webkit-transition:all .5s ease-out;-moz-transition:all .5s ease-out;-ms-transition:all .5s ease-out;-o-transition:all .5s ease-out;transition:all .5s ease-out;-webkit-filter:brightness(.8);filter:brightness(.8)}#PopularPosts2 amp-img:hover{-webkit-filter:brightness(1.1);filter:brightness(1.1)}.sidebar-amp{width:300px;float:right;word-wrap:break-word;overflow:hidden}.sidebar h3{background:#f95633;color:#fff;font-size:20px;top:0;font-weight:700;margin:0;padding:25px 0 25px 13px}.sidebar{color:#111;line-height:1em;margin:-28px 0}.sidebar li{line-height:1.1em;margin:0;padding:10px 0 4px}.sidebar .widget{margin:30px 3px;padding:0;-webkit-box-shadow:0 0 3px 0 rgba(199,199,199,.51);-moz-box-shadow:0 0 3px 0 rgba(199,199,199,.51);box-shadow:0 0 3px 0 rgba(199,199,199,.51)}.sidebar .widget-content{background-color:#fff;margin:0 auto;padding:0}.sidebar a:link,.sidebar a:visited{text-decoration:none;line-height:1.1em;font-size:13px;font-weight:500;color:#777}.Label li:hover,.label-size a:hover,.sidebar li a:hover{color:#aaa}.sidebar ul{margin:0;padding:5px 0}.widget-content.cloud-label-widget-content{width:100%;display:inline-block}.widget-content.list-label-widget-content{padding:0}.label-size-1,.label-size-2,.label-size-3,.label-size-4,.label-size-5{font-size:100%;opacity:1}.cloud-label-widget-content{text-align:left;padding:10px}.Label ul{margin:0;padding:0;width:100%}.Label li{padding:0;margin:0;text-align:left;overflow:hidden}#HTML2 .widget-content{background:0}#amp-credit,#amp-subs .title,.amp-goo,.amp-goo ul,.amp-soc,.icon{text-align:center}.Label li a,.label-size a{padding:17px 20px 19px;display:block;line-height:1.2em;color:#333;text-decoration:none;font-weight:400}.Label li a:hover{color:#aaa}.Label li span,.label-count{float:right;height:27px;line-height:25px;padding:0 10px;text-align:center;display:inline-block;background:#f95633;color:#fff;position:absolute;top:15px;right:17px;z-index:2;-webkit-border-radius:99em;-moz-border-radius:99em;border-radius:99em}.label-size{position:relative;display:block;width:100%;min-width:100%}#amp-subs{width:100%;height:auto;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;padding:10px 0 70px}#amp-subs .title{padding:10px 25px;line-height:30px;font-size:26px;color:#fff;border-bottom:1px solid #bbb;-webkit-border-radius:2px 2px 0 0;-moz-border-radius:2px 2px 0 0;border-radius:2px 2px 0 0}#amp-subs .emailfield input{color:#777;padding:10px;margin-top:13px;font-size:13px;margin-left:20px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;border:1px solid #f3f3f3;background:#f8f8f8}#amp-subs p{font-size:20px;color:#fff;line-height:20px;padding:30px 20px;margin:0;position:absolute;font-weight:900;top:0;left:13px;height:60px;background:#f95633;z-index:30}#amp-subs p:after,#amp-subs p:before{content:'';width:0;height:0;position:absolute;top:0}#amp-subs p:before{border-top:100px solid transparent;border-right:16px solid #f95633;left:-16px}#amp-subs p::after{border-bottom:100px solid transparent;border-left:16px solid #f95633;right:-16px}#amp-subs .emailfield{padding:0 20px 10px;float:right}#amp-subs .emailfield input:focus{outline:0}#amp-subs .emailfield .submitbutton{background:#ef991a;color:#fff;border:0;outline:0;cursor:pointer;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;font-weight:700;padding:10px 45px 12px;font-family:Roboto,sans-serif}.fbgoo:before,.gplusgoo:before,.linkgoo:before,.pintgoo:before,.rssBtn:before,.twitgoo:before{font-family:FontAwesome}#amp-subs .emailfield .submitbutton:active{padding-top:11px;padding-bottom:9px}#amp-subs .emailfield .submitbutton:hover{color:#eee}.footer{width:100%;padding:0;margin:0}#amp-footer{background:#222;margin:0 auto;padding:30px 0 15px;min-height:10px}.amp-goo,.amp-goo ul{display:block;margin:0 auto;padding:0}.amp-goo ul li,.amp-goo ul li a,.icon{display:inline-block}.amp-goo ul li a{font-size:14px;color:#efefef;padding:10px;font-weight:700}.amp-goo ul li a:hover{color:#f95633}.amp-goo ul li a.ampb{color:#ef991a}.amp-soc{margin:30px}.amp-soc a{color:#bbb;margin:5px}.icon{position:relative;width:40px;height:40px;padding:0;border:1px solid #bbb;font-size:20px;font-weight:300;line-height:2em;-webkit-border-radius:25px;-moz-border-radius:25px;border-radius:25px}.fbgoo:before{content:"\f09a"}.fbgoo:hover,.gplusgoo:hover,.linkgoo:hover,.pintgoo:hover,.twitgoo:hover{color:#ddd}.twitgoo:before{content:"\f099"}.gplusgoo:before{content:"\f0d5"}.linkgoo:before{content:"\f0e1"}.pintgoo:before{content:"\f0d2"}#amp-credit{background:rgba(17,17,17,.95);font-size:11px;color:#7b7b7b;overflow:hidden;padding:18px;line-height:18px}#amp-credit a{color:#7b7b7b;text-decoration:none}#amp-credit a:hover{color:#f95633;text-decoration:none}.head-amp{background:#fff;width:100%}table{border-collapse:collapse;border-spacing:0;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;border-left:1px solid #e9e9e9;border-right:1px solid #eee;max-width:100%;width:100%;margin:1.5em auto}.post-body table td{border:1px solid #eee;border-left:none;padding:10px;text-align:center;vertical-align:top}.post-body table th{padding:15px 8px;text-align:center;vertical-align:top;color:#fff;background:#3b6ca0}.post-body td,.post-body th{vertical-align:top;text-align:left;font-size:13px;padding:3px 5px}.post-body th{font-weight:700;text-transform:capitalize;font-size:15px}table.section-columns td.first.columns-cell{border-left:none}table.section-columns{border:none;table-layout:fixed;width:100%;position:relative}table.columns-2 td.columns-cell,table.columns-3 td.columns-cell{width:50%}table.columns-4 td.columns-cell{width:30%}table.section-columns td.columns-cell{vertical-align:top}table.tr-caption-container{padding:4px;margin-bottom:.5em}td.tr-caption{font-size:80%}.post-body table.tr-caption-container td{border:none;padding:0;margin:0}.post-body table caption{max-width:100%;height:auto;border:none;padding:0}.lisbot{text-align:left}.lisbots{background:#3b6ca0;width:28%;overflow:hidden;text-align:center}.tfre,.theme_instal,.tpre{background:#1dc087;width:22%;overflow:hidden;text-align:center}.post-body .tpre{background:#15a144}.post-body .tfre{background:#ff552a}.post-body i.fa-times:before{content:"\f00d";font-family:FontAwesome;margin:0 auto}.post-body i.fa-check:before{content:"\f00c";font-family:FontAwesome;margin:0 auto}.post-body i.fa-check,.post-body i.fa-minus,.post-body i.fa-times{height:27px;width:27px;line-height:27px;text-align:center;border-radius:99em;color:#fff}.post-body td i.fa-check{background:#15a144}.post-body td i.fa-times{background:#ff552a}.post-body td i.fa-minus{background:#ffbd2e}.purchase-wrapper{background:#fff;position:relative;display:block;overflow:hidden;padding:0}.purchase-wrapper h3{text-transform:uppercase;background:#f5f5f5;border:1px solid #eee;display:block;padding:15px;margin:0;font-size:18px;line-height:1.2em;font-weight:700;color:#F95633;letter-spacing:2.5px}.purchase_desc{margin:0;padding:30px 15px;border:1px solid #eee;border-top:none}.text-not,.text-yes{font-size:15px;font-weight:900;text-transform:uppercase}.text-not{color:#ff552a}.text-yes{color:#15a144}
+@media screen and (max-width:1024px){#header-inner{margin:10px 40px 0 10px;padding:0}.amp-content{width:98%}.main-wrapper{width:67.5%;overflow:hidden}#amp-nav li a{padding:15px 8px}.amp-word{width:98%;margin:0 auto}.amp-search{width:75.6%}#ampsearch{width:100%}.btn-slide{width:287px;}}@media screen and (max-width:980px){.main-wrapper{width:66%}}@media screen and (max-width:960px){#amp-nav li a{padding:10px 5px}.main-wrapper{width:65%}.sidebar-amp{width:33%}}@media screen and (max-width:800px){#amp-nav input[type=checkbox]:checked~#amp-gooms{display:block;width:100%;margin:0}#amp-nav ul{position:static;display:none;padding:0;margin-top:19px}#amp-nav li{border-bottom:1px solid #333;background:#222}#amp-nav li a,#amp-nav ul li{width:100%}#amp-nav li a{display:block;height:auto;line-height:normal;text-align:left;color:#fff}.amp-go{display:block;line-height:30px;float:right;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;padding:5px 9px;color:#f95633;margin-right:10px;margin-top:15px;background:#eee}.amp-go:hover{cursor:pointer}.main-wrapper{margin-left:0;width:100%;margin-top:-10px}.sidebar-amp{float:none;margin:0 auto;width:300px;}.comments{margin:30px 3px 30px;}.amp-search{width:69%}.search-form{width:71.4%}#amp-subs .emailfield input{margin-left:5px}#amp-subs p {font-size:15px;padding:30px 0;}}@media screen and (max-width:768px){.sbox{max-width:31.6%}#amp-subs .emailfield{padding:0;float:right}#amp-subs p{font-size:15px}}@media screen and (max-width:640px){.amp-wp{padding:5px 0 20px;}#amp-subs p{text-align:center;width:95%;padding:5px 0;font-size:18px;line-height:60px;position:relative}#amp-subs p:before{border-top:70px solid transparent;border-right:13px solid #f95633;left:-13px}#amp-subs p::after{border-bottom:70px solid transparent;border-left:15px solid #f95633;right:-15px}.amp-search{width:60%}#ampsearch{width:100%}.search-form{width:58%}#amp-subs .emailfield input{width:80%}#amp-subs p{text-align:center;position:relative}#amp-subs .emailfield .submitbutton{width:84.5%}.main-wrapper{width:100%}.sidebar-amp{width:49%;margin:0 auto;float:none}.box-wrapper{padding-bottom:30px}}@media screen and (max-width:600px){#amp-subs .emailfield input{width:89%}#amp-subs .emailfield .submitbutton{width:93%}.amp-wp{padding:5px 0 20px;}}@media screen and (max-width:515px){#amp-goom{width:100%}.search-form{width:68%}.post h1{font-size:200%}#amp-subs .emailfield input{width:93%}#amp-subs .emailfield .submitbutton{width:98%}.box-wrapper{width:100%;padding-bottom:20px}.amp-search{width:100%}.sidebar-amp{width:300px;margin:0 auto;float:none}.amp-info{float:left;width:100%}}@media screen and (max-width:480px){#amp-goom{width:100%}.search-form{width:68%}.post h1{font-size:200%}#amp-subs .emailfield input{width:93%}#amp-subs .emailfield .submitbutton{width:98%}.box-wrapper{width:100%;padding-bottom:20px}.amp-search{width:100%}.sidebar-amp{width:300px;margin:0 auto;float:none}.amp-info{float:left;width:86%}}@media screen and (max-width:460px){#amp-goom,#ampsearch,.amp-search{width:100%}.search-form{width:66%}.sidebar-amp{width:70%}#amp-subs p{width:93%;}}@media screen and (max-width:414px){#ampsearch,.amp-search,.main-wrapper,.sidebar-amp{width:100%}#amp-subs p{text-align:center;position:relative}.amp-goo ul li a{padding:10px 5px;display:inline-block}.amp-soc a{margin-left:0;margin-bottom:10px}}@media screen and (max-width:384px){#amp-subs p{width:92%}#amp-subs .emailfield input{width:91%}.main-wrapper,.sidebar-amp{width:100%}.search-form{width:62%}}@media screen and (max-width:320px){.amp-info{float:left;width:82%}#header-inner{margin:10px 0 0 10px;padding:0}.amp-go{display:block;line-height:20px;float:right;margin-top:26px;padding:5px;position:relative}#amp-subs p{width:90%}.amp-wrap,.post-inner{position:relative;margin:0 auto}.amp-go{display:block;line-height:10px;float:right;position:relative}.post-inner{padding:20px 5px 5px}.breadcrumbs{padding:25px 5px 5px}.post h1 a{font-size:25px}.main-wrapper,.sidebar-amp{width:100%}.amp-wrap{overflow:hidden;padding:0;max-width:95%}.search-form{font-size:11px;width:52%}#amp-subs .emailfield input{width:90%}#amp-subs .emailfield .submitbutton{width:97.2%}}@media screen and (max-width:290px){#header-inner{margin:10px 0 0;padding:0}.search-form{font-size:10px}#amp-subs .emailfield input{width:88%}#amp-subs .emailfield .submitbutton{width:96%}#header h1,#header h1 a,#header p,.titlewrapper a{font-size:24px}}
+</style>
+<style amp-boilerplate="amp-boilerplate">body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate='amp-boilerplate'>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<script async="async" src="./Membuat Shopping Cart Dengan CodeIgniter Part 1 _ CodeIgniter_files/v0.js.download"></script>
+<script async="async" custom-element="amp-analytics" src="./Membuat Shopping Cart Dengan CodeIgniter Part 1 _ CodeIgniter_files/amp-analytics-0.1.js.download"></script>
+<script async="async" custom-element="amp-iframe" src="./Membuat Shopping Cart Dengan CodeIgniter Part 1 _ CodeIgniter_files/amp-iframe-0.1.js.download"></script>
+<script async="async" custom-element="amp-form" src="./Membuat Shopping Cart Dengan CodeIgniter Part 1 _ CodeIgniter_files/amp-form-0.1.js.download"></script>
+<script async="async" custom-element="amp-ad" src="./Membuat Shopping Cart Dengan CodeIgniter Part 1 _ CodeIgniter_files/amp-ad-0.1.js.download"></script>
+<script async="async" custom-element="amp-social-share" src="./Membuat Shopping Cart Dengan CodeIgniter Part 1 _ CodeIgniter_files/amp-social-share-0.1.js.download"></script>
+<script async="async" custom-element="amp-carousel" src="./Membuat Shopping Cart Dengan CodeIgniter Part 1 _ CodeIgniter_files/amp-carousel-0.1.js.download"></script>
+<script async="async" custom-element="amp-auto-ads" src="./Membuat Shopping Cart Dengan CodeIgniter Part 1 _ CodeIgniter_files/amp-auto-ads-0.1.js.download"></script>
+<script async="async" custom-element="amp-youtube" src="./Membuat Shopping Cart Dengan CodeIgniter Part 1 _ CodeIgniter_files/amp-youtube-0.1.js.download"></script>
+<script async="async" custom-element="amp-fx-flying-carpet" src="./Membuat Shopping Cart Dengan CodeIgniter Part 1 _ CodeIgniter_files/amp-fx-flying-carpet-0.1.js.download"></script>
+<script async="" custom-element="amp-user-notification" src="./Membuat Shopping Cart Dengan CodeIgniter Part 1 _ CodeIgniter_files/amp-user-notification-0.1.js.download"></script>
+
+
+<link rel="preload" referrerpolicy="origin" href="https://d-20021334432230990627.ampproject.net/1524862012167/frame.html" as="fetch"><link rel="preload" referrerpolicy="origin" href="https://3p.ampproject.net/1524862012167/f.js" as="fetch"><link rel="preload" referrerpolicy="origin" href="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" as="fetch"></head><!--<head>
+<link href='https://www.blogger.com/static/v1/widgets/3957297643-widget_css_bundle.css' rel='stylesheet' type='text/css'/>
+<link href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=6110852922316004041&amp;zx=1bcb9a0b-fc8e-4462-88f8-21e380b0ef9e' media='none' onload='if(media!=&#39;all&#39;)media=&#39;all&#39;' rel='stylesheet'/><noscript><link href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=6110852922316004041&amp;zx=1bcb9a0b-fc8e-4462-88f8-21e380b0ef9e' rel='stylesheet'/></noscript>
+</head>-->
+<body itemscope="itemscope" itemtype="http://schema.org/WebPage" class="amp-mode-mouse" style="opacity: 1; visibility: visible; animation: none;">
+<amp-auto-ads data-ad-client="ca-pub-2383736688165580" type="adsense" class="i-amphtml-element i-amphtml-layout-container"></amp-auto-ads>
+<amp-analytics id="analytics1" type="googleanalytics" class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-layout" style="width: 1px; height: 1px; display: none;" aria-hidden="true">
+<script type="application/json">
+{
+  "vars": {
+    "account": "UA-102774475-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script>
+</amp-analytics>
+<header itemprop="mainEntity" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+<div class="head-amp">
+<div class="amp-basri"><div id="amp-content">
+<div class="header section" id="header"><div class="widget Header" data-version="1" id="Header1">
+<div id="header-inner">
+<div class="titlewrapper">
+<p class="title" itemprop="headline">
+<a href="https://www.kioscoding.com/" itemprop="url" title="KiosCoding"><span itemprop="name"><amp-img alt="logo" height="55" src="https://4.bp.blogspot.com/-ouUZLvpqhzI/Wi0YP4lj5kI/AAAAAAAAAs4/IjN7PmN9A5kFwkLMKnVb8xe8FekfI9sxQCLcBGAs/s1600/kioslogo.png" title="KiosCoding" width="207" class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-layout" style="width: 207px; height: 55px;"><img decoding="async" alt="logo" title="KiosCoding" class="i-amphtml-fill-content i-amphtml-replaced-content" src="./Membuat Shopping Cart Dengan CodeIgniter Part 1 _ CodeIgniter_files/kioslogo.png"></amp-img></span></a>
+</p>
+</div>
+<div class="descriptionwrapper">
+<p class="description" itemprop="description"><span>Tutorial Php | Tutorial Android Studio | Tutorial Java | Tutorial Html | Tutorial lain seputar programing</span></p>
+</div>
+</div>
+</div></div>
+<div id="amp-nav" itemprop="mainEntity" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+<label class="amp-go" for="amp-go"><i class="material-icons"></i></label>
+<input autocomplete="off" id="amp-go" role="button" type="checkbox">
+<ul id="amp-gooms">
+<li><a href="https://www.kioscoding.com/search/label/PHP" title="Free Template"><i class="material-icons"></i> PHP</a></li>
+<li><a href="https://www.kioscoding.com/search/label/ANDROID%20STUDIO" title="Android Studio"><i class="material-icons"></i> ANDROID STUDIO</a></li>
+<li><a href="https://www.kioscoding.com/search/label/JAVA" title="Premium Template"><i class="material-icons"></i> JAVA</a></li>
+<li><a href="https://www.kioscoding.com/search/label/HTML" title="Premium Template"><i class="material-icons"></i> HTML</a></li>
+<li><a href="https://www.kioscoding.com/search/label/CSS" title="Premium Template"><i class="material-icons"></i> CSS</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div><!-- /amp-basri -->
+</header>
+<div class="amp-wp">
+<div class="amp-word">
+<div class="amp-search">
+<div id="ampsearch">
+<div itemprop="mainEntity" itemscope="itemscope" itemtype="http://schema.org/WebSite">
+<form action="https://www.kioscoding.com/search" itemprop="potentialAction" itemscope="itemscope" itemtype="http://schema.org/SearchAction" method="get" target="_blank" novalidate="" class="i-amphtml-form">
+<meta content="/search?q={q}" itemprop="target">
+<input class="search-form" id="feed-q-input" itemprop="query-input" name="q" placeholder="Cari Tutorial Pemrograman Yang Kamu inginkan" required="required" type="text">
+<button class="search-button" title="Search" type="submit">CARI</button>
+</form></div></div></div>
+<nav id="amp-goom" itemprop="mainEntity" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+<input type="checkbox">
+<label></label>
+<ul>
+<li><a class="ai" href="https://www.kioscoding.com/2018/04/tutorial-membuat-cart-dengan-codeigniter.html#">Framework</a>
+<ul class="amp-gooms">
+<li><a href="https://www.kioscoding.com/search/label/SPRINGBOOT">Spring Boot</a></li>
+<li><a href="https://www.kioscoding.com/search/label/CODEIGNITER">CodeIgniter</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<div class="box-wrap">
+<div class="amp-content"><div id="catherine">
+<a href="https://www.kioscoding.com/2018/04/www.kioscoding.com" target="_blank" title="buy"><amp-img alt="kioscoding" height="250" src="https://4.bp.blogspot.com/-9bqVqBtahcM/Wi0PwACFY4I/AAAAAAAAAsc/QZIhql6X650WXfF0RMo7bCVY9B-xn8D_wCLcBGAs/s1600/kioscoding2.png" title="kioscoding" class="i-amphtml-element i-amphtml-layout-fixed-height i-amphtml-layout-size-defined" style="height: 250px;"></amp-img></a>
+</div>
+<div class="sbox">
+<div class="g-info">
+<div class="amp-info">
+<div class="amp-site">
+<h3>SITUS PEMROGRAMAN TERBAIK</h3>
+<p>KIOSCODING.COM</p>
+<span>KiosCoding adalah sebuah website yang menyediakan tutorial-tutorial bahasa pemrograman seperti dekstop, mobile, web dan beberapa framework pendukung lainnya.</span>
+</div>
+</div>
+</div></div></div></div>
+<div class="box-wrapp">
+<div class="amp-content">
+<div class="postinfo">
+<ul class="infopay">
+<li>
+<a class="pay" href="http://www.kioscoding.com/2017/08/belajar-php-lengkap-untuk-pemula-php.html" target="_blank"><p>web</p></a>
+<span class="number">pemrograman php</span>
+<span>Belajar membuat aplikasi berbasis web lengkap</span></li>
+<li>
+<a class="pay" href="http://www.kioscoding.com/2017/08/belajar-android-studio-lengkap-untuk.html" target="_blank"><p>mobile</p></a>
+<span class="number">Pemrograman Mobile</span>
+<span>Belajar membuat aplikasi android lengkap</span></li>
+<li>
+<a class="pay" href="https://www.kioscoding.com/2018/04/tutorial-membuat-cart-dengan-codeigniter.html#" target="_blank"><p>dekstop</p></a>
+<span class="number">pemrograman java</span>
+<span>Belajar membuat aplikasi dekstop lengkap</span></li>
+<li>
+<a class="pay" href="https://www.youtube.com/channel/UCBBZZIesxXMtjC07xFstk_g?view_as=subscriber" target="_blank"><p>Channel</p></a>
+<span class="number">KiosCoding</span>
+<span>Tutorial relevan menggunakan video</span></li>
+</ul>
+</div>
+<div class="clr"></div>
+<div class="info-box">
+<div id="spotslide">
+<amp-carousel height="350" layout="fixed-height" type="slides" class="i-amphtml-element i-amphtml-layout-fixed-height i-amphtml-layout-size-defined i-amphtml-carousel-has-controls i-amphtml-slidescroll" style="height: 350px;">
+
+
+
+<div class="i-amphtml-slides-container" aria-live="polite"><div class="i-amphtml-slide-item"><div class="textslide amp-carousel-slide">
+<span>Pemrograman Web</span>
+<p>Belajar Pemrograman Web Lengkap Mulai Dari Dasar Hingga Dapat Membuat Sebuah Aplikasi Berbasis Web Menggunakan Bahasa PHP</p>
+<ul class="button">
+<li><a class="amp-button" href="http://www.kioscoding.com/2017/08/belajar-php-lengkap-untuk-pemula-php.html" target="_blank">Mulai Belajar</a></li>
+</ul>
+</div></div><div class="i-amphtml-slide-item"><div class="textslide amp-carousel-slide">
+<span>Pemrograman Mobile</span>
+<p>Belajar Pemrograman mobile Lengkap Mulai Dari Dasar Hingga Dapat Membuat Sebuah Aplikasi Berbasis Android Menggunakan Android Studio</p>
+<ul class="button">
+<li><a class="amp-button" href="http://www.kioscoding.com/2017/08/belajar-android-studio-lengkap-untuk.html" rel="nofollow" target="_blank">Mulai Belajar</a></li>
+</ul>
+</div></div><div class="i-amphtml-slide-item"><div class="textslide amp-carousel-slide">
+<span>Pemrograman Dekstop</span>
+<p>Belajar Pemrograman Dekstop Lengkap Mulai Dari Dasar Hingga Dapat Membuat Sebuah Aplikasi Berbasis Dekstop Menggunakan Bahasa JAVA </p>
+<ul class="button">
+<li><a class="amp-button" href="https://www.kioscoding.com/2018/04/tutorial-membuat-cart-dengan-codeigniter.html#" target="_blank">Mulai Belajar</a></li>
+</ul>
+</div></div></div><div class="amp-carousel-button amp-carousel-button-prev amp-disabled" role="button" aria-label="Previous item in carousel" tabindex="0" aria-disabled="true"></div><div class="amp-carousel-button amp-carousel-button-next" role="button" aria-label="Next item in carousel" tabindex="0" aria-disabled="false"></div></amp-carousel>
+</div>
+</div></div>
+</div>
+<div class="amp-content">
+<div class="amp-wrapper">
+<div class="amp-outer">
+<div itemscope="itemscope" itemtype="http://schema.org/Blog">
+<div class="main-wrapper">
+<div class="main section" id="main"><div class="widget Blog" data-version="1" id="Blog1">
+<div class="breadcrumbs" id="breadcrumbs">
+<div id="bread-crumbs">
+<span itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://www.kioscoding.com/" itemprop="url" title="Home"><span itemprop="title"><i class="material-icons breadcrumbs-icon"></i> Home&nbsp;</span></a></span>&nbsp;<i class="material-icons breadcrumbs-icon"></i>
+<span itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://www.kioscoding.com/search/label/CODEIGNITER?max-results=15" itemprop="url" title="CODEIGNITER"><span itemprop="title">CODEIGNITER</span></a></span>
+<i class="material-icons breadcrumbs-icon"></i>
+<span>Membuat Shopping Cart Dengan CodeIgniter Part 1 | CodeIgniter</span>
+</div></div>
+<div class="blog-posts hfeed">
+<!--Can't find substitution for tag [defaultAdStart]-->
+<div class="post-outer">
+<article class="post hentry" itemscope="itemscope" itemtype="http://schema.org/Blog">
+<meta content="https://2.bp.blogspot.com/-aGFpAnri_90/Wt27XewxYjI/AAAAAAAAA_s/-alwqN50hv0c89nppQuvkPFOT5aP4-SJgCLcBGAs/s1600/tutorial%2Bcart%2Bsederhana%2Bmenggunakan%2Bcodeigniter%2Bci.png" itemprop="image">
+<div class="post-inner">
+<h1 class="post-title entry-title" itemprop="headline">
+<a href="https://www.kioscoding.com/2018/04/tutorial-membuat-cart-dengan-codeigniter.html" itemprop="url mainEntityOfPage" title="Membuat Shopping Cart Dengan CodeIgniter Part 1 | CodeIgniter">Membuat Shopping Cart Dengan CodeIgniter Part 1 | CodeIgniter</a>
+</h1>
+<div class="image-wrapper">
+<div class="post-firstimage">
+<div class="firstimage">
+<amp-img alt="Membuat Shopping Cart Dengan CodeIgniter Part 1 | CodeIgniter" height="393" layout="responsive" src="https://2.bp.blogspot.com/-aGFpAnri_90/Wt27XewxYjI/AAAAAAAAA_s/-alwqN50hv0c89nppQuvkPFOT5aP4-SJgCLcBGAs/s1600/tutorial%2Bcart%2Bsederhana%2Bmenggunakan%2Bcodeigniter%2Bci.png" title="Membuat Shopping Cart Dengan CodeIgniter Part 1 | CodeIgniter" width="769" class="i-amphtml-element i-amphtml-layout-responsive i-amphtml-layout-size-defined i-amphtml-layout"><i-amphtml-sizer style="display: block; padding-top: 51.1053%;"></i-amphtml-sizer><img decoding="async" alt="Membuat Shopping Cart Dengan CodeIgniter Part 1 | CodeIgniter" title="Membuat Shopping Cart Dengan CodeIgniter Part 1 | CodeIgniter" class="i-amphtml-fill-content i-amphtml-replaced-content" src="./Membuat Shopping Cart Dengan CodeIgniter Part 1 _ CodeIgniter_files/tutorial cart sederhana menggunakan codeigniter ci.png"></amp-img>
+</div>
+</div>
+</div>
+<div class="post-meta">
+<span class="post-meta-span"><span></span>
+<span class="post-author vcard">
+<span class="fn" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+<meta content="https://plus.google.com/101061887657544929491" itemprop="url">
+<a href="https://plus.google.com/101061887657544929491" rel="author" title="author profile">
+<span itemprop="name">KiosCoding</span>
+</a>
+</span>
+</span>
+</span>
+<span class="post-meta-span">
+<span></span>
+<a href="https://www.kioscoding.com/search/label/CODEIGNITER" rel="tag nofollow"><span itemprop="keywords">CODEIGNITER</span></a>
+</span>
+<span class="post-meta-span">
+<span></span>
+<span itemprop="dateModified"><a class="updated" href="https://www.kioscoding.com/2018/04/tutorial-membuat-cart-dengan-codeigniter.html" rel="bookmark" title="permanent link"><abbr class="published" itemprop="datePublished" title="2018-04-23T20:47:00+07:00">
+4/23/2018</abbr></a></span>
+</span>
+<span class="post-meta-span">
+<span></span>
+</span>
+</div>
+<div class="post-header">
+<div class="post-header-line-1"></div>
+</div>
+<div class="above_post">
+<amp-fx-flying-carpet height="250px" class="i-amphtml-element i-amphtml-layout-fixed-height i-amphtml-layout-size-defined i-amphtml-layout" style="height: 250px;"><div class="i-amphtml-fx-flying-carpet-clip"><div class="i-amphtml-fx-flying-carpet-container" i-amphtml-fixedid="F0" style="top: calc(0px); width: 300px;">
+<amp-ad data-ad-client="ca-pub-2383736688165580" data-ad-slot="2759912714" height="600" layout="fixed" type="adsense" width="300" class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-layout" data-amp-slot-index="0" style="width: 300px; height: 600px;">
+<div fallback=""><div class="i-amphtml-ad-default-holder" data-ad-holder-text="Ad"></div></div><div placeholder="" class="amp-hidden"><div class="i-amphtml-ad-default-holder" data-ad-holder-text="Ad"></div></div><iframe src="./Membuat Shopping Cart Dengan CodeIgniter Part 1 _ CodeIgniter_files/frame.html" name="{&quot;host&quot;:&quot;d-20021334432230990627.ampproject.net&quot;,&quot;type&quot;:&quot;adsense&quot;,&quot;count&quot;:2,&quot;attributes&quot;:{&quot;adClient&quot;:&quot;ca-pub-2383736688165580&quot;,&quot;adSlot&quot;:&quot;2759912714&quot;,&quot;ampSlotIndex&quot;:&quot;0&quot;,&quot;width&quot;:300,&quot;height&quot;:600,&quot;_context&quot;:{&quot;ampcontextVersion&quot;:&quot;1524862012167&quot;,&quot;ampcontextFilepath&quot;:&quot;https://3p.ampproject.net/1524862012167/ampcontext-v0.js&quot;,&quot;sourceUrl&quot;:&quot;https://www.kioscoding.com/2018/04/tutorial-membuat-cart-dengan-codeigniter.html&quot;,&quot;referrer&quot;:&quot;https://www.google.co.id/&quot;,&quot;canonicalUrl&quot;:&quot;https://www.kioscoding.com/2018/04/tutorial-membuat-cart-dengan-codeigniter.html&quot;,&quot;pageViewId&quot;:&quot;4089&quot;,&quot;location&quot;:{&quot;href&quot;:&quot;https://www.kioscoding.com/2018/04/tutorial-membuat-cart-dengan-codeigniter.html&quot;},&quot;startTime&quot;:1525166535948,&quot;tagName&quot;:&quot;AMP-AD&quot;,&quot;mode&quot;:{&quot;localDev&quot;:false,&quot;development&quot;:false,&quot;minified&quot;:true,&quot;lite&quot;:false,&quot;test&quot;:false,&quot;version&quot;:&quot;1524862012167&quot;,&quot;rtvVersion&quot;:&quot;011524862012167&quot;},&quot;canary&quot;:false,&quot;hidden&quot;:false,&quot;initialLayoutRect&quot;:{&quot;left&quot;:186,&quot;top&quot;:7,&quot;width&quot;:300,&quot;height&quot;:600},&quot;initialIntersection&quot;:{&quot;time&quot;:10717.000000004191,&quot;rootBounds&quot;:{&quot;left&quot;:0,&quot;top&quot;:0,&quot;width&quot;:1366,&quot;height&quot;:613,&quot;bottom&quot;:613,&quot;right&quot;:1366,&quot;x&quot;:0,&quot;y&quot;:0},&quot;boundingClientRect&quot;:{&quot;left&quot;:186,&quot;top&quot;:7,&quot;width&quot;:300,&quot;height&quot;:600,&quot;bottom&quot;:607,&quot;right&quot;:486,&quot;x&quot;:186,&quot;y&quot;:7},&quot;intersectionRect&quot;:{&quot;left&quot;:0,&quot;top&quot;:0,&quot;width&quot;:0,&quot;height&quot;:0,&quot;bottom&quot;:0,&quot;right&quot;:0,&quot;x&quot;:0,&quot;y&quot;:0},&quot;intersectionRatio&quot;:0},&quot;domFingerprint&quot;:&quot;109997055&quot;,&quot;experimentToggles&quot;:{&quot;canary&quot;:false,&quot;expAdsenseA4A&quot;:false,&quot;expDoubleclickA4A&quot;:false,&quot;expDfpCanonicalFf&quot;:false,&quot;expUnconditionedCanonical&quot;:false,&quot;dbclk_a4a_viz_change&quot;:false,&quot;a4aProfilingRate&quot;:false,&quot;ad-type-custom&quot;:true,&quot;ios-embed-wrapper&quot;:true,&quot;amp-apester-media&quot;:true,&quot;amp-ima-video&quot;:true,&quot;amp-playbuzz&quot;:true,&quot;chunked-amp&quot;:true,&quot;amp-auto-ads&quot;:true,&quot;amp-auto-ads-adsense-holdout&quot;:false,&quot;slidescroll-disable-css-snap&quot;:true,&quot;version-locking&quot;:true,&quot;a4aFastFetchDoubleclickLaunched&quot;:false,&quot;a4aFastFetchAdSenseLaunched&quot;:false,&quot;a4a-new-signature-verifier&quot;:true,&quot;pump-early-frame&quot;:true,&quot;a4a-measure-get-ad-urls&quot;:false,&quot;3p-use-ampcontext&quot;:true,&quot;amp-animation&quot;:true,&quot;amp-live-list-sorting&quot;:true,&quot;amp-sidebar toolbar&quot;:true,&quot;a4a-safeframe-preloading-off&quot;:false,&quot;expUnconditionedAdxIdentity&quot;:false,&quot;expUnconditionedDfpIdentity&quot;:false,&quot;expUnconditionedCanonicalHoldback&quot;:false,&quot;rollback-delayed-fetch-deprecation&quot;:false,&quot;rollback-dfd-ix&quot;:true,&quot;rollback-dfd-criteo&quot;:true,&quot;rollback-dfd-rubicon&quot;:true,&quot;rollback-dfd-navegg&quot;:true,&quot;rollback-dfd-openx&quot;:true,&quot;rollback-dfd-yieldbot&quot;:true,&quot;rollback-dfd-imonomy&quot;:true,&quot;rollback-dfd-pulsepoint&quot;:true,&quot;dcdf-whitelist-deprecation&quot;:false,&quot;amp-consent&quot;:true},&quot;sentinel&quot;:&quot;0-7727405903740730507&quot;,&quot;clientId&quot;:&quot;amp-uBVizE3iryH4PJp91auZdw&quot;,&quot;container&quot;:&quot;AMP-FX-FLYING-CARPET&quot;},&quot;type&quot;:&quot;adsense&quot;}}" width="300" height="600" scrolling="no" data-amp-3p-sentinel="0-7727405903740730507" class="i-amphtml-fill-content" style="border: none;"></iframe></amp-ad>
+</div></div></amp-fx-flying-carpet>
+</div>
+<div class="post-body entry-content" id="post-body-5324537235601715211">
+<meta content="" itemprop="description">
+<noscript><img alt="cart, library cart ci, belajar cart dengan codeigniter, membuat cart sederhana ci" src="https://2.bp.blogspot.com/-aGFpAnri_90/Wt27XewxYjI/AAAAAAAAA_s/-alwqN50hv0c89nppQuvkPFOT5aP4-SJgCLcBGAs/s1600/tutorial%2Bcart%2Bsederhana%2Bmenggunakan%2Bcodeigniter%2Bci.png"/></noscript>
+<b>-Cara Menggunakan Cart Di Codeigniter.</b> Assalamualaikum wr.wb, pada tutorial kali ini kita akan belajar bagaimana cara membuat shopping cart sederhana menggunakan framework codeigniter. Apa sih cart itu? cart adalah sebuah keranjang belanja pada sebuah aplikasi, cart ini sering kita jumpai pada aplikasi-aplikasi E-Commerce atau online shop.<br>
+<br>
+Ketika kita ingin membuat sebuah aplikasi berjenis e-commerce maka shopping cart ini wajib ada pada aplikasi kita. Nah pada tutorial kali ini kita akan belajar membuat nya menggunakan library cart codeigniter. Sebelum kita masuk pada tutorial saya ingin menjelaskan terlebih dahulu apa saja yang akan kita buat pada tutorial shopping cart kali ini.<br>
+<br>
+Pada tutorial kali ini kita akan belajar :<br>
+<ol>
+<li><a href="https://www.kioscoding.com/2018/04/tutorial-membuat-cart-dengan-codeigniter.html" target="_blank">Menambahkan barang atau produk ke cart.</a></li>
+<a href="https://www.kioscoding.com/2018/04/tutorial-membuat-cart-dengan-codeigniter.html" target="_blank">
+</a>
+<li><a href="https://www.kioscoding.com/2018/04/tutorial-membuat-cart-dengan-codeigniter.html" target="_blank">Melihat daftar produk yang ada di cart.</a></li>
+<li><a href="https://www.kioscoding.com/2018/04/tutorial-cara-membuat-cart-dengan-codeigniter.html" target="_blank">Mengubah atau menambah Qty pada cart.</a></li>
+<a href="https://www.kioscoding.com/2018/04/tutorial-cara-membuat-cart-dengan-codeigniter.html" target="_blank">
+</a>
+<li><a href="https://www.kioscoding.com/2018/04/tutorial-cara-membuat-cart-dengan-codeigniter.html" target="_blank">Menghapus produk yang ada di cart.</a></li>
+<li>Memasukan semua produk yang ada di dalam cart kedalam database.</li>
+</ol>
+<br>
+Nah sekarang kita akan belajar bagaimana cara menambahkan barang atau produk kedalam cart dan melihat barang atau produk yang ada di dalam cart.<br>
+<br>
+<br>
+<br>
+<h3>
+Mempersiapkan Database Baru</h3>
+Sebelum kita memulai untuk membuat cart dengan codeigniter, kita harus mempersiapkan database dan tabel beserta data
+ dummy nya terlebih dahulu. Silahkan sobat buat database baru dengan <b>kioscoding,</b> kemudian silahkan sobat import sql yang sudah berisi tabel beserta data dummy 
+nya menggunakan <b>PhpMyAdmin.</b><br>
+<pre data-codetype="HTMLku" title="kioscoding.sql"><code class="language-markup">
+
+
+-- phpMyAdmin SQL Dump
+-- version 4.8.0
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Waktu pembuatan: 29 Apr 2018 pada 16.21
+-- Versi server: 10.1.31-MariaDB
+-- Versi PHP: 7.2.4
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `kioscoding`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `order`
+--
+
+CREATE TABLE `order` (
+  `id_order` int(11) NOT NULL,
+  `id_produk` int(11) DEFAULT NULL,
+  `qty` int(11) DEFAULT NULL,
+  `subtotal` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `produk`
+--
+
+CREATE TABLE `produk` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(100) NOT NULL,
+  `harga` varchar(100) NOT NULL,
+  `stok` varchar(100) NOT NULL,
+  `gambar` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `produk`
+--
+
+INSERT INTO `produk` (`id`, `nama`, `harga`, `stok`, `gambar`) VALUES
+(11, 'Hot Dog', '12000', '', 'hot_dog.jpg'),
+(12, 'Strawberry Lime', '15000', '', 'strawberry.jpg'),
+(13, 'Kupau', '23000', '', 'kupau.jpg');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indeks untuk tabel `order`
+--
+ALTER TABLE `order`
+  ADD PRIMARY KEY (`id_order`),
+  ADD KEY `produk` (`id_produk`);
+
+--
+-- Indeks untuk tabel `produk`
+--
+ALTER TABLE `produk`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT untuk tabel yang dibuang
+--
+
+--
+-- AUTO_INCREMENT untuk tabel `order`
+--
+ALTER TABLE `order`
+  MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT untuk tabel `produk`
+--
+ALTER TABLE `produk`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+--
+
+--
+-- Ketidakleluasaan untuk tabel `order`
+--
+ALTER TABLE `order`
+  ADD CONSTRAINT `produk` FOREIGN KEY (`id_produk`) REFERENCES `produk` (`id`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+</code></pre>
+<br>
+<br>
+Setelah itu buatlah sebuah project baru dengan nama <b>kioscoding, </b>kemudian hubungkan project tadi dengan database yang sudah kita buat tadi dengan cara melakukan sedikit konfigurasi di <b>database.php</b> <b>tepatnya di application/config/database.php.</b><br>
+<pre data-codetype="HTMLku" title="database.php"><code class="language-markup">
+
+
+$active_group = 'default';
+$query_builder = TRUE;
+
+$db['default'] = array(
+ 'dsn' =&gt; '',
+ 'hostname' =&gt; 'localhost',
+ 'username' =&gt; 'root',
+ 'password' =&gt; '',
+ 'database' =&gt; 'kioscoding',
+ 'dbdriver' =&gt; 'mysqli',
+ 'dbprefix' =&gt; '',
+ 'pconnect' =&gt; FALSE,
+ 'db_debug' =&gt; (ENVIRONMENT !== 'production'),
+ 'cache_on' =&gt; FALSE,
+ 'cachedir' =&gt; '',
+ 'char_set' =&gt; 'utf8',
+ 'dbcollat' =&gt; 'utf8_general_ci',
+ 'swap_pre' =&gt; '',
+ 'encrypt' =&gt; FALSE,
+ 'compress' =&gt; FALSE,
+ 'stricton' =&gt; FALSE,
+ 'failover' =&gt; array(),
+ 'save_queries' =&gt; TRUE
+);
+
+</code></pre>
+<br>
+<br>
+<br>
+<br>
+<h3>
+<b>Mengaktifkan Library Yang Akan Digunakan&nbsp;</b></h3>
+Setelah kita 
+membuat database dan tabel baru, sekarang kita akan mengaktifkan atau 
+me-load librrary yang akan digunakan, karena kita akan berhubungan 
+dengan database dan cart maka kita akan mengaktifkan library database nya. <b>application/config/autoload.php.</b><br>
+<br>
+<pre data-codetype="HTMLku" title="autoload.php"><code class="language-markup">
+
+
+$autoload['libraries'] = array('database','cart');
+
+</code></pre>
+<br>
+Dan jangan lupa untuk mengaktifkan helper url nya juga.<br>
+<pre data-codetype="HTMLku" title="autoload.php"><code class="language-markup">
+
+
+$autoload['helper'] = array('url');
+
+</code></pre>
+<br>
+Setelah mengaktifkan library serta helper yang dibutuhkan, sekarang kita setting base_url di <b>config.php</b> dengan url project sobat. sebagai contoh disini saya mengisikan nya sebagai berikut.<br>
+<pre data-codetype="HTMLku" title="config.php"><code class="language-markup">
+
+
+$config['base_url'] = 'http://localhost/kioscoding/';
+
+</code></pre>
+<br>
+<br>
+<h3>
+&nbsp;</h3>
+<h3>
+Membuat Controller Baru</h3>
+Langkah awal yang harus dilakukan setelah kita mensetting konfigurasi dasar adalah membuat controller baru dengan nama <b>Shopping_cart.php</b>. Disini kita akan membuat 3 function sekaligus yaitu function <b>index()</b> yang digunakan untuk menampilkan daftar barang yang ada di database, lalu function <b>beli()</b> yang akan digunakan untuk memasukan barang yang ingin dibeli ke dalam cart, dan function<b> keranjang_belanja()</b> yang akan digunakan untuk menampilkan daftar barang yang disimpan didalam cart.<br>
+<br>
+Baiklah setelah kita mengetahui struktur kode yang akan dibuat sekarang buatlah sebuah controller baru dengan nama <b>Shopping_cart.php</b> kemudian salin lah baris kode berikut dibawah ini.<br>
+<pre data-codetype="HTMLku" title="Shopping_cart.php"><code class="language-markup">
+
+
+&lt;?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Shopping_cart extends CI_Controller{
+
+  public function __construct()
+  {
+    parent::__construct();
+    $this-&gt;load-&gt;model('M_cart');
+  }
+
+  public function index(){
+
+    $data['product'] = $this-&gt;M_cart-&gt;get()-&gt;result();
+    $data['cart'] = $this-&gt;cart-&gt;contents();
+    $this-&gt;load-&gt;view('index',$data);
+  }
+
+  public function beli(){
+    $data = array(
+            'id' =&gt; $this-&gt;input-&gt;post('id'),
+      'name' =&gt; $this-&gt;input-&gt;post('nama'),
+      'price' =&gt; $this-&gt;input-&gt;post('harga'),
+      'gambar' =&gt; $this-&gt;input-&gt;post('gambar'),
+      'qty' =&gt;$this-&gt;input-&gt;post('qty')
+      );
+  $this-&gt;cart-&gt;insert($data);
+    redirect('Shopping_cart');
+  }
+
+  public function keranjang_belanja(){
+    $data['cart'] = $this-&gt;cart-&gt;contents();
+    $this-&gt;load-&gt;view('keranjang_belanja',$data);
+  }
+
+}
+
+</code></pre>
+<br>
+<br>
+Sedikit penjelasan saja pada function <b>index()</b> pertama kita tampilkan data produk yang ada di database menggunakan function get() pada model<b> M_cart.php.</b><br>
+<pre data-codetype="HTMLku" title="Shopping_cart.php"><code class="language-markup">
+
+
+$data['product'] = $this-&gt;M_cart-&gt;get()-&gt;result();
+
+</code></pre>
+<br>
+<br>
+Dikarenakan kita akan menampilkan jumlah barang yang ada di dalam cart maka kita gunakan fungsi yang ada pada library cart untuk menampilkan barang apa saja yang ada di dalam cart yang kemudian akan kita hitung jumlah nya menggunakan fungsi <b>count()</b> yang akan kita buat pada view nanti.<br>
+<pre data-codetype="HTMLku" title="Shopping_cart.php"><code class="language-markup">
+
+
+$data['cart'] = $this-&gt;cart-&gt;contents();
+
+</code></pre>
+<br>
+<br>
+Lalu pada function <b>beli()</b> kita gunakan untuk menyimpan barang yang ingin dibeli kedalam cart. Untuk memasukannya kita simpan terlebih dahulu data yang dikirim dari form pada view yang akan kita buat nanti kedalam <b>array(). -tutorial membuat shopping cart menggunakan codeigniter</b><br>
+<pre data-codetype="HTMLku" title="Shopping_cart.php"><code class="language-markup">
+
+
+$data = array(
+            'id' =&gt; $this-&gt;input-&gt;post('id'),
+      'name' =&gt; $this-&gt;input-&gt;post('nama'),
+      'price' =&gt; $this-&gt;input-&gt;post('harga'),
+      'gambar' =&gt; $this-&gt;input-&gt;post('gambar'),
+      'qty' =&gt;$this-&gt;input-&gt;post('qty')
+      );
+
+</code></pre>
+<br>
+<br>
+Kemudian kita masukan data yang ada didalam array tadi kedalam cart menggunakan fungsi <b>insert() </b>lalu kita alihkan halaman ke controller <b>Shopping_cart</b> menggunakan fungsi <b>redirect().</b><br>
+<pre data-codetype="HTMLku" title="Shopping_cart.php"><code class="language-markup">
+
+
+$this-&gt;cart-&gt;insert($data);
+    redirect('Shopping_cart');
+
+</code></pre>
+<br>
+<br>
+Selanjutnya pada function <b>keranjang_belanja()</b> kita gunakan untuk menampilkan barang apa saja yang ada didalam cart menggunakan fungsi <b>contents().</b><br>
+<pre data-codetype="HTMLku" title="Shopping_cart.php"><code class="language-markup">
+
+
+$data['cart'] = $this-&gt;cart-&gt;contents();
+
+</code></pre>
+<br>
+<br>
+<h3>
+&nbsp;</h3>
+<h3>
+Membuat Model Baru</h3>
+Setelah kita membuat sebuah controller baru sekarang kita buat sebuah model baru dengan nama <b>M_cart.php.</b> Kemudian kita buat sebuah function baru dengan nama <b>get().</b> Function ini akan kita gunakan untuk menampilkan daftar produk yang ada didalam database kita. Silahkan salin baris kode berikut kedalam model yang sudah sobat buat tadi.<br>
+<br>
+<pre data-codetype="HTMLku" title="M_cart.php"><code class="language-markup">
+
+
+&lt;?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class M_cart extends CI_Model{
+
+  public function __construct()
+  {
+    parent::__construct();
+  }
+
+  public function get(){
+    return $this-&gt;db-&gt;get('produk');
+  }
+
+}
+
+</code></pre>
+<br>
+<br>
+<h3>
+&nbsp;</h3>
+<h3>
+Membuat 2 Buah View Baru</h3>
+Kemudian setelah kita membuat sebuah controller dan model baru langkah terakhir kita buat 2 buah view baru dengan nama<b> index.php </b>yang akan kita gunakan untuk menampilkan data produk yang ada didalam database dan<b> keranjang_belanja.php</b> yang akan digunakan untuk menampilkan data produk yang kita simpan di dalam<b> cart.</b><br>
+<br>
+Sebelum kita membuat view baru silahkan sobat buat sebuah folder baru dengan nama assets dan didalamnya buat 2 buah folder baru dengan nama <b>bootstrap</b> dan <b>images.</b> Folder bootstrap digunakan untuk menyimpan resource bootstrap nya karena kita akan menggunakan bootstrap untuk mempercantik tampilannya, dan folder images digunakan untuk menyimpan gambar yang dibutuhkan oleh data produk yang ada di dalam database kita.<br>
+<br>
+Silahkan download terlebih dahulu bootstrap nya di situs resmi nya <a href="http://getbootstrap.com/docs/3.3/" target="_blank">disini</a>. Kemudian masukan file tersebut kedalam folder <b>bootstrap,</b> lalu masukan juga beberapa gambar yang dapat sobat download <a href="https://drive.google.com/open?id=1pYA6gTGG-oKE5CwtibVbrBpSnhwyopO2" target="_blank">disini</a> kedalam folder <b>images</b> sehingga kurang lebih struktur folder nya seperti berikut.<br>
+<br>
+<amp-img alt="aplikasi ecommerce codeigniter sederhana, membuat cart dengan ci, shopping cart codeigniter 3, menggunakan library cart codeigniter" height="630" layout="responsive" src="https://3.bp.blogspot.com/-Ty004WrmJPY/Wt26bIWppzI/AAAAAAAAA_Y/_XAAeg56SpcAoJKZToJ3r-q_fH-Aui1QACLcBGAs/s1600/how%2Bto%2Bcreate%2Bcart%2Busing%2Bcodeigniter.png" width="366" class="i-amphtml-element i-amphtml-layout-responsive i-amphtml-layout-size-defined"><i-amphtml-sizer style="display: block; padding-top: 172.131%;"></i-amphtml-sizer></amp-img>
+
+<br>
+Setelah mempersiapkan bahan-bahan pendukung nya sekarang buat 2 buah view baru dengan nama <b>index.php</b> dan <b>keranjang_belanja.php.</b> Kemudian salin baris kode berikut dibawah ini.<br>
+<pre data-codetype="HTMLku" title="index.php"><code class="language-markup">
+
+
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;KiosCoding&lt;/title&gt;
+  &lt;link href="&lt;?php echo base_url('assets/bootstrap/css/bootstrap.min.css'); ?&gt;" rel="stylesheet" type="text/css"&gt;
+  &lt;style&gt;
+  .kotak
+ {
+  padding:10px;
+  border:1px solid #e8e8e8;
+  margin-bottom:15px;
+  background:#F4F4F4;
+  border-radius:5px;
+ }
+
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- INI ADALAH HEADER --&gt;
+     &lt;nav class="navbar navbar-default navbar-fixed-top"&gt;
+        &lt;div class="container"&gt;
+          &lt;div class="navbar-header"&gt;
+            &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"&gt;
+              &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+              &lt;span class="icon-bar"&gt;&lt;/span&gt;
+              &lt;span class="icon-bar"&gt;&lt;/span&gt;
+              &lt;span class="icon-bar"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;a class="navbar-brand" href="https://www.kioscoding.com"&gt;KiosCoding&lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div id="navbar" class="navbar-collapse collapse"&gt;
+            &lt;ul class="nav navbar-nav"&gt;
+              &lt;li class="active"&gt;&lt;a href="&lt;?php echo site_url('Shopping_cart/')?&gt;"&gt;Data Produk&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="&lt;?php echo site_url('Shopping_cart/keranjang_belanja/')?&gt;"&gt;Keranjang Belanja (&lt;?php echo count($cart); ?&gt;)&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;ul class="nav navbar-nav navbar-right"&gt;
+              &lt;li&gt;&lt;a href="https://www.kioscoding.com/search/label/CODEIGNITER"&gt;Tutorial lainnya&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/nav&gt;
+   &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+   &lt;div class="container"&gt;
+     &lt;div class="row"&gt;
+       &lt;?php foreach($product as $p){ ?&gt;
+          &lt;div class="col-lg-4 col-md-6 mb-4"&gt;
+            &lt;div class="kotak"&gt;
+            &lt;a href="#"&gt;&lt;/a&gt;
+            &lt;a href="#"&gt;&lt;img class="img-thumbnail" src="&lt;?php echo base_url() . 'assets/images/'.$p-&gt;gambar  ?&gt;"/&gt;&lt;/a&gt;
+              &lt;div class="card-body"&gt;
+                &lt;h1 class="card-title"&gt;
+                  &lt;a href="#"&gt;&lt;?php echo $p-&gt;nama; ?&gt;&lt;/a&gt;
+                &lt;/h1&gt;
+                &lt;h4&gt;Rp. &lt;?php echo number_format($p-&gt;harga,0,",","."); ?&gt;&lt;/h4&gt;
+             &lt;/div&gt;
+             &lt;form method="post" action="&lt;?php echo site_url('Shopping_cart/beli'); ?&gt;"&gt;
+               &lt;input type="hidden" name="id" value="&lt;?php echo $p-&gt;id; ?&gt;" /&gt;
+               &lt;input type="hidden" name="nama" value="&lt;?php echo $p-&gt;nama; ?&gt;" /&gt;
+               &lt;input type="hidden" name="harga" value="&lt;?php echo $p-&gt;harga; ?&gt;" /&gt;
+               &lt;input type="hidden" name="gambar" value="&lt;?php echo $p-&gt;gambar; ?&gt;" /&gt;
+               &lt;input type="hidden" name="qty" value="1" /&gt;
+              &lt;div class="card-footer"&gt;
+                &lt;button type="submit" class="btn btn-sm btn-primary"&gt;&lt;i class="glyphicon glyphicon-shopping-cart"&gt;&lt;/i&gt; Beli&lt;/button&gt;
+              &lt;/div&gt;
+            &lt;/form&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;?php } ?&gt;
+     &lt;/div&gt;
+
+&lt;/div&gt; &lt;!-- /container --&gt;
+  &lt;script src="&lt;?php echo base_url('assets/bootstrap/js/bootstrap.min.js'); ?&gt;"&gt;&lt;/script&gt;
+  &lt;script src="&lt;?php echo base_url('assets/bootstrap/js/jquery.min.js'); ?&gt;"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+<br>
+<pre data-codetype="HTMLku" title="keranjang_belanja.php"><code class="language-markup">
+
+
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;KiosCoding&lt;/title&gt;
+  &lt;link href="&lt;?php echo base_url('assets/bootstrap/css/bootstrap.min.css'); ?&gt;" rel="stylesheet" type="text/css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- INI ADALAH HEADER --&gt;
+  &lt;nav class="navbar navbar-default navbar-fixed-top"&gt;
+     &lt;div class="container"&gt;
+       &lt;div class="navbar-header"&gt;
+         &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"&gt;
+           &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+           &lt;span class="icon-bar"&gt;&lt;/span&gt;
+           &lt;span class="icon-bar"&gt;&lt;/span&gt;
+           &lt;span class="icon-bar"&gt;&lt;/span&gt;
+         &lt;/button&gt;
+         &lt;a class="navbar-brand" href="https://www.kioscoding.com"&gt;KiosCoding&lt;/a&gt;
+       &lt;/div&gt;
+       &lt;div id="navbar" class="navbar-collapse collapse"&gt;
+         &lt;ul class="nav navbar-nav"&gt;
+           &lt;li class="active"&gt;&lt;a href="&lt;?php echo site_url('Shopping_cart/')?&gt;"&gt;Data Produk&lt;/a&gt;&lt;/li&gt;
+           &lt;li&gt;&lt;a href="&lt;?php echo site_url('Shopping_cart/keranjang_belanja/')?&gt;"&gt;Keranjang Belanja (&lt;?php echo count($cart); ?&gt;)&lt;/a&gt;&lt;/li&gt;
+         &lt;/ul&gt;
+         &lt;ul class="nav navbar-nav navbar-right"&gt;
+           &lt;li&gt;&lt;a href="https://www.kioscoding.com/search/label/CODEIGNITER"&gt;Tutorial lainnya&lt;/a&gt;&lt;/li&gt;
+         &lt;/ul&gt;
+       &lt;/div&gt;
+     &lt;/div&gt;
+   &lt;/nav&gt;
+   &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+   &lt;div class="container"&gt;
+     &lt;h2 align="center"&gt;KERANJANG BELANJA&lt;/h2&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+      &lt;table class="table table-hover"&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Gambar&lt;/th&gt;
+            &lt;th&gt;Nama Produk&lt;/th&gt;
+            &lt;th&gt;Harga Produk&lt;/th&gt;
+            &lt;th&gt;QTY&lt;/th&gt;
+            &lt;th&gt;Subtotal&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;?php
+            $total = 0;
+            foreach($cart as $item){
+              $total += $item['subtotal'];
+          ?&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;img src="&lt;?php echo base_url('assets/images/'.$item['gambar']) ?&gt;" width="100"&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;?php echo $item['name']; ?&gt;&lt;/td&gt;
+            &lt;td&gt;Rp &lt;?php echo number_format($item['price'],0,',','.'); ?&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;?php echo $item['qty']; ?&gt;&lt;/td&gt;
+            &lt;td&gt;Rp &lt;?php echo number_format($item['subtotal'],0,',','.'); ?&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;?php } ?&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;&lt;hr&gt;&lt;br&gt;
+      &lt;h4&gt;Total Yang Harus Dibayar : Rp &lt;?php echo number_format($total,0,',','.'); ?&gt;&lt;/h4&gt;
+   &lt;/div&gt; &lt;!-- /container --&gt;
+  &lt;script src="&lt;?php echo base_url('assets/bootstrap/js/bootstrap.min.js'); ?&gt;"&gt;&lt;/script&gt;
+  &lt;script src="&lt;?php echo base_url('assets/bootstrap/js/jquery.min.js'); ?&gt;"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+<br>
+<br>
+<br>
+<br>
+<h3>
+&nbsp;</h3>
+<h3>
+Demo Project Shopping Cart</h3>
+Setelah kita melakukan semua tahapan diatas, sekarang silahkan sobat buka project nya dengan menuliskan alamat <b>http://localhost/kioscoding/index.php/shopping_cart/</b> maka akan tampil sebagai berikut<br>
+<br>
+<br>
+<amp-img alt="update cart codeigniter, add cart codeigniter, delete cart codeigniter, cara menggunakan cart di codeigniter, ecommerce sederhana menggunakan codeigniter" height="671" layout="responsive" src="https://4.bp.blogspot.com/-uM8Fmggjb3o/Wt26bgUm61I/AAAAAAAAA_c/icE1frDxG7o_9nOta4kxQUK-3mOErSuWwCLcBGAs/s1600/tutorial%2Bcart%2Bmenggunakan%2Bcodeigniter.png" width="1366" class="i-amphtml-element i-amphtml-layout-responsive i-amphtml-layout-size-defined"><i-amphtml-sizer style="display: block; padding-top: 49.1215%;"></i-amphtml-sizer></amp-img><br>
+<br>
+<br>
+Lalu coba pilih produk yang ingin dimasukan kedalam cart dengan menekan tombol beli jika sobat mengikuti tutorial ini dengan benar maka angka disamping tulisan keranjang belanja akan berubah menjadi 1 kemudian silahkan cek keranjang belanja anda dan produk yang anda beli tadi akan masuk kedalam cart dan tampil di keranjang belanja sobat. <b>-belajar membuat cart dengan codeigniter.</b><br>
+<br>
+<amp-img alt="update cart codeigniter, add cart codeigniter, delete cart codeigniter, cara menggunakan cart di codeigniter, ecommerce sederhana menggunakan codeigniter" height="629" layout="responsive" src="https://3.bp.blogspot.com/-ocZm3_jJP9s/Wt26bAULflI/AAAAAAAAA_U/y1UnSxJmDvAvduD8rVFM9jSjZqGdfHYnQCLcBGAs/s1600/shopping%2Bcart%2Bsederhana%2Bdengan%2Bcodeigniter.png" width="1343" class="i-amphtml-element i-amphtml-layout-responsive i-amphtml-layout-size-defined"><i-amphtml-sizer style="display: block; padding-top: 46.8354%;"></i-amphtml-sizer></amp-img>
+
+<br>
+<br>
+<br>
+Cukup sekian tutorial kali ini, semoga bermanfaat dan admin meminta maaf karna sudah lama tidak menulis tutorial pemrograman dikarenakan admin saat itu sedang sibuk dengan urusan di dunia nyata hehe.<br>
+<br>
+Untuk tutorial selanjutnya kita akan belajar <a href="https://www.kioscoding.com/2018/04/tutorial-cara-membuat-cart-dengan-codeigniter.html" target="_blank">bagaimana cara mengubah atau menambahkan qty pada cart dan menghapus produk atau data yang ada di dalam cart</a>. <b>-Cara Menggunakan Library Cart Di Codeigniter.</b>
+<div class="adsense336">
+<amp-ad data-ad-client="ca-pub-2383736688165580" data-ad-slot="1670354027" height="250" layout="fixed-height" type="adsense" class="i-amphtml-element i-amphtml-layout-fixed-height i-amphtml-layout-size-defined" style="height: 250px;" data-amp-slot-index="1"><div fallback=""><div class="i-amphtml-ad-default-holder" data-ad-holder-text="Ad"></div></div><div placeholder=""><div class="i-amphtml-ad-default-holder" data-ad-holder-text="Ad"></div></div></amp-ad>
+</div>
+<div class="clear"></div>
+</div>
+<div class="post-footer">
+<div class="post-footer-line post-footer-line-1">
+</div>
+<div class="post-footer-line post-footer-line-2">
+</div>
+<div class="post-footer-line post-footer-line-3"><span class="post-location">
+</span>
+</div>
+</div>
+<div class="ampsoc">
+<amp-social-share data-param-app_id="100003793780919" height="38" type="facebook" width="75" class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined amp-social-share-facebook" style="width: 75px; height: 38px;" role="button" tabindex="0"></amp-social-share>
+<amp-social-share height="38" type="twitter" width="75" class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined amp-social-share-twitter" style="width: 75px; height: 38px;" role="button" tabindex="0"></amp-social-share>
+<amp-social-share height="38" type="gplus" width="75" class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined amp-social-share-gplus" style="width: 75px; height: 38px;" role="button" tabindex="0"></amp-social-share>
+<amp-social-share height="38" type="linkedin" width="75" class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined amp-social-share-linkedin" style="width: 75px; height: 38px;" role="button" tabindex="0"></amp-social-share>
+<amp-social-share height="38" type="pinterest" width="75" class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined amp-social-share-pinterest" style="width: 75px; height: 38px;" role="button" tabindex="0"></amp-social-share>
+</div>
+<amp-iframe frameborder="0" height="320" layout="responsive" resizable="resizable" sandbox="allow-scripts allow-same-origin allow-modals allow-popups" src="https://cdn.rawgit.com/kangismet/ki-html/master/random-posts2.html?url=https://www.kioscoding.com/" width="600" class="i-amphtml-element i-amphtml-layout-responsive i-amphtml-layout-size-defined" scrolling="no"><i-amphtml-sizer style="display: block; padding-top: 53.3333%;"></i-amphtml-sizer>
+<div aria-label="Tutorial Lainnya" overflow="" role="button" tabindex="0">Tutorial Lainnya</div>
+</amp-iframe>
+<div class="amp-info">
+<span itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+<span class="amp-selfi">
+<amp-img alt="bm" height="90" src="//lh4.googleusercontent.com/-wFDq30oDxGU/AAAAAAAAAAI/AAAAAAAAAyA/K_HwgiLvah8/s512-c/photo.jpg" title="Autor" width="90" class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined" style="width: 90px; height: 90px;"></amp-img>
+</span>
+<span class="amp-admin vcard">
+<span class="author"><span class="fn">
+<a href="https://plus.google.com/101061887657544929491" itemprop="url" rel="publisher" target="_blank" title="author profile">
+<span class="post-author vcard"><span class="fn" itemprop="name">KiosCoding</span>
+</span></a>
+</span></span>
+<span class="amp-mesengers">
+Sebuah website sederhana yang membahas seputar tutorial bahasa pemrograman. Yang diharapkan dapat membantu seluruh pelajar ataupun programmer dalam memahami bahasa pemrograman.
+</span>
+</span>
+</span>
+</div>
+</div>
+<div class="clear"></div>
+</article>
+<div class="comments">
+<amp-iframe frameborder="0" height="300" layout="responsive" resizable="resizable" sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms" src="https://cdn.rawgit.com/basrimedia/online/793395fc/disqusonline.html?shortname=kioscoding&amp;url=https://www.kioscoding.com/2018/04/tutorial-membuat-cart-dengan-codeigniter.html" width="600" class="i-amphtml-element i-amphtml-layout-responsive i-amphtml-layout-size-defined" scrolling="no"><i-amphtml-sizer style="display: block; padding-top: 50%;"></i-amphtml-sizer>
+<div aria-label="Disqus Comments" overflow="" role="button" tabindex="0">Disqus Comments</div>
+</amp-iframe>
+</div>
+</div>
+<!--Can't find substitution for tag [adEnd]-->
+</div>
+<div class="blog-pager" id="blog-pager">
+<span id="blog-pager-newer-link">
+<a class="blog-pager-newer-link" href="https://www.kioscoding.com/2018/04/tutorial-cara-membuat-cart-dengan-codeigniter.html" id="Blog1_blog-pager-newer-link" title="Posting Lebih Baru">Posting Lebih Baru</a>
+</span>
+<span id="blog-pager-older-link">
+<a class="blog-pager-older-link" href="https://www.kioscoding.com/2018/03/multiple-search-data-di-codeigniter.html" id="Blog1_blog-pager-older-link" title="Posting Lama">Posting Lama</a>
+</span>
+<a class="home-link" href="https://www.kioscoding.com/">Beranda</a>
+</div>
+<div class="clear"></div>
+<div class="clear"></div>
+<div class="post-feeds">
+</div>
+</div></div>
+</div></div>
+<div itemprop="mainEntity" itemscope="itemscope" itemtype="https://schema.org/WPSideBar">
+<aside class="sidebar-amp">
+<div class="sidebar section" id="sidebar"><div class="widget HTML" data-version="1" id="HTML3">
+<div class="widget-content">
+<amp-ad width="300" height="250" type="adsense" layout="responsive" data-ad-client="ca-pub-2383736688165580" data-ad-slot="1670354027" class="i-amphtml-element i-amphtml-layout-responsive i-amphtml-layout-size-defined i-amphtml-layout" data-amp-slot-index="2"><i-amphtml-sizer style="display: block; padding-top: 83.3333%;"></i-amphtml-sizer>
+<div fallback=""><div class="i-amphtml-ad-default-holder" data-ad-holder-text="Ad"></div></div><div placeholder="" class="amp-hidden"><div class="i-amphtml-ad-default-holder" data-ad-holder-text="Ad"></div></div><iframe src="./Membuat Shopping Cart Dengan CodeIgniter Part 1 _ CodeIgniter_files/frame(1).html" name="{&quot;host&quot;:&quot;d-20021334432230990627.ampproject.net&quot;,&quot;type&quot;:&quot;adsense&quot;,&quot;count&quot;:1,&quot;attributes&quot;:{&quot;adClient&quot;:&quot;ca-pub-2383736688165580&quot;,&quot;adSlot&quot;:&quot;1670354027&quot;,&quot;ampSlotIndex&quot;:&quot;2&quot;,&quot;width&quot;:300,&quot;height&quot;:250,&quot;_context&quot;:{&quot;ampcontextVersion&quot;:&quot;1524862012167&quot;,&quot;ampcontextFilepath&quot;:&quot;https://3p.ampproject.net/1524862012167/ampcontext-v0.js&quot;,&quot;sourceUrl&quot;:&quot;https://www.kioscoding.com/2018/04/tutorial-membuat-cart-dengan-codeigniter.html&quot;,&quot;referrer&quot;:&quot;https://www.google.co.id/&quot;,&quot;canonicalUrl&quot;:&quot;https://www.kioscoding.com/2018/04/tutorial-membuat-cart-dengan-codeigniter.html&quot;,&quot;pageViewId&quot;:&quot;4089&quot;,&quot;location&quot;:{&quot;href&quot;:&quot;https://www.kioscoding.com/2018/04/tutorial-membuat-cart-dengan-codeigniter.html&quot;},&quot;startTime&quot;:1525166535885,&quot;tagName&quot;:&quot;AMP-AD&quot;,&quot;mode&quot;:{&quot;localDev&quot;:false,&quot;development&quot;:false,&quot;minified&quot;:true,&quot;lite&quot;:false,&quot;test&quot;:false,&quot;version&quot;:&quot;1524862012167&quot;,&quot;rtvVersion&quot;:&quot;011524862012167&quot;},&quot;canary&quot;:false,&quot;hidden&quot;:false,&quot;initialLayoutRect&quot;:{&quot;left&quot;:890,&quot;top&quot;:252,&quot;width&quot;:294,&quot;height&quot;:245},&quot;initialIntersection&quot;:{&quot;time&quot;:10653.999999994994,&quot;rootBounds&quot;:{&quot;left&quot;:0,&quot;top&quot;:0,&quot;width&quot;:1366,&quot;height&quot;:613,&quot;bottom&quot;:613,&quot;right&quot;:1366,&quot;x&quot;:0,&quot;y&quot;:0},&quot;boundingClientRect&quot;:{&quot;left&quot;:890,&quot;top&quot;:252,&quot;width&quot;:294,&quot;height&quot;:245,&quot;bottom&quot;:497,&quot;right&quot;:1184,&quot;x&quot;:890,&quot;y&quot;:252},&quot;intersectionRect&quot;:{&quot;left&quot;:890,&quot;top&quot;:252,&quot;width&quot;:294,&quot;height&quot;:245,&quot;bottom&quot;:497,&quot;right&quot;:1184,&quot;x&quot;:890,&quot;y&quot;:252},&quot;intersectionRatio&quot;:1},&quot;domFingerprint&quot;:&quot;2321321029&quot;,&quot;experimentToggles&quot;:{&quot;canary&quot;:false,&quot;expAdsenseA4A&quot;:false,&quot;expDoubleclickA4A&quot;:false,&quot;expDfpCanonicalFf&quot;:false,&quot;expUnconditionedCanonical&quot;:false,&quot;dbclk_a4a_viz_change&quot;:false,&quot;a4aProfilingRate&quot;:false,&quot;ad-type-custom&quot;:true,&quot;ios-embed-wrapper&quot;:true,&quot;amp-apester-media&quot;:true,&quot;amp-ima-video&quot;:true,&quot;amp-playbuzz&quot;:true,&quot;chunked-amp&quot;:true,&quot;amp-auto-ads&quot;:true,&quot;amp-auto-ads-adsense-holdout&quot;:false,&quot;slidescroll-disable-css-snap&quot;:true,&quot;version-locking&quot;:true,&quot;a4aFastFetchDoubleclickLaunched&quot;:false,&quot;a4aFastFetchAdSenseLaunched&quot;:false,&quot;a4a-new-signature-verifier&quot;:true,&quot;pump-early-frame&quot;:true,&quot;a4a-measure-get-ad-urls&quot;:false,&quot;3p-use-ampcontext&quot;:true,&quot;amp-animation&quot;:true,&quot;amp-live-list-sorting&quot;:true,&quot;amp-sidebar toolbar&quot;:true,&quot;a4a-safeframe-preloading-off&quot;:false,&quot;expUnconditionedAdxIdentity&quot;:false,&quot;expUnconditionedDfpIdentity&quot;:false,&quot;expUnconditionedCanonicalHoldback&quot;:false,&quot;rollback-delayed-fetch-deprecation&quot;:false,&quot;rollback-dfd-ix&quot;:true,&quot;rollback-dfd-criteo&quot;:true,&quot;rollback-dfd-rubicon&quot;:true,&quot;rollback-dfd-navegg&quot;:true,&quot;rollback-dfd-openx&quot;:true,&quot;rollback-dfd-yieldbot&quot;:true,&quot;rollback-dfd-imonomy&quot;:true,&quot;rollback-dfd-pulsepoint&quot;:true,&quot;dcdf-whitelist-deprecation&quot;:false,&quot;amp-consent&quot;:true},&quot;sentinel&quot;:&quot;0-29861373451249124802&quot;,&quot;clientId&quot;:&quot;amp-uBVizE3iryH4PJp91auZdw&quot;,&quot;container&quot;:null},&quot;type&quot;:&quot;adsense&quot;}}" width="300" height="250" scrolling="no" data-amp-3p-sentinel="0-29861373451249124802" class="i-amphtml-fill-content" style="border: none;"></iframe></amp-ad>
+</div>
+</div><div class="widget PopularPosts" data-version="1" id="PopularPosts2">
+<h3>Tutorial populer</h3>
+<div class="widget-content popular-posts">
+<ul>
+<li>
+<div class="item-thumbnail-only">
+<div class="item-thumbnail">
+<a href="https://www.kioscoding.com/2017/09/cara-membuat-crud-php-mysqli-sederhana.html">
+<amp-img alt="Cara Membuat CRUD PHP MYSQLI Sederhana Lengkap | PHP" height="72" src="https://2.bp.blogspot.com/-GpNSACVUIJU/WavHY7dGZVI/AAAAAAAAAZI/aHZYybKJY401Z0f2ZrG_tnEXog2u5vlIACLcBGAs/w300/contoh-crud-sederhana-menggunakan-php-mysqli.png" title="Cara Membuat CRUD PHP MYSQLI Sederhana Lengkap | PHP" width="100" class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-layout" style="width: 100px; height: 72px;"><img decoding="async" alt="Cara Membuat CRUD PHP MYSQLI Sederhana Lengkap | PHP" title="Cara Membuat CRUD PHP MYSQLI Sederhana Lengkap | PHP" class="i-amphtml-fill-content i-amphtml-replaced-content" src="./Membuat Shopping Cart Dengan CodeIgniter Part 1 _ CodeIgniter_files/contoh-crud-sederhana-menggunakan-php-mysqli.png"></amp-img>
+</a>
+</div>
+<div class="item-title"><a href="https://www.kioscoding.com/2017/09/cara-membuat-crud-php-mysqli-sederhana.html">Cara Membuat CRUD PHP MYSQLI Sederhana Lengkap | PHP</a></div>
+</div>
+<div class="clear"></div>
+</li>
+<li>
+<div class="item-thumbnail-only">
+<div class="item-thumbnail">
+<a href="https://www.kioscoding.com/2017/11/membuat-login-multiuser-di-codeigniter.html">
+<amp-img alt="Membuat Login Multiuser Di Codeigniter Menggunakan Session | Codeigniter" height="72" src="https://4.bp.blogspot.com/-VNrH9OuDk_Q/Wf6k-_2v2vI/AAAAAAAAAqY/59ZZU85b800mNpgj4gnQnHksKVQe6EuWwCEwYBhgL/w300/contoh-login-session-dengan-level-berbeda-di-codeigniter.png" title="Membuat Login Multiuser Di Codeigniter Menggunakan Session | Codeigniter" width="100" class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-layout" style="width: 100px; height: 72px;"><img decoding="async" alt="Membuat Login Multiuser Di Codeigniter Menggunakan Session | Codeigniter" title="Membuat Login Multiuser Di Codeigniter Menggunakan Session | Codeigniter" class="i-amphtml-fill-content i-amphtml-replaced-content" src="./Membuat Shopping Cart Dengan CodeIgniter Part 1 _ CodeIgniter_files/contoh-login-session-dengan-level-berbeda-di-codeigniter.png"></amp-img>
+</a>
+</div>
+<div class="item-title"><a href="https://www.kioscoding.com/2017/11/membuat-login-multiuser-di-codeigniter.html">Membuat Login Multiuser Di Codeigniter Menggunakan Session | Codeigniter</a></div>
+</div>
+<div class="clear"></div>
+</li>
+<li>
+<div class="item-thumbnail-only">
+<div class="item-thumbnail">
+<a href="https://www.kioscoding.com/2017/09/login-session-menggunakan-codeigniter.html">
+<amp-img alt="Cara Membuat Login Menggunakan Session Di CodeIgniter | CodeIgniter" height="72" src="https://2.bp.blogspot.com/-pQZ1w3hyZkw/Wc_E6iueF0I/AAAAAAAAApI/NOLC636Qw5IC-g3eFttqaEgQh3mhsTf5ACLcBGAs/w300/contoh-login-sederhana-codeigniter.png" title="Cara Membuat Login Menggunakan Session Di CodeIgniter | CodeIgniter" width="100" class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-layout" style="width: 100px; height: 72px;"><img decoding="async" alt="Cara Membuat Login Menggunakan Session Di CodeIgniter | CodeIgniter" title="Cara Membuat Login Menggunakan Session Di CodeIgniter | CodeIgniter" class="i-amphtml-fill-content i-amphtml-replaced-content" src="./Membuat Shopping Cart Dengan CodeIgniter Part 1 _ CodeIgniter_files/contoh-login-sederhana-codeigniter.png"></amp-img>
+</a>
+</div>
+<div class="item-title"><a href="https://www.kioscoding.com/2017/09/login-session-menggunakan-codeigniter.html">Cara Membuat Login Menggunakan Session Di CodeIgniter | CodeIgniter</a></div>
+</div>
+<div class="clear"></div>
+</li>
+<li>
+<div class="item-thumbnail-only">
+<div class="item-thumbnail">
+<a href="https://www.kioscoding.com/2017/09/integrasi-bootstrap-dengan-codeigniter.html">
+<amp-img alt="Cara Mengintegrasikan Bootstrap Dengan CodeIgniter | CodeIgniter" height="72" src="https://3.bp.blogspot.com/-w3rXw0p2LMs/Wc85UtZVAqI/AAAAAAAAAoo/08Us8BscRCQvtodZi-wy6Q-JtpexsJH4gCLcBGAs/w300/cara%2Bmengintegrasikan%2Bbootstrap%2Bdi%2Bcodeigniter.png" title="Cara Mengintegrasikan Bootstrap Dengan CodeIgniter | CodeIgniter" width="100" class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-layout" style="width: 100px; height: 72px;"><img decoding="async" alt="Cara Mengintegrasikan Bootstrap Dengan CodeIgniter | CodeIgniter" title="Cara Mengintegrasikan Bootstrap Dengan CodeIgniter | CodeIgniter" class="i-amphtml-fill-content i-amphtml-replaced-content" src="./Membuat Shopping Cart Dengan CodeIgniter Part 1 _ CodeIgniter_files/cara mengintegrasikan bootstrap di codeigniter.png"></amp-img>
+</a>
+</div>
+<div class="item-title"><a href="https://www.kioscoding.com/2017/09/integrasi-bootstrap-dengan-codeigniter.html">Cara Mengintegrasikan Bootstrap Dengan CodeIgniter | CodeIgniter</a></div>
+</div>
+<div class="clear"></div>
+</li>
+<li>
+<div class="item-thumbnail-only">
+<div class="item-thumbnail">
+<a href="https://www.kioscoding.com/2017/12/login-multi-level-sederhana-php-mysqli.html">
+<amp-img alt="Cara Membuat Login Multi User Dengan PHP MySQLi | PHP" height="72" src="https://4.bp.blogspot.com/-iBJwvMSRCUY/WjoBdeAlZrI/AAAAAAAAA24/VN5Ab8GFsdEc7JkIoXeDgiZlB5imMlYCwCLcBGAs/w300/cara-membuat-login-multi-level-php-mysqli.png" title="Cara Membuat Login Multi User Dengan PHP MySQLi | PHP" width="100" class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-layout" style="width: 100px; height: 72px;"><img decoding="async" alt="Cara Membuat Login Multi User Dengan PHP MySQLi | PHP" title="Cara Membuat Login Multi User Dengan PHP MySQLi | PHP" class="i-amphtml-fill-content i-amphtml-replaced-content" src="./Membuat Shopping Cart Dengan CodeIgniter Part 1 _ CodeIgniter_files/cara-membuat-login-multi-level-php-mysqli.png"></amp-img>
+</a>
+</div>
+<div class="item-title"><a href="https://www.kioscoding.com/2017/12/login-multi-level-sederhana-php-mysqli.html">Cara Membuat Login Multi User Dengan PHP MySQLi | PHP</a></div>
+</div>
+<div class="clear"></div>
+</li>
+<li>
+<div class="item-thumbnail-only">
+<div class="item-thumbnail">
+<a href="https://www.kioscoding.com/2017/09/contoh-crud-codeigniter.html">
+<amp-img alt="Cara Membuat CRUD Menggunakan CodeIgniter : Update Data Dari Database" height="72" src="https://3.bp.blogspot.com/-D062_eBWoZA/Wb0iV6pJprI/AAAAAAAAAiA/-l6P1M4YRjsCJZn0tOjaoJjtKQotQOlwQCLcBGAs/w300/codeigniter-crud.png" title="Cara Membuat CRUD Menggunakan CodeIgniter : Update Data Dari Database" width="100" class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-layout" style="width: 100px; height: 72px;"><img decoding="async" alt="Cara Membuat CRUD Menggunakan CodeIgniter : Update Data Dari Database" title="Cara Membuat CRUD Menggunakan CodeIgniter : Update Data Dari Database" class="i-amphtml-fill-content i-amphtml-replaced-content" src="./Membuat Shopping Cart Dengan CodeIgniter Part 1 _ CodeIgniter_files/codeigniter-crud.png"></amp-img>
+</a>
+</div>
+<div class="item-title"><a href="https://www.kioscoding.com/2017/09/contoh-crud-codeigniter.html">Cara Membuat CRUD Menggunakan CodeIgniter : Update Data Dari Database</a></div>
+</div>
+<div class="clear"></div>
+</li>
+<li>
+<div class="item-thumbnail-only">
+<div class="item-thumbnail">
+<a href="https://www.kioscoding.com/2018/01/cara-join-2-tabel-atau-lebih-dengan.html">
+<amp-img alt="Cara Join 2 Tabel Atau Lebih Dengan Codeigniter | CodeIgniter" height="72" src="https://2.bp.blogspot.com/-4VeKPnZ0sF0/WlCRAVKB7GI/AAAAAAAAA4g/9NXaq7UVStQu_M3hT0Ij-WKvajBRsluGgCLcBGAs/w300/cara-menampilkan-data-dari-tabel-berbeda-codeigniter.png" title="Cara Join 2 Tabel Atau Lebih Dengan Codeigniter | CodeIgniter" width="100" class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-layout" style="width: 100px; height: 72px;"><img decoding="async" alt="Cara Join 2 Tabel Atau Lebih Dengan Codeigniter | CodeIgniter" title="Cara Join 2 Tabel Atau Lebih Dengan Codeigniter | CodeIgniter" class="i-amphtml-fill-content i-amphtml-replaced-content" src="./Membuat Shopping Cart Dengan CodeIgniter Part 1 _ CodeIgniter_files/cara-menampilkan-data-dari-tabel-berbeda-codeigniter.png"></amp-img>
+</a>
+</div>
+<div class="item-title"><a href="https://www.kioscoding.com/2018/01/cara-join-2-tabel-atau-lebih-dengan.html">Cara Join 2 Tabel Atau Lebih Dengan Codeigniter | CodeIgniter</a></div>
+</div>
+<div class="clear"></div>
+</li>
+<li>
+<div class="item-thumbnail-only">
+<div class="item-thumbnail">
+<a href="https://www.kioscoding.com/2018/01/crud-gambar-upload-input-gambar-codeigniter.html">
+<amp-img alt="CRUD Gambar : Upload Gambar Ke Database Dengan CodeIgniter Part 1" height="72" src="https://3.bp.blogspot.com/-Uq7uz6XTIoQ/WmtkaFOR01I/AAAAAAAAA5M/dFJ6joVpMjc8UCgcETZ2rdj4Cv41WEUaQCLcBGAs/w300/upload-gambar-ke-database-codeigniter.png" title="CRUD Gambar : Upload Gambar Ke Database Dengan CodeIgniter Part 1" width="100" class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-layout" style="width: 100px; height: 72px;"><img decoding="async" alt="CRUD Gambar : Upload Gambar Ke Database Dengan CodeIgniter Part 1" title="CRUD Gambar : Upload Gambar Ke Database Dengan CodeIgniter Part 1" class="i-amphtml-fill-content i-amphtml-replaced-content" src="./Membuat Shopping Cart Dengan CodeIgniter Part 1 _ CodeIgniter_files/upload-gambar-ke-database-codeigniter.png"></amp-img>
+</a>
+</div>
+<div class="item-title"><a href="https://www.kioscoding.com/2018/01/crud-gambar-upload-input-gambar-codeigniter.html">CRUD Gambar : Upload Gambar Ke Database Dengan CodeIgniter Part 1</a></div>
+</div>
+<div class="clear"></div>
+</li>
+<li>
+<div class="item-thumbnail-only">
+<div class="item-thumbnail">
+<a href="https://www.kioscoding.com/2017/09/cara-membuat-view-di-codeigniter.html">
+<amp-img alt="Belajar CodeIgniter 3 : Cara Membuat View Dan Menampilkan Di Codeigniter" height="72" src="https://2.bp.blogspot.com/-vwdips8GX8w/WcKQg7LnOkI/AAAAAAAAAkM/wng_P9YIW94CiGXwR6VfJ3MqLEG86XUswCLcBGAs/w300/cara-menampilkan-view-di-codeigniter.png" title="Belajar CodeIgniter 3 : Cara Membuat View Dan Menampilkan Di Codeigniter" width="100" class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-layout" style="width: 100px; height: 72px;"><img decoding="async" alt="Belajar CodeIgniter 3 : Cara Membuat View Dan Menampilkan Di Codeigniter" title="Belajar CodeIgniter 3 : Cara Membuat View Dan Menampilkan Di Codeigniter" class="i-amphtml-fill-content i-amphtml-replaced-content" src="./Membuat Shopping Cart Dengan CodeIgniter Part 1 _ CodeIgniter_files/cara-menampilkan-view-di-codeigniter.png"></amp-img>
+</a>
+</div>
+<div class="item-title"><a href="https://www.kioscoding.com/2017/09/cara-membuat-view-di-codeigniter.html">Belajar CodeIgniter 3 : Cara Membuat View Dan Menampilkan Di Codeigniter</a></div>
+</div>
+<div class="clear"></div>
+</li>
+<li>
+<div class="item-thumbnail-only">
+<div class="item-thumbnail">
+<a href="https://www.kioscoding.com/2017/12/membuat-login-sederhana-android-studio.html">
+<amp-img alt="Cara Membuat Login Sederhana Tanpa Database Android | Android Studio" height="72" src="https://4.bp.blogspot.com/-drbmsCj1NVg/Wjf351ArcTI/AAAAAAAAA2U/lHC59GUwMJQrPvsdn0sxchH0RkqbRHtlACLcBGAs/w300/contoh-aplikasi-login-android-menggunakan-android-studio.png" title="Cara Membuat Login Sederhana Tanpa Database Android | Android Studio" width="100" class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-layout" style="width: 100px; height: 72px;"><img decoding="async" alt="Cara Membuat Login Sederhana Tanpa Database Android | Android Studio" title="Cara Membuat Login Sederhana Tanpa Database Android | Android Studio" class="i-amphtml-fill-content i-amphtml-replaced-content" src="./Membuat Shopping Cart Dengan CodeIgniter Part 1 _ CodeIgniter_files/contoh-aplikasi-login-android-menggunakan-android-studio.png"></amp-img>
+</a>
+</div>
+<div class="item-title"><a href="https://www.kioscoding.com/2017/12/membuat-login-sederhana-android-studio.html">Cara Membuat Login Sederhana Tanpa Database Android | Android Studio</a></div>
+</div>
+<div class="clear"></div>
+</li>
+</ul>
+</div>
+</div><div class="widget HTML" data-version="1" id="HTML2">
+<div class="widget-content">
+<center><amp-iframe width="300" height="214" sandbox="allow-scripts allow-same-origin allow-popups" frameborder="0" scrolling="no" src="https://cdn.rawgit.com/basrimedia/media/d822862b/goomlike.html?page=kioscoding" class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-layout" style="width: 300px; height: 214px;">
+  <iframe class="i-amphtml-fill-content" name="amp_iframe0" frameborder="0" scrolling="no" sandbox="allow-scripts allow-same-origin allow-popups" src="./Membuat Shopping Cart Dengan CodeIgniter Part 1 _ CodeIgniter_files/goomlike.html"></iframe></amp-iframe></center>
+</div>
+</div><div class="widget HTML" data-version="1" id="HTML1">
+<div class="widget-content">
+<amp-ad width="300" height="600" type="adsense" layout="responsive" data-ad-client="ca-pub-2383736688165580" data-ad-slot="2759912714" class="i-amphtml-element i-amphtml-layout-responsive i-amphtml-layout-size-defined i-amphtml-layout" data-amp-slot-index="3"><i-amphtml-sizer style="display: block; padding-top: 200%;"></i-amphtml-sizer>
+<div fallback=""><div class="i-amphtml-ad-default-holder" data-ad-holder-text="Ad"></div></div><div placeholder="" class="amp-hidden"><div class="i-amphtml-ad-default-holder" data-ad-holder-text="Ad"></div></div><iframe src="./Membuat Shopping Cart Dengan CodeIgniter Part 1 _ CodeIgniter_files/frame(2).html" name="{&quot;host&quot;:&quot;d-20021334432230990627.ampproject.net&quot;,&quot;type&quot;:&quot;adsense&quot;,&quot;count&quot;:3,&quot;attributes&quot;:{&quot;adClient&quot;:&quot;ca-pub-2383736688165580&quot;,&quot;adSlot&quot;:&quot;2759912714&quot;,&quot;ampSlotIndex&quot;:&quot;3&quot;,&quot;width&quot;:300,&quot;height&quot;:600,&quot;_context&quot;:{&quot;ampcontextVersion&quot;:&quot;1524862012167&quot;,&quot;ampcontextFilepath&quot;:&quot;https://3p.ampproject.net/1524862012167/ampcontext-v0.js&quot;,&quot;sourceUrl&quot;:&quot;https://www.kioscoding.com/2018/04/tutorial-membuat-cart-dengan-codeigniter.html&quot;,&quot;referrer&quot;:&quot;https://www.google.co.id/&quot;,&quot;canonicalUrl&quot;:&quot;https://www.kioscoding.com/2018/04/tutorial-membuat-cart-dengan-codeigniter.html&quot;,&quot;pageViewId&quot;:&quot;4089&quot;,&quot;location&quot;:{&quot;href&quot;:&quot;https://www.kioscoding.com/2018/04/tutorial-membuat-cart-dengan-codeigniter.html&quot;},&quot;startTime&quot;:1525166538359,&quot;tagName&quot;:&quot;AMP-AD&quot;,&quot;mode&quot;:{&quot;localDev&quot;:false,&quot;development&quot;:false,&quot;minified&quot;:true,&quot;lite&quot;:false,&quot;test&quot;:false,&quot;version&quot;:&quot;1524862012167&quot;,&quot;rtvVersion&quot;:&quot;011524862012167&quot;},&quot;canary&quot;:false,&quot;hidden&quot;:false,&quot;initialLayoutRect&quot;:{&quot;left&quot;:890,&quot;top&quot;:1838,&quot;width&quot;:294,&quot;height&quot;:588},&quot;initialIntersection&quot;:{&quot;time&quot;:13123.000000006869,&quot;rootBounds&quot;:{&quot;left&quot;:0,&quot;top&quot;:0,&quot;width&quot;:1366,&quot;height&quot;:613,&quot;bottom&quot;:613,&quot;right&quot;:1366,&quot;x&quot;:0,&quot;y&quot;:0},&quot;boundingClientRect&quot;:{&quot;left&quot;:890,&quot;top&quot;:-162,&quot;width&quot;:294,&quot;height&quot;:588,&quot;bottom&quot;:426,&quot;right&quot;:1184,&quot;x&quot;:890,&quot;y&quot;:-162},&quot;intersectionRect&quot;:{&quot;left&quot;:890,&quot;top&quot;:0,&quot;width&quot;:294,&quot;height&quot;:426,&quot;bottom&quot;:426,&quot;right&quot;:1184,&quot;x&quot;:890,&quot;y&quot;:0},&quot;intersectionRatio&quot;:0.7244897959183674},&quot;domFingerprint&quot;:&quot;2226019204&quot;,&quot;experimentToggles&quot;:{&quot;canary&quot;:false,&quot;expAdsenseA4A&quot;:false,&quot;expDoubleclickA4A&quot;:false,&quot;expDfpCanonicalFf&quot;:false,&quot;expUnconditionedCanonical&quot;:false,&quot;dbclk_a4a_viz_change&quot;:false,&quot;a4aProfilingRate&quot;:false,&quot;ad-type-custom&quot;:true,&quot;ios-embed-wrapper&quot;:true,&quot;amp-apester-media&quot;:true,&quot;amp-ima-video&quot;:true,&quot;amp-playbuzz&quot;:true,&quot;chunked-amp&quot;:true,&quot;amp-auto-ads&quot;:true,&quot;amp-auto-ads-adsense-holdout&quot;:false,&quot;slidescroll-disable-css-snap&quot;:true,&quot;version-locking&quot;:true,&quot;a4aFastFetchDoubleclickLaunched&quot;:false,&quot;a4aFastFetchAdSenseLaunched&quot;:false,&quot;a4a-new-signature-verifier&quot;:true,&quot;pump-early-frame&quot;:true,&quot;a4a-measure-get-ad-urls&quot;:false,&quot;3p-use-ampcontext&quot;:true,&quot;amp-animation&quot;:true,&quot;amp-live-list-sorting&quot;:true,&quot;amp-sidebar toolbar&quot;:true,&quot;a4a-safeframe-preloading-off&quot;:false,&quot;expUnconditionedAdxIdentity&quot;:false,&quot;expUnconditionedDfpIdentity&quot;:false,&quot;expUnconditionedCanonicalHoldback&quot;:false,&quot;rollback-delayed-fetch-deprecation&quot;:false,&quot;rollback-dfd-ix&quot;:true,&quot;rollback-dfd-criteo&quot;:true,&quot;rollback-dfd-rubicon&quot;:true,&quot;rollback-dfd-navegg&quot;:true,&quot;rollback-dfd-openx&quot;:true,&quot;rollback-dfd-yieldbot&quot;:true,&quot;rollback-dfd-imonomy&quot;:true,&quot;rollback-dfd-pulsepoint&quot;:true,&quot;dcdf-whitelist-deprecation&quot;:false,&quot;amp-consent&quot;:true},&quot;sentinel&quot;:&quot;0-40035665912767953972&quot;,&quot;clientId&quot;:&quot;amp-uBVizE3iryH4PJp91auZdw&quot;,&quot;container&quot;:null},&quot;type&quot;:&quot;adsense&quot;}}" width="300" height="600" scrolling="no" data-amp-3p-sentinel="0-40035665912767953972" class="i-amphtml-fill-content" style="border: none;"></iframe></amp-ad>
+</div>
+</div></div>
+</aside>
+</div><div class="clr"></div>
+</div></div></div>
+<div class="clr"></div>
+<div class="box-wrapper">
+<div class="amp-content">
+<div id="amp-subs">
+<p>NEWSLETTER SIGNUP </p>
+<div class="emailfield">
+<form action="https://feedburner.google.com/fb/a/mailverify" target="_blank" novalidate="" class="i-amphtml-form">
+<input name="name" placeholder="First name" title="First name" type="text">
+<input name="email" placeholder="Email *" title="Email" type="text">
+<input name="uri" type="hidden" value="goomsite/cWaD">
+<input name="loc" type="hidden" value="en_US">
+<input class="submitbutton" type="submit" value="Subscribe">
+</form>
+</div></div></div></div>
+<div class="clr"></div>
+<footer itemprop="mainEntity" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+<div class="footer">
+<div id="amp-footer">
+<div class="amp-goo"><ul>
+<li><a class="ampb" href="http://www.kioscoding.com/p/about-me.html" target="_blank" title="About">About</a></li>
+<li><a href="https://www.kioscoding.com/p/contact.html" title="Contact">Contact</a></li>
+<li><a href="http://cdn.rawgit.com/2jack4jek/kioscoding_sitemap/f2dce740/privacy_policy.html" title="Privacy">Privacy</a></li>
+<li><a href="http://cdn.rawgit.com/2jack4jek/kioscoding_sitemap/aaa5c524/disclaimer.html" title="Disclaimer">Disclaimer</a></li>
+<li><a href="http://cdn.rawgit.com/2jack4jek/kioscoding_sitemap/376c9f68/tos.html" title="tos">Terms Of Service</a></li>
+<li><a href="http://cdn.rawgit.com/2jack4jek/kioscoding_sitemap/38ae0174/sitemap.html" target="_blank" title="Sitemap">Sitemaps</a></li>
+<li><a href="https://id.jooble.org/lowongan-kerja-programmer" target="_blank" title="Jooble">Jooble</a></li>
+</ul></div>
+<div class="amp-soc">
+<a class="fbgoo icon" href="https://www.facebook.com/bmatindas" rel="nofollow" target="_blank" title="Facebook"></a>
+<a class="twitgoo icon" href="https://www.kioscoding.com/2018/04/tutorial-membuat-cart-dengan-codeigniter.html#" rel="nofollow" target="_blank" title="Twitter"></a>
+<a class="gplusgoo icon" href="https://plus.google.com/108529897441056741459" rel="nofollow" target="_blank" title="Google +"></a>
+<a class="linkgoo icon" href="https://www.kioscoding.com/2018/04/tutorial-membuat-cart-dengan-codeigniter.html#" rel="nofollow" target="_blank" title="Linkedin"></a>
+<a class="pintgoo icon" href="https://www.kioscoding.com/2018/04/tutorial-membuat-cart-dengan-codeigniter.html#" rel="nofollow" target="_blank" title="pinterest"></a>
+</div></div>
+<div id="amp-credit">
+<div class="amp-wrap">
+© <span itemprop="copyrightYear">2017</span>
+<span itemprop="copyrightHolder" itemscope="itemscope" itemtype="https://schema.org/Organization"><a href="https://www.kioscoding.com/" itemprop="url" title="KiosCoding"><span itemprop="name">KiosCoding</span></a></span> - All Right Reserved
+</div>
+</div></div></footer>
+<amp-pixel layout="nodisplay" src="https://sstatic1.histats.com/0.gif?3881838&amp;101" class="i-amphtml-element i-amphtml-layout-nodisplay i-amphtml-display" aria-hidden="true" style="display: none;"></amp-pixel>
+<amp-pixel layout="nodisplay" src="https://sstatic1.histats.com/0.gif?3902630&amp;10" class="i-amphtml-element i-amphtml-layout-nodisplay i-amphtml-display" aria-hidden="true" style="display: none;"></amp-pixel>
+<amp-user-notification id="block-notification" layout="nodisplay" class="i-amphtml-element i-amphtml-layout-nodisplay i-amphtml-display amp-active i-amphtml-layout" role="alert" style="" i-amphtml-fixedid="F1">
+<div class="notifbox" id="notifbox" style="display: none;">
+<div class="notif_box">
+<button class="close_notifbox" on="tap:notifbox.hide" role="button" tabindex="0" title="Close">×</button>
+<p class="note">Bantu kami membuat situs kioscoding.com ini menjadi lebih baik.<br>
+<br>
+      Dengan menonaktifkan AdBlock atau aplikasi-aplikasi sejenis yang mampu memblokir iklan, Anda sudah membantu kami untuk tetap membuat website ini terus menayangkan konten.<br>
+<br>
+      Cara mendukungan situs kioscoding.com:
+<a href="http://www.kioscoding.com/p/blog-page.html" target="_blank">Silahkan simak artikel berikut ini.</a></p>
+<hr class="note_block">
+<p class="close_note">
+        Don't show again <a href="https://www.kioscoding.com/2018/04/tutorial-membuat-cart-dengan-codeigniter.html#" on="tap:block-notification.dismiss" role="button" tabindex="0" title="Close">click here</a>.
+        </p>
+</div>
+</div>
+</amp-user-notification>
+
+
+<!--<script src='https://apis.google.com/js/plusone.js' type='text/javascript'></script>
+
+<script type="text/javascript" src="https://www.blogger.com/static/v1/widgets/403034737-widgets.js"></script>
+<script type='text/javascript'>
+window['__wavt'] = 'AOuZoY5XO3rrVAO8oUbdzwQMetzcKinnZQ:1525162968761';_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d6110852922316004041','//www.kioscoding.com/2018/04/tutorial-membuat-cart-dengan-codeigniter.html','6110852922316004041');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '6110852922316004041', 'title': 'KiosCoding', 'url': 'https://www.kioscoding.com/2018/04/tutorial-membuat-cart-dengan-codeigniter.html', 'canonicalUrl': 'https://www.kioscoding.com/2018/04/tutorial-membuat-cart-dengan-codeigniter.html', 'homepageUrl': 'https://www.kioscoding.com/', 'searchUrl': 'https://www.kioscoding.com/search', 'canonicalHomepageUrl': 'https://www.kioscoding.com/', 'blogspotFaviconUrl': 'https://www.kioscoding.com/favicon.ico', 'bloggerUrl': 'https://www.blogger.com', 'hasCustomDomain': true, 'httpsEnabled': true, 'enabledCommentProfileImages': true, 'gPlusViewType': 'FILTERED_POSTMOD', 'adultContent': false, 'analyticsAccountNumber': 'UA-102774475-1', 'encoding': 'UTF-8', 'locale': 'id', 'localeUnderscoreDelimited': 'id', 'languageDirection': 'ltr', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'feedLinks': '\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22KiosCoding - Atom\x22 href\x3d\x22https://www.kioscoding.com/feeds/posts/default\x22 /\x3e\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/rss+xml\x22 title\x3d\x22KiosCoding - RSS\x22 href\x3d\x22https://www.kioscoding.com/feeds/posts/default?alt\x3drss\x22 /\x3e\n\x3clink rel\x3d\x22service.post\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22KiosCoding - Atom\x22 href\x3d\x22https://www.blogger.com/feeds/6110852922316004041/posts/default\x22 /\x3e\n\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22KiosCoding - Atom\x22 href\x3d\x22https://www.kioscoding.com/feeds/5324537235601715211/comments/default\x22 /\x3e\n', 'meTag': '', 'openIdOpTag': '', 'adsenseClientId': 'ca-pub-2383736688165580', 'adsenseHostId': 'ca-host-pub-1556223355139109', 'adsenseHasAds': false, 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/ab24a46d2145c32c', 'plusOneApiSrc': 'https://apis.google.com/js/plusone.js', 'sharing': {'platforms': [{'name': 'Dapatkan link', 'key': 'link', 'shareMessage': 'Dapatkan link', 'target': ''}, {'name': 'Facebook', 'key': 'facebook', 'shareMessage': 'Bagikan ke Facebook', 'target': 'facebook'}, {'name': 'BlogThis!', 'key': 'blogThis', 'shareMessage': 'BlogThis!', 'target': 'blog'}, {'name': 'Twitter', 'key': 'twitter', 'shareMessage': 'Bagikan ke Twitter', 'target': 'twitter'}, {'name': 'Pinterest', 'key': 'pinterest', 'shareMessage': 'Bagikan ke Pinterest', 'target': 'pinterest'}, {'name': 'Google+', 'key': 'googlePlus', 'shareMessage': 'Bagikan ke Google+', 'target': 'googleplus'}, {'name': 'Email', 'key': 'email', 'shareMessage': 'Email', 'target': 'email'}], 'googlePlusShareButtonWidth': 300, 'googlePlusBootstrap': '\x3cscript type\x3d\x22text/javascript\x22\x3ewindow.___gcfg \x3d {\x27lang\x27: \x27id\x27};\x3c/script\x3e'}, 'hasCustomJumpLinkMessage': false, 'jumpLinkMessage': 'Baca selengkapnya', 'pageType': 'item', 'postId': '5324537235601715211', 'postImageThumbnailUrl': 'https://2.bp.blogspot.com/-aGFpAnri_90/Wt27XewxYjI/AAAAAAAAA_s/-alwqN50hv0c89nppQuvkPFOT5aP4-SJgCLcBGAs/s72-c/tutorial%2Bcart%2Bsederhana%2Bmenggunakan%2Bcodeigniter%2Bci.png', 'postImageUrl': 'https://2.bp.blogspot.com/-aGFpAnri_90/Wt27XewxYjI/AAAAAAAAA_s/-alwqN50hv0c89nppQuvkPFOT5aP4-SJgCLcBGAs/s1600/tutorial%2Bcart%2Bsederhana%2Bmenggunakan%2Bcodeigniter%2Bci.png', 'pageName': 'Membuat Shopping Cart Dengan CodeIgniter Part 1 | CodeIgniter', 'pageTitle': 'KiosCoding: Membuat Shopping Cart Dengan CodeIgniter Part 1 | CodeIgniter', 'metaDescription': ''}}, {'name': 'features', 'data': {'lazy_images': 'false', 'sharing_get_link_dialog': 'true', 'sharing_native': 'false'}}, {'name': 'messages', 'data': {'edit': 'Edit', 'linkCopiedToClipboard': 'Tautan disalin ke papan klip!', 'ok': 'Oke', 'postLink': 'Tautan Pos'}}, {'name': 'template', 'data': {'name': 'custom', 'localizedName': 'Khusus', 'isResponsive': false, 'isAlternateRendering': false, 'isCustom': true}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\x3dclassic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\x3dflipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\x3dmagazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\x3dmosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\x3dsidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\x3dsnapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\x3dtimeslide'}, 'isMobile': false, 'title': 'Membuat Shopping Cart Dengan CodeIgniter Part 1 | CodeIgniter', 'description': 'Tutorial Php | Tutorial Android Studio | Tutorial Java | Tutorial Html | Tutorial lain seputar programing', 'featuredImage': 'https://2.bp.blogspot.com/-aGFpAnri_90/Wt27XewxYjI/AAAAAAAAA_s/-alwqN50hv0c89nppQuvkPFOT5aP4-SJgCLcBGAs/s1600/tutorial%2Bcart%2Bsederhana%2Bmenggunakan%2Bcodeigniter%2Bci.png', 'url': 'https://www.kioscoding.com/2018/04/tutorial-membuat-cart-dengan-codeigniter.html', 'type': 'item', 'isSingleItem': true, 'isMultipleItems': false, 'isError': false, 'isPage': false, 'isPost': true, 'isHomepage': false, 'isArchive': false, 'isLabelSearch': false, 'postId': 5324537235601715211}}]);
+_WidgetManager._RegisterWidget('_HeaderView', new _WidgetInfo('Header1', 'header', null, document.getElementById('Header1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML5', 'adsv', null, document.getElementById('HTML5'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'main', null, document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'showBacklinks': true, 'postId': '5324537235601715211', 'useNgc': false, 'lightboxEnabled': true, 'lightboxModuleUrl': 'https://www.blogger.com/static/v1/jsbin/3697197901-lbx.js', 'lightboxCssUrl': 'https://www.blogger.com/static/v1/v-css/368954415-lightbox_bundle.css'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML3', 'sidebar', null, document.getElementById('HTML3'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_PopularPostsView', new _WidgetInfo('PopularPosts2', 'sidebar', null, document.getElementById('PopularPosts2'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML2', 'sidebar', null, document.getElementById('HTML2'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML1', 'sidebar', null, document.getElementById('HTML1'), {}, 'displayModeFull'));
+</script>
+</body>-->
+</body></html>

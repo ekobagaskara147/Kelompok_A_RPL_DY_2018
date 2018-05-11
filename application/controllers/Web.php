@@ -14,10 +14,6 @@ class Web extends CI_Controller {
 	public function home(){
 		$this->load->view('home');
 	}
-		
-	public function menu(){
-		$this->load->view('menu');
-	}
 
 	public function login(){
 		$this->load->view('login');
@@ -25,6 +21,19 @@ class Web extends CI_Controller {
 	
 	public function dashboardpelanggan(){
 		$this->load->view('dashboardpelanggan');
+	}
+	
+	public function menu(){
+		$this->load->model('Menu_model');
+		
+		$items_makanan = $this->Menu_model->get_items_makanan();
+		$items_seafood = $this->Menu_model->get_items_seafood();
+			$data = array(
+				"items_makanan" => $items_makanan,
+				"items_seafood" => $items_seafood,
+			);
+		$this->load->view('menu', $data);
+		
 	}
 
 	public function login_post(){

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">    
-    <title>Order Now: Sekarang pesan di tempat jadi lebih mudah!</title>
+    <title>Order Now: Sekarang pemesanan di tempat jadi lebih mudah! </title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="<?php echo base_url('assets/');?>img/favicon.ico" type="image/x-icon">
@@ -69,19 +69,20 @@
           <!-- LOGO -->       
 
            <!--  Text based logo  -->
-          <a class="navbar-brand" href="<?php echo base_url('index.php/web/home');?>">Order<span>Now</span></a> 
+          <a class="navbar-brand" href="index.html">Order<span>Now</span></a> 
 
 		      <!--  Image based logo  -->
-          <!-- <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="Logo img"></a>  -->
+          <!-- <a class="navbar-brand" href="index.html"><img src="<?php// echo base_url('assets/');?>img/logo.png" alt="Logo img"></a>  -->
          
 
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul id="top-menu" class="nav navbar-nav navbar-right mu-main-nav">
-            <li><a href="<?php echo base_url('index.php/web/home');?>">HOME</a></li>
+            <li><a href="index.html">HOME</a></li>
             <li><a href="#mu-about-us">ABOUT US</a></li>                                                                     
             <li><a href="#mu-gallery">GALLERY</a></li>
             <li><a href="#mu-contact">CONTACT</a></li> 
+			<li><a href="index.html">LOG OUT</a></li> 
           </ul>                            
         </div><!--/.nav-collapse -->       
       </div>          
@@ -96,6 +97,37 @@
       <div class="row">
         <div class="col-md-12">
           <div class="mu-restaurant-menu-area">
+		  
+			<div id="popup">
+				<div class="window">
+					<a href="#" class="close-button" title="Close">X</a>
+						<h1>Pesanan Anda</h1>
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<table class="table" id="cart-table">
+										<tr>
+											<th width="70%">Item</td>
+											<th width="10%">Harga</td> 
+											<th width="5%">Qty</td>
+											<th width="10%">Total</td>
+											<th width="5%"></td>
+										</tr>
+									</table>
+									<table class="table">
+										<tr>
+											<td width="85%">Total</td>
+											<td width="15%">0</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+					<div class="button">
+						<ul>
+							<a>Checkout</a>
+						</ul>
+					</div>
+				</div>
+			</div>
 
             <div class="mu-title">
               <span class="mu-subtitle">Discover</span>
@@ -121,89 +153,30 @@
                         <div class="mu-tab-content-left">
                           <ul class="mu-menu-item-nav">
                             <li>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Ayam Bakar</a></h4>
-                                  <span class="mu-menu-price">Rp. 13.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Ayam Siram</a></h4>
-                                  <span class="mu-menu-price">Rp. 13.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Ayam Bakar Pedas</a></h4>
-                                  <span class="mu-menu-price">Rp. 13.000</span>
-                                </div>
-                              </div>
+							
+                              <?php
+								$x = 0;
+								foreach($items_makanan as $item){
+									if ($x % 2 == 0){
+								?>
 							  <div class="media">
                                 <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Mie Soto Ayam</a></h4>
-                                  <span class="mu-menu-price">Rp. 12.000</span>
+								<div style="float:left;">
+                                  <h4 class="media-heading"><a href="#"><?php echo $item->nama_makanan; ?></a></h4>
+                                  <span class="mu-menu-price"><?php echo $item->harga_makanan; ?></span>
                                 </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Mie Bakso</a></h4>
-                                  <span class="mu-menu-price">Rp. 12.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Bakso Tok</a></h4>
-                                  <span class="mu-menu-price">Rp. 12.000</span>
-                                </div>
-								 <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Bakso Tok + Ayam</a></h4>
-                                  <span class="mu-menu-price">Rp. 15.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Mie Bakso + Ayam</a></h4>
-                                  <span class="mu-menu-price">Rp. 15.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Mie Goreng/Rebus</a></h4>
-                                  <span class="mu-menu-price">Rp. 10.000</span>
-                                </div>
-                              </div>
-							  <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Mie Goreng Spesial</a></h4>
-                                  <span class="mu-menu-price">Rp. 16.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Mie Hun Goreng</a></h4>
-                                  <span class="mu-menu-price">Rp. 10.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Mie Goreng Spesial</a></h4>
-                                  <span class="mu-menu-price">Rp. 16.000</span>
-								</div>
-                              </div>
-							  <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Mie Tiaw Goreng</a></h4>
-                                  <span class="mu-menu-price">Rp. 16.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Indomie Rebus</a></h4>
-                                  <span class="mu-menu-price">Rp. 10.000</span>
-								</div>
-                              </div>
+								<div class="button style-button-pesan" idItem="<?php echo $item->id_makanan; ?>" namaItem="<?php echo $item->nama_makanan; ?></" harga="<?php echo $item->harga_makanan; ?>">
+								    <ul>
+									   <a href="#popup">Pesan</a>
+									</ul>
+                                  </div>
+							</div>
+							  <?php
+									}
+									$x++;
+								}
+								?>
+                       
                             </li>
                           </ul>   
                         </div>
@@ -213,83 +186,31 @@
                        <div class="mu-tab-content-right">
                           <ul class="mu-menu-item-nav">
                             <li>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Nasi Goreng Telur / Dadar</a></h4>
-                                  <span class="mu-menu-price">Rp. 10.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Nasi Goreng Lele Goreng</a></h4>
-                                  <span class="mu-menu-price">Rp. 18.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Nasi Goreng Ayam</a></h4>
-                                  <span class="mu-menu-price">Rp. 18.000</span>
-                                </div>
-                              </div>
+                              
+							  <?php
+								$x = 0;
+								foreach($items_makanan as $item){
+									if ($x % 2 == 1){
+								?>
 							  <div class="media">
                                 <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Nasi Goreng Ayam Bakar</a></h4>
-                                  <span class="mu-menu-price">Rp. 19.000</span>
+								<div style="float:left;">
+                                  <h4 class="media-heading"><a href="#"><?php echo $item->nama_makanan; ?></a></h4>
+                                  <span class="mu-menu-price"><?php echo $item->harga_makanan; ?></span>
                                 </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Nasi Goreng Ayam Siram</a></h4>
-                                  <span class="mu-menu-price">Rp. 19.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Nasi Goreng Spesial</a></h4>
-                                  <span class="mu-menu-price">Rp. 20.000</span>
-                                </div>
-								 <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Nasi Goreng Mbak Moel</a></h4>
-                                  <span class="mu-menu-price">Rp. 27.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Nasi Goreng Seafood</a></h4>
-                                  <span class="mu-menu-price">Rp. 27.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Nasi Goreng Spesial Udang</a></h4>
-                                  <span class="mu-menu-price">Rp. 27.000</span>
-                                </div>
-                              </div>
-							  <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Nasi Goreng Spesial Cumi</a></h4>
-                                  <span class="mu-menu-price">Rp. 27.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Nasi Goreng Tok</a></h4>
-                                  <span class="mu-menu-price">Rp. 7.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Nasi Putih</a></h4>
-                                  <span class="mu-menu-price">Rp. 4.000</span>
-								</div>
-                              </div>
-							  <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Telur Dadar / Mata Sapi</a></h4>
-                                  <span class="mu-menu-price">Rp. 4.000</span>
-                                </div>
-                              </div>
+								<div class="button style-button-pesan" idItem="<?php echo $item->id_makanan; ?>" namaItem="<?php echo $item->nama_makanan; ?></" harga="<?php echo $item->harga_makanan; ?>">
+								    <ul>
+									   <a href="#popup">Pesan</a>
+									</ul>
+                                  </div>
+								  </div>
+							</div>
+							  <?php
+									}
+									$x++;
+								}
+								?>
+                              
                             </li>
                           </ul>   
                        </div>
@@ -300,54 +221,38 @@
                 </div>
 
                 <div class="tab-pane fade" id="Seafood">
-                  <div class="mu-tab-content-area">
+				   <div class="mu-tab-content-area">
                     <div class="row">
 
                       <div class="col-md-6">
                         <div class="mu-tab-content-left">
                           <ul class="mu-menu-item-nav">
                              <li>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Udang Goreng Tepung</a></h4>
-                                  <span class="mu-menu-price">Rp. 20.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Udang Tauco / Udang Tumis</a></h4>
-                                  <span class="mu-menu-price">Rp. 25.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Udang Jamur Tumis</a></h4>
-                                  <span class="mu-menu-price">Rp. 30.000</span>
-                                </div>
-                              </div>
+                             	
+                             	 <?php
+								$x = 0;
+								foreach($items_seafood as $item){
+									if ($x % 2 == 0){
+								?>
+								
 							  <div class="media">
                                 <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Udang Asam Manis</a></h4>
-                                  <span class="mu-menu-price">Rp. 35.000</span>
+								<div style="float:left;">
+                                  <h4 class="media-heading"><a href="#"><?php echo $item->nama_seafood; ?></a></h4>
+                                  <span class="mu-menu-price"><?php echo $item->harga_seafood; ?></span>
                                 </div>
+								<div class="button style-button-pesan" idItem="<?php echo $item->id_seafood; ?>" namaItem="<?php echo $item->nama_seafood; ?></" harga="<?php echo $item->harga_seafood; ?>">
+								    <ul>
+									   <a href="#popup">Pesan</a>
+									</ul>
+                                  </div>
+							  </div>
                               </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Cumi Cumi Goreng Tepung</a></h4>
-                                  <span class="mu-menu-price">Rp. 20.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Cumi Cumi Tauco / Cumi Cumi Tumis</a></h4>
-                                  <span class="mu-menu-price">Rp. 25.000</span>
-                                </div>
-								<div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Cumi Cumi Jamur Tumis</a></h4>
-                                  <span class="mu-menu-price">Rp. 30.000</span>
-                                </div>
-                              </div>
+                               <?php
+									}
+									$x++;
+								}
+								?>
                             </li>
                           </ul>   
                         </div>
@@ -357,42 +262,31 @@
                        <div class="mu-tab-content-right">
                           <ul class="mu-menu-item-nav">
                             <li>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Cumi Cumi Asam Manis</a></h4>
-                                  <span class="mu-menu-price">Rp. 35.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Kepiting Lunak Asam Manis</a></h4>
-                                  <span class="mu-menu-price">Rp. 40.000</span>
-                                </div>
-                              </div>
+                              
+							  <?php
+								$x = 0;
+								foreach($items_seafood as $item){
+									if ($x % 2 == 1){
+								?>
 							  <div class="media">
                                 <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Ikan Bakar</a></h4>
-                                  <span class="mu-menu-price">Kerapu, Rambe, Kakap</span>
+								<div style="float:left;">
+                                  <h4 class="media-heading"><a href="#"><?php echo $item->nama_seafood; ?></a></h4>
+                                  <span class="mu-menu-price"><?php echo $item->harga_seafood; ?></span>
                                 </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Ikan Goreng</a></h4>
-                                  <span class="mu-menu-price">Kerapu, Rambe, Kakap</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Ikan Tauco</a></h4>
-                                  <span class="mu-menu-price">Kerapu, Rambe, Kakap</span>
-                                </div>
-                              </div>
-							  <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Ikan Asam Manis</a></h4>
-                                  <span class="mu-menu-price">Kerapu, Rambe, Kakap</span>
-                                </div>
-                              </div>
+								<div class="button style-button-pesan" idItem="<?php echo $item->id_seafood; ?>" namaItem="<?php echo $item->nama_seafood; ?></" harga="<?php echo $item->harga_seafood; ?>">
+								    <ul>
+									   <a href="#popup">Pesan</a>
+									</ul>
+                                  </div>
+								  </div>
+							</div>
+							  <?php
+									}
+									$x++;
+								}
+								?>
+                              
                             </li>
                           </ul>   
                        </div>
@@ -410,59 +304,21 @@
                         <div class="mu-tab-content-left">
                           <ul class="mu-menu-item-nav">
                             <li>
-                              <div class="media">
+                              
+							  <div class="media">
                                 <div class="media-body">
+								<div style="float:left;">
                                   <h4 class="media-heading"><a href="#">Soto Daging</a></h4>
                                   <span class="mu-menu-price">Rp. 15.000</span>
                                 </div>
+								<div class="button style-button-pesan">
+								    <ul>
+									   <a href="#">Pesan</a>
+									</ul>
+                                  </div>
+							  </div>
                               </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Soto Bakso</a></h4>
-                                  <span class="mu-menu-price">Rp. 15.000</span>
-                                </div>
-                              </div>
-                             <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Soto Ayam</a></h4>
-                                  <span class="mu-menu-price">Rp. 12.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Sop Ayam</a></h4>
-                                  <span class="mu-menu-price">Rp. 12.000</span>
-                                </div>
-                              </div>
-							  <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Sop Daging</a></h4>
-                                  <span class="mu-menu-price">Rp. 15.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Tumis Kangkung Terasi</a></h4>
-                                  <span class="mu-menu-price">Rp. 10.000</span>
-                                </div>
-								 <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Tumis Kangkung Jamur Terasi</a></h4>
-                                  <span class="mu-menu-price">Rp. 16.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Capcay</a></h4>
-                                  <span class="mu-menu-price">Rp. 14.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Capcay Jamur</a></h4>
-                                  <span class="mu-menu-price">Rp. 20.000</span>
-                                </div>
-                              </div>
+                              
                             </li>
                           </ul>   
                         </div>
@@ -472,59 +328,21 @@
                        <div class="mu-tab-content-right">
                           <ul class="mu-menu-item-nav">
                             <li>
-                              <div class="media">
+                              
+							  <div class="media">
                                 <div class="media-body">
+								<div style="float:left;">
                                   <h4 class="media-heading"><a href="#">Jamur Tumis</a></h4>
                                   <span class="mu-menu-price">Rp. 20.000</span>
                                 </div>
+								<div class="button style-button-pesan">
+								    <ul>
+									   <a href="#">Pesan</a>
+									</ul>
+                                  </div>
+							  </div>
                               </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Tumis Tauge</a></h4>
-                                  <span class="mu-menu-price">Rp. 14.000</span>
-                                </div>
-                              </div>
-                             <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Lalapan</a></h4>
-                                  <span class="mu-menu-price">Rp. 6.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Lele Siram /Penyet</a></h4>
-                                  <span class="mu-menu-price">Rp. 15.000</span>
-                                </div>
-                              </div>
-							  <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Pecal Lele</a></h4>
-                                  <span class="mu-menu-price">Rp. 15.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Lele Goreng</a></h4>
-                                  <span class="mu-menu-price">Rp. 12.000</span>
-                                </div>
-								 <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Kerupuk</a></h4>
-                                  <span class="mu-menu-price">Rp. 3.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Tahu</a></h4>
-                                  <span class="mu-menu-price">Rp. 5.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Sambal Terasi / Kecap / A. Siram</a></h4>
-                                  <span class="mu-menu-price">Rp. 3.000</span>
-                                </div>
-                              </div>
+                              
                             </li>
                           </ul>   
                        </div>
@@ -542,59 +360,21 @@
                         <div class="mu-tab-content-left">
                           <ul class="mu-menu-item-nav">
                             <li>
-                              <div class="media">
+                              
+							  <div class="media">
                                 <div class="media-body">
+								<div style="float:left;">
                                   <h4 class="media-heading"><a href="#">Lemon Tea</a></h4>
                                   <span class="mu-menu-price">Rp. 9.000</span>
                                 </div>
+								<div class="button style-button-pesan">
+								    <ul>
+									   <a href="#">Pesan</a>
+									</ul>
+                                  </div>
+							  </div>
                               </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Jeruk Nipis</a></h4>
-                                  <span class="mu-menu-price">Rp. 9.000</span>
-                                </div>
-                              </div>
-                             <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Jeruk Peras</a></h4>
-                                  <span class="mu-menu-price">Rp. 9.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Jus Semangka</a></h4>
-                                  <span class="mu-menu-price">Rp. 9.000</span>
-                                </div>
-                              </div>
-							  <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Jus Timun</a></h4>
-                                  <span class="mu-menu-price">Rp. 9.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Jus Tomat</a></h4>
-                                  <span class="mu-menu-price">Rp. 9.000</span>
-                                </div>
-								 <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Jus Melon</a></h4>
-                                  <span class="mu-menu-price">Rp. 9.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Kolak Dingin</a></h4>
-                                  <span class="mu-menu-price">Rp. 10.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Jus Tape</a></h4>
-                                  <span class="mu-menu-price">Rp. 10.000</span>
-                                </div>
-                              </div>
+                              
                             </li>
                           </ul>   
                         </div>
@@ -604,59 +384,21 @@
                        <div class="mu-tab-content-right">
                           <ul class="mu-menu-item-nav">
                             <li>
-                              <div class="media">
+                              
+							  <div class="media">
                                 <div class="media-body">
+								<div style="float:left;">
                                   <h4 class="media-heading"><a href="#">Jus Wortel</a></h4>
                                   <span class="mu-menu-price">Rp. 10.000</span>
                                 </div>
+								<div class="button style-button-pesan">
+								    <ul>
+									   <a href="#">Pesan</a>
+									</ul>
+                                  </div>
+							  </div>
                               </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Jus Kedondong</a></h4>
-                                  <span class="mu-menu-price">Rp. 10.000</span>
-                                </div>
-                              </div>
-                             <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Jus Belimbing</a></h4>
-                                  <span class="mu-menu-price">Rp. 10.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Jus Jambu Klutuk (Putih)</a></h4>
-                                  <span class="mu-menu-price">Rp. 10.000</span>
-                                </div>
-                              </div>
-							  <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Jus Mangga</a></h4>
-                                  <span class="mu-menu-price">Rp. 10.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Buah Segar</a></h4>
-                                  <span class="mu-menu-price">Rp. 10.000</span>
-                                </div>
-								 <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Jus Marquisa</a></h4>
-                                  <span class="mu-menu-price">Rp. 12.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Jus Terong Belanda</a></h4>
-                                  <span class="mu-menu-price">Rp. 12.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Jus Pokat</a></h4>
-                                  <span class="mu-menu-price">Rp. 12.000</span>
-                                </div>
-                              </div>
+                              
                             </li>
                           </ul>   
                        </div>
@@ -674,94 +416,21 @@
                         <div class="mu-tab-content-left">
                           <ul class="mu-menu-item-nav">
                             <li>
-                              <div class="media">
+                              
+							  <div class="media">
                                 <div class="media-body">
+								<div style="float:left;">
                                   <h4 class="media-heading"><a href="#">Air Mineral Gelas</a></h4>
                                   <span class="mu-menu-price">Rp. 1.000</span>
                                 </div>
+								<div class="button style-button-pesan">
+								    <ul>
+									   <a href="#">Pesan</a>
+									</ul>
+                                  </div>
+							  </div>
                               </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Air Mineral Botol</a></h4>
-                                  <span class="mu-menu-price">Rp. 3.000</span>
-                                </div>
-                              </div>
-                             <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Teh Panas / Setengah Panas</a></h4>
-                                  <span class="mu-menu-price">Rp. 4.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Kopi Nescafe Panas</a></h4>
-                                  <span class="mu-menu-price">Rp. 4.000</span>
-                                </div>
-                              </div>
-							  <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Teh Dingin</a></h4>
-                                  <span class="mu-menu-price">Rp. 5.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Hemaviton Jreng / Extra Joss Dingin</a></h4>
-                                  <span class="mu-menu-price">Rp. 5.000</span>
-                                </div>
-								 <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Teh Botol Sosro</a></h4>
-                                  <span class="mu-menu-price">Rp. 5.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Kopi Nescafe Dingin</a></h4>
-                                  <span class="mu-menu-price">Rp. 6.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Susu Panas</a></h4>
-                                  <span class="mu-menu-price">Rp. 6.000</span>
-                                </div>
-                              </div>
-							  <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Milo Panas</a></h4>
-                                  <span class="mu-menu-price">Rp. 6.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Sirup Orange ABC</a></h4>
-                                  <span class="mu-menu-price">Rp. 6.000</span>
-                                </div>
-                              </div>
-							  <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Sirup Kurnia</a></h4>
-                                  <span class="mu-menu-price">Rp. 6.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Capucino Panas</a></h4>
-                                  <span class="mu-menu-price">Rp. 6.000</span>
-                                </div>
-								 <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Teh Tarik Panas</a></h4>
-                                  <span class="mu-menu-price">Rp. 6.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Coffemix Panas</a></h4>
-                                  <span class="mu-menu-price">Rp. 6.000</span>
-                                </div>
-                              </div>
+                              
                             </li>
                           </ul>   
                         </div>
@@ -771,95 +440,21 @@
                        <div class="mu-tab-content-right">
                           <ul class="mu-menu-item-nav">
                            <li>
-                              <div class="media">
+                              
+							  <div class="media">
                                 <div class="media-body">
+								<div style="float:left;">
                                   <h4 class="media-heading"><a href="#">Cincau Dingin</a></h4>
                                   <span class="mu-menu-price">Rp. 7.000</span>
                                 </div>
+								<div class="button style-button-pesan">
+								    <ul>
+									   <a href="#">Pesan</a>
+									</ul>
+                                  </div>
+							  </div>
                               </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Teh Susu Panas</a></h4>
-                                  <span class="mu-menu-price">Rp. 7.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Kopi Susu Panas</a></h4>
-                                  <span class="mu-menu-price">Rp. 7.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Milo Susu Panas</a></h4>
-                                  <span class="mu-menu-price">Rp. 8.000</span>
-                                </div>
-                              </div>
-							  <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Capucino Dingin</a></h4>
-                                  <span class="mu-menu-price">Rp. 8.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Coffemix Dingin</a></h4>
-                                  <span class="mu-menu-price">Rp. 8.000</span>
-                                </div>
-								<div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Susu Dingin</a></h4>
-                                  <span class="mu-menu-price">Rp. 8.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Teh Tarik Dingin</a></h4>
-                                  <span class="mu-menu-price">Rp. 8.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Milo Dingin</a></h4>
-                                  <span class="mu-menu-price">Rp. 8.000</span>
-                                </div>
-                              </div>
-							  <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Sirup Limao</a></h4>
-                                  <span class="mu-menu-price">Rp. 9.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Teh Susu Dingin</a></h4>
-                                  <span class="mu-menu-price">Rp. 9.000</span>
-                                </div>
-                              </div>
-							  <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Capucino Cincau Dingin</a></h4>
-                                  <span class="mu-menu-price">Rp. 10.000</span>
-                                </div>
-                              </div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Kopi Susu Dingin</a></h4>
-                                  <span class="mu-menu-price">Rp. 10.000</span>
-                                </div>
-                              </div>
-								  <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Hemaviton Jreng / Extra Joss + Susu Dingin</a></h4>
-                                  <span class="mu-menu-price">Rp. 12.000</span>
-                                </div>
-								</div>
-                              <div class="media">
-                                <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Milo Susu Dingin</a></h4>
-                                  <span class="mu-menu-price">Rp. 13.000</span>
-                                </div>
-                              </div>
+                              
                             </li>
                           </ul>   
                        </div>
@@ -897,10 +492,10 @@
                 <div class="mu-single-gallery col-md-4">
                     <div class="mu-single-gallery-item">
 	                    <figure class="mu-single-gallery-img">
-	                      <a class="mu-imglink" href="assets/img/gallery/1.png">
-                          <img alt="img" src="assets/img/gallery/1.png">
+	                      <a class="mu-imglink" href="<?php echo base_url('assets/');?>img/gallery/1.png">
+                          <img alt="img" src="<?php echo base_url('assets/');?>img/gallery/1.png">
                            <div class="mu-single-gallery-info">
-                              <img class="mu-view-btn" src="assets/img/plus.png" alt="plus icon img">
+                              <img class="mu-view-btn" src="<?php echo base_url('assets/');?>img/plus.png" alt="plus icon img">
                           </div> 
                         </a>
 	                    </figure>            
@@ -912,10 +507,10 @@
                 <div class="mu-single-gallery col-md-4">
                   	 <div class="mu-single-gallery-item">
                         <figure class="mu-single-gallery-img">
-                          <a class="mu-imglink" href="assets/img/gallery/2.jpg">
-                            <img alt="img" src="assets/img/gallery/2.jpg">
+                          <a class="mu-imglink" href="<?php echo base_url('assets/');?>img/gallery/2.jpg">
+                            <img alt="img" src="<?php echo base_url('assets/');?>img/gallery/2.jpg">
                              <div class="mu-single-gallery-info">
-                                <img class="mu-view-btn" src="assets/img/plus.png" alt="plus icon img">
+                                <img class="mu-view-btn" src="<?php echo base_url('assets/');?>img/plus.png" alt="plus icon img">
                             </div> 
                           </a>
                         </figure>            
@@ -927,10 +522,10 @@
                 <div class="mu-single-gallery col-md-4">                  
                   	 <div class="mu-single-gallery-item">
                       <figure class="mu-single-gallery-img">
-                        <a class="mu-imglink" href="assets/img/gallery/3.jpg">
-                          <img alt="img" src="assets/img/gallery/3.jpg">
+                        <a class="mu-imglink" href="<?php echo base_url('assets/');?>img/gallery/3.jpg">
+                          <img alt="img" src="<?php echo base_url('assets/');?>img/gallery/3.jpg">
                            <div class="mu-single-gallery-info">
-                              <img class="mu-view-btn" src="assets/img/plus.png" alt="plus icon img">
+                              <img class="mu-view-btn" src="<?php echo base_url('assets/');?>img/plus.png" alt="plus icon img">
                           </div> 
                         </a>
                       </figure>            
@@ -942,10 +537,10 @@
                 <div class="mu-single-gallery col-md-4">                  
                   	<div class="mu-single-gallery-item">
                       <figure class="mu-single-gallery-img">
-                        <a class="mu-imglink" href="assets/img/gallery/4.jpg">
-                          <img alt="img" src="assets/img/gallery/4.jpg">
+                        <a class="mu-imglink" href="<?php echo base_url('assets/');?>img/gallery/4.jpg">
+                          <img alt="img" src="<?php echo base_url('assets/');?>img/gallery/4.jpg">
                            <div class="mu-single-gallery-info">
-                              <img class="mu-view-btn" src="assets/img/plus.png" alt="plus icon img">
+                              <img class="mu-view-btn" src="<?php echo base_url('assets/');?>img/plus.png" alt="plus icon img">
                           </div> 
                         </a>
                       </figure>            
@@ -957,10 +552,10 @@
                 <div class="mu-single-gallery col-md-4">                  
                   	<div class="mu-single-gallery-item">
                       <figure class="mu-single-gallery-img">
-                        <a class="mu-imglink" href="assets/img/gallery/5.jpg">
-                          <img alt="img" src="assets/img/gallery/5.jpg">
+                        <a class="mu-imglink" href="<?php echo base_url('assets/');?>img/gallery/5.jpg">
+                          <img alt="img" src="<?php echo base_url('assets/');?>img/gallery/5.jpg">
                            <div class="mu-single-gallery-info">
-                              <img class="mu-view-btn" src="assets/img/plus.png" alt="plus icon img">
+                              <img class="mu-view-btn" src="<?php echo base_url('assets/');?>img/plus.png" alt="plus icon img">
                           </div> 
                         </a>
                       </figure>            
@@ -972,10 +567,10 @@
                 <div class="mu-single-gallery col-md-4">                  
                    <div class="mu-single-gallery-item">
                       <figure class="mu-single-gallery-img">
-                        <a class="mu-imglink" href="assets/img/gallery/6.jpg">
-                          <img alt="img" src="assets/img/gallery/6.jpg">
+                        <a class="mu-imglink" href="<?php echo base_url('assets/');?>img/gallery/6.jpg">
+                          <img alt="img" src="<?php echo base_url('assets/');?>img/gallery/6.jpg">
                            <div class="mu-single-gallery-info">
-                              <img class="mu-view-btn" src="assets/img/plus.png" alt="plus icon img">
+                              <img class="mu-view-btn" src="<?php echo base_url('assets/');?>img/plus.png" alt="plus icon img">
                           </div> 
                         </a>
                       </figure>            
@@ -987,10 +582,10 @@
                 <div class="mu-single-gallery col-md-4">                  
                   	<div class="mu-single-gallery-item">
                       <figure class="mu-single-gallery-img">
-                        <a class="mu-imglink" href="assets/img/gallery/7.jpg">
-                          <img alt="img" src="assets/img/gallery/7.jpg">
+                        <a class="mu-imglink" href="<?php echo base_url('assets/');?>img/gallery/7.jpg">
+                          <img alt="img" src="<?php echo base_url('assets/');?>img/gallery/7.jpg">
                            <div class="mu-single-gallery-info">
-                              <img class="mu-view-btn" src="assets/img/plus.png" alt="plus icon img">
+                              <img class="mu-view-btn" src="<?php echo base_url('assets/');?>img/plus.png" alt="plus icon img">
                           </div> 
                         </a>
                       </figure>            
@@ -1002,10 +597,10 @@
                 <div class="mu-single-gallery col-md-4">                  
                   	<div class="mu-single-gallery-item">
                       <figure class="mu-single-gallery-img">
-                        <a class="mu-imglink" href="assets/img/gallery/8.jpeg">
-                          <img alt="img" src="assets/img/gallery/8.jpeg">
+                        <a class="mu-imglink" href="<?php echo base_url('assets/');?>img/gallery/8.jpeg">
+                          <img alt="img" src="<?php echo base_url('assets/');?>img/gallery/8.jpeg">
                            <div class="mu-single-gallery-info">
-                              <img class="mu-view-btn" src="assets/img/plus.png" alt="plus icon img">
+                              <img class="mu-view-btn" src="<?php echo base_url('assets/');?>img/plus.png" alt="plus icon img">
                           </div> 
                         </a>
                       </figure>            
@@ -1017,10 +612,10 @@
                 <div class="mu-single-gallery col-md-4">                  
                   	<div class="mu-single-gallery-item">
                       <figure class="mu-single-gallery-img">
-                        <a class="mu-imglink" href="assets/img/gallery/9.jpg">
-                          <img alt="img" src="assets/img/gallery/9.jpg">
+                        <a class="mu-imglink" href="<?php echo base_url('assets/');?>img/gallery/9.jpg">
+                          <img alt="img" src="<?php echo base_url('assets/');?>img/gallery/9.jpg">
                            <div class="mu-single-gallery-info">
-                              <img class="mu-view-btn" src="assets/img/plus.png" alt="plus icon img">
+                              <img class="mu-view-btn" src="<?php echo base_url('assets/');?>img/plus.png" alt="plus icon img">
                           </div> 
                         </a>
                       </figure>            
@@ -1055,8 +650,9 @@
 
                 <div class="col-md-6">
                   <div class="mu-contact-left">
-                    <!-- Email message div -->
-                    <div id="form-messages"></div>
+                    <div class="mu-contact-left">     
+                      <img src="<?php echo base_url('assets/');?>img/contact.png" alt="img">           
+                    </div>
                   </div>
                 </div>
 
@@ -1115,22 +711,23 @@
   <!-- End Footer -->
   
   <!-- jQuery library -->
-  <script src="assets/js/jquery.min.js"></script>  
+  <script src="<?php echo base_url('assets/');?>js/jquery.min.js"></script>  
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="assets/js/bootstrap.js"></script>   
+  <script src="<?php echo base_url('assets/');?>js/bootstrap.js"></script>   
   <!-- Slick slider -->
-  <script type="text/javascript" src="assets/js/slick.js"></script>
+  <script type="text/javascript" src="<?php echo base_url('assets/');?>js/slick.js"></script>
   <!-- Counter -->
-  <script type="text/javascript" src="assets/js/simple-animated-counter.js"></script>
+  <script type="text/javascript" src="<?php echo base_url('assets/');?>js/simple-animated-counter.js"></script>
   <!-- Gallery Lightbox -->
-  <script type="text/javascript" src="assets/js/jquery.magnific-popup.min.js"></script>
+  <script type="text/javascript" src="<?php echo base_url('assets/');?>js/jquery.magnific-popup.min.js"></script>
   <!-- Date Picker -->
-  <script type="text/javascript" src="assets/js/bootstrap-datepicker.js"></script> 
+  <script type="text/javascript" src="<?php echo base_url('assets/');?>js/bootstrap-datepicker.js"></script> 
   <!-- Ajax contact form  -->
-  <script type="text/javascript" src="assets/js/app.js"></script>
+  <script type="text/javascript" src="<?php echo base_url('assets/');?>js/app.js"></script>
  
   <!-- Custom js -->
-  <script src="assets/js/custom.js"></script> 
+  <script src="<?php echo base_url('assets/');?>js/custom.js"></script> 
+  <script type="text/javascript" src="<?php echo base_url('assets/');?>js/cart.js"></script>
 
   </body>
 </html>

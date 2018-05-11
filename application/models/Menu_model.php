@@ -25,4 +25,7 @@ class Menu_model extends CI_Model {
 		return $qr->result();
 	}
 		
+	public function input_pesanan($data){
+	$data = $this->db->insert('pemesanan', $data); 
+	}
 }

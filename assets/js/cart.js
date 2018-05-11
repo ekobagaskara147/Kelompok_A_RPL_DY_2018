@@ -1,4 +1,3 @@
-
 function calcAllTotal(){
 	var alltotal = 0;
 	var prices = document.getElementsByClassName("total-item-price");

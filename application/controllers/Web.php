@@ -14,28 +14,11 @@ class Web extends CI_Controller {
 	public function home(){
 		$this->load->view('home');
 	}
-
+	
 	public function login(){
 		$this->load->view('login');
 	}
 	
-	public function dashboardpelanggan(){
-		$this->load->view('dashboardpelanggan');
-	}
-	
-	public function menu(){
-		$this->load->model('Menu_model');
-		
-		$items_makanan = $this->Menu_model->get_items_makanan();
-		$items_seafood = $this->Menu_model->get_items_seafood();
-			$data = array(
-				"items_makanan" => $items_makanan,
-				"items_seafood" => $items_seafood,
-			);
-		$this->load->view('menu', $data);
-		
-	}
-
 	public function login_post(){
 		$no_meja = $this->input->post('no_meja');
 		
@@ -49,7 +32,29 @@ class Web extends CI_Controller {
 		if ($user_login){
 			$this->load->view('dashboardpelanggan');
 		} else {
-			echo "Meja tidak tersedia!";
+			echo "Gagal";
 		}
+	}
+	
+	public function dashboardpelanggan(){
+		$this->load->view('dashboardpelanggan');
+	}
+	
+	public function menu(){
+		$this->load->model('Menu_model');
+		
+		$items_makanan = $this->Menu_model->get_items_makanan();
+		$items_seafood = $this->Menu_model->get_items_seafood();
+		$items_sayuran = $this->Menu_model->get_items_sayuran();
+		$items_jus = $this->Menu_model->get_items_jus();
+		$items_minuman = $this->Menu_model->get_items_minuman();
+			$data = array(
+				"items_makanan" => $items_makanan,
+				"items_seafood" => $items_seafood,
+				"items_sayuran" => $items_sayuran,
+				"items_jus" => $items_jus,
+				"items_minuman" => $items_minuman,
+			);
+		$this->load->view('menu', $data);	
 	}
 }

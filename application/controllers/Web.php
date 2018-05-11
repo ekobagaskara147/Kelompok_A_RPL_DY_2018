@@ -22,6 +22,10 @@ class Web extends CI_Controller {
 	public function login(){
 		$this->load->view('login');
 	}
+	
+	public function dashboardpelanggan(){
+		$this->load->view('dashboardpelanggan');
+	}
 
 	public function login_post(){
 		$no_meja = $this->input->post('no_meja');

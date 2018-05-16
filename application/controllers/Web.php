@@ -32,7 +32,7 @@ class Web extends CI_Controller {
 		if ($user_login){
 			$this->load->view('dashboardpelanggan');
 		} else {
-			echo "Gagal";
+			echo "Meja tidak tersedia!";
 		}
 	}
 	

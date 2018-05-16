@@ -123,13 +123,16 @@
 											</table>
 										</div>
 									</div>
-									
-									<button class="button">
-										<ul>
-											<a>Checkout</a>
-										</ul>
+
+									<button class="button" onclick="myFunction()">
+										<a>Checkout</a>	
 									</button>
 									
+									<script>
+										function myFunction() {
+    										alert("Pesanan anda sedang diproses!");
+										}
+									</script>
 									</form>
 								</div>
 							</div>

@@ -68,7 +68,7 @@
 						<!-- LOGO -->       
 
 						<!--  Text based logo  -->
-						<a class="navbar-brand" href="index.html">Order<span>Now</span></a> 
+						<a class="navbar-brand" href="<?php echo base_url('index.php/web/dashboardpelanggan');?>">Order<span>Now</span></a> 
 
 						<!--  Image based logo  -->
 						<!-- <a class="navbar-brand" href="index.html"><img src="<?php// echo base_url('assets/');?>img/logo.png" alt="Logo img"></a>  -->
@@ -76,11 +76,12 @@
 					
 					<div id="navbar" class="navbar-collapse collapse">
 						<ul id="top-menu" class="nav navbar-nav navbar-right mu-main-nav">
-							<li><a href="index.html">HOME</a></li>
-							<li><a href="#mu-about-us">ABOUT US</a></li>                                                         
+							<li><a href="<?php echo base_url('index.php/web/dashboardpelanggan');?>">HOME</a></li>
+							<li><a href="<?php echo base_url('index.php/web/menu');?>">MENU</a></li>
+							<li><a href="<?php echo base_url('index.php/web/dashboardpelanggan');?>#mu-about-us">ABOUT US</a></li>                                                         
 							<li><a href="#mu-gallery">GALLERY</a></li>
 							<li><a href="#mu-contact">CONTACT</a></li> 
-							<li><a href="index.html">LOG OUT</a></li> 
+							<li><a href="<?php echo base_url('index.php/web/home');?>">LOGOUT</a></li> 
 						</ul>                            
 					</div><!--/.nav-collapse -->       
 				</div>          
@@ -100,7 +101,7 @@
 									<h1>Pesanan Anda</h1>
 									
 									<form method="POST" action="" >
-									<div class="panel panel-default">
+									<div class="panel panel-default pre-scrollable">
 										<div class="panel-body">
 											<table class="table">
 												<thead>

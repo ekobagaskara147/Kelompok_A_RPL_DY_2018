@@ -16,31 +16,43 @@ class Menu_model extends CI_Model {
 	 */
 		
 	public function get_items_makanan(){
-		$qr = $this->db->query("SELECT id_makanan, nama_makanan, harga_makanan FROM menu_makanan;");
+		$qr = $this->db->query("SELECT id_menu, nama_menu, harga_menu FROM menu WHERE jenis_menu = 'makanan';");
 		return $qr->result();
 	}
 	
 	public function get_items_seafood(){
-		$qr = $this->db->query("SELECT id_seafood, nama_seafood, harga_seafood FROM menu_seafood;");
+		$qr = $this->db->query("SELECT id_menu, nama_menu, harga_menu FROM menu WHERE jenis_menu = 'seafood';");
 		return $qr->result();
 	}
 	
 	public function get_items_sayuran(){
-		$qr = $this->db->query("SELECT id_sayuran, nama_sayuran, harga_sayuran FROM menu_sayuran;");
+		$qr = $this->db->query("SELECT id_menu, nama_menu, harga_menu FROM menu WHERE jenis_menu = 'sayuran';");
 		return $qr->result();
 	}
 	
 	public function get_items_jus(){
-		$qr = $this->db->query("SELECT id_jus, nama_jus, harga_jus FROM menu_jus;");
+		$qr = $this->db->query("SELECT id_menu, nama_menu, harga_menu FROM menu WHERE jenis_menu = 'jus';");
 		return $qr->result();
 	}
 	
 	public function get_items_minuman(){
-		$qr = $this->db->query("SELECT id_minuman, nama_minuman, harga_minuman FROM menu_minuman;");
+		$qr = $this->db->query("SELECT id_menu, nama_menu, harga_menu FROM menu WHERE jenis_menu = 'minuman';");
 		return $qr->result();
 	}
 	
-	public function input_pesanan($data){
-	$data = $this->db->insert('pemesanan', $data); 
-	}	
+	public function input_pesanan($id_pelanggan, $data){
+		$input_id_pelanggan = array ('id_pelanggan' => $id_pelanggan);
+		$qr = $this->db->insert('pemesanan', $input_id_pelanggan);
+		if ($qr){
+			$list_pesanan = $this->db->insert_id();
+			foreach ($data as $item) {
+				$data_pesan = array(
+					'id_pemesanan' => $list_pesanan,
+					'id_item' => $item['id_item'],
+					'jumlah_item' => $item['jumlah']
+				);
+				$qr2 = $this->db->insert('menu_pesanan', $data_pesan);
+			}
+		}
+	}
 }

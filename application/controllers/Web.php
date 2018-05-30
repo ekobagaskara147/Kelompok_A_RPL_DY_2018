@@ -30,7 +30,10 @@ class Web extends CI_Controller {
 		//echo $this->Web_model->check_login($data);
 		$user_login = $this->Web_model->check_login($data);
 		if ($user_login){
-			$this->load->view('dashboardpelanggan');
+			$no = (int)explode("M", $no_meja)[1];
+			$this->session->set_userdata('no_meja', $no_meja);
+			$this->session->set_userdata('id_pelanggan', $no);
+			redirect('web/dashboardpelanggan');
 		} else {
 			echo "Meja tidak tersedia!";
 		}

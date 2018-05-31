@@ -43,4 +43,16 @@ class Menu_model extends CI_Model {
 	public function input_pesanan($id_pelanggan, $data){
 		$input_id_pelanggan = array ('id_pelanggan' => $id_pelanggan);
 		$qr = $this->db->insert('pemesanan', $input_id_pelanggan);
+		if ($qr){
+			$list_pesanan = $this->db->insert_id();
+			foreach ($data as $item) {
+				$data_pesan = array(
+					'id_pemesanan' => $list_pesanan,
+					'id_item' => $item['id_item'],
+					'jumlah_item' => $item['jumlah']
+				);
+				$qr2 = $this->db->insert('menu_pesanan', $data_pesan);
+			}
+		}
+	}
 }

@@ -248,7 +248,7 @@
 																			<span class="mu-menu-price"><?php echo $item->harga_menu; ?></span>
 																		</div>
 																		
-																		<div class="button style-button-pesan" idItem="<?php echo $item->id_menu; ?>" namaItem="<?php echo $item->nama_seafood; ?></" harga="<?php echo $item->harga_seafood; ?>">
+																		<div class="button style-button-pesan" idItem="<?php echo $item->id_menu; ?>" namaItem="<?php echo $item->nama_menu; ?></" harga="<?php echo $item->harga_menu; ?>">
 																			<ul>
 																				<a href="#popup">Pesan</a>
 																			</ul>
@@ -282,7 +282,7 @@
 																			<span class="mu-menu-price"><?php echo $item->harga_menu; ?></span>
 																		</div>
 																		
-																		<div class="button style-button-pesan" idItem="<?php echo $item->id_menu; ?>" namaItem="<?php echo $item->nama_seafood; ?></" harga="<?php echo $item->harga_seafood; ?>">
+																		<div class="button style-button-pesan" idItem="<?php echo $item->id_menu; ?>" namaItem="<?php echo $item->nama_menu; ?></" harga="<?php echo $item->harga_menu; ?>">
 																			<ul>
 																				<a href="#popup">Pesan</a>
 																			</ul>

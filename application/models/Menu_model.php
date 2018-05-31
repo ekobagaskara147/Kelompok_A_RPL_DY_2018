@@ -21,7 +21,7 @@ class Menu_model extends CI_Model {
 	}
 	
 	public function get_items_seafood(){
-		$qr = $this->db->query("SELECT id_seafood, nama_seafood, harga_seafood FROM menu_seafood;");
+		$qr = $this->db->query("SELECT id_menu, nama_menu, harga_menu FROM menu WHERE jenis_menu = 'seafood';");
 		return $qr->result();
 	}
 	

@@ -41,6 +41,9 @@ function addCartItem(idItem, namaItem, harga){
 		$("#row-item-"+idItem).remove();
 		calcAllTotal();
 	});
+	counter_item++;
+
+	$("#hitung").attr("value", counter_item);
 }
 
 $(document).ready(function(){

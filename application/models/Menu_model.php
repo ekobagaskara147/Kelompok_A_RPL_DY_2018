@@ -26,7 +26,7 @@ class Menu_model extends CI_Model {
 	}
 	
 	public function get_items_sayuran(){
-		$qr = $this->db->query("SELECT id_sayuran, nama_sayuran, harga_sayuran FROM menu_sayuran;");
+		$qr = $this->db->query("SELECT id_menu, nama_menu, harga_menu FROM menu WHERE jenis_menu = 'sayuran';");
 		return $qr->result();
 	}
 	

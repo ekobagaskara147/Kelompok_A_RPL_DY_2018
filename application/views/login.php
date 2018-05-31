@@ -39,7 +39,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 											<div class="login-agileits-top"> 
 												<form action="<?php echo base_url('index.php/web/login_post'); ?>" method="post">
 													<p>Nomor Meja </p>
-													<input type="text" name="no_meja" placeholder="Contoh: M01" required=""/>
+													<input type="text" name="no_meja" placeholder="Contoh: M01" style="text-transform:uppercase;"  required=""/>
 													<input type="submit" value="LOGIN">
 												</form>  
 											</div>

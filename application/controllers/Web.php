@@ -44,7 +44,10 @@ class Web extends CI_Controller {
 	}
 	
 	public function menu(){
-		$this->load->model('Menu_model');
+		if (!$this->session->has_userdata('no_meja')){
+			redirect('web/home');
+		}else{
+			$this->load->model('Menu_model');
 		
 		$items_makanan = $this->Menu_model->get_items_makanan();
 		$items_seafood = $this->Menu_model->get_items_seafood();

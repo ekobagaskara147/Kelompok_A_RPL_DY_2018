@@ -78,5 +78,10 @@ class Web extends CI_Controller {
 				);
 			}
 		}
+		if (isset($items)){
+			$id_pelanggan = $this->session->userdata('id_pelanggan');
+			$this->Menu_model->input_pesanan($id_pelanggan, $items);
+			redirect('web/menu');
+		}
 	}
 }

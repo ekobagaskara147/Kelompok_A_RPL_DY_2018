@@ -42,7 +42,11 @@ class Web extends CI_Controller {
 	}
 	
 	public function dashboardpelanggan(){
+		if (!$this->session->has_userdata('no_meja')){
+			redirect('web/home');
+		}else{
 		$this->load->view('dashboardpelanggan');
+		}
 	}
 	
 	public function menu(){

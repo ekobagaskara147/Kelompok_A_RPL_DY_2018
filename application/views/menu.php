@@ -170,11 +170,11 @@
 																<div class="media">
 																	<div class="media-body">
 																		<div style="float:left;">
-																			<h4 class="media-heading"><a href="#"><?php echo $item->nama_makanan; ?></a></h4>
-																			<span class="mu-menu-price"><?php echo $item->harga_makanan; ?></span>
+																			<h4 class="media-heading"><a href="#"><?php echo $item->nama_menu; ?></a></h4>
+																			<span class="mu-menu-price"><?php echo $item->harga_menu; ?></span>
 																		</div>
 																		
-																		<div class="button style-button-pesan" idItem="<?php echo $item->id_makanan; ?>" namaItem="<?php echo $item->nama_makanan; ?></" harga="<?php echo $item->harga_makanan; ?>">
+																		<div class="button style-button-pesan" idItem="<?php echo $item->id_menu; ?>" namaItem="<?php echo $item->nama_makanan; ?></" harga="<?php echo $item->harga_makanan; ?>">
 																			<ul>
 																				<a href="#popup">Pesan</a>
 																			</ul>

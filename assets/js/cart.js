@@ -17,7 +17,7 @@ function addCartItem(idItem, namaItem, harga){
 	row += "<input type=\"hidden\" name=\"item-no-"+counter_item+"\" value=\""+idItem+"\">";
 	row += "<td width=\"50%\">"+namaItem+"</td>";
 	row += "<td width=\"20%\" id=\"harga-item-"+idItem+"\">"+harga+"</td> ";
-	row += "<td width=\"5%\"><input style=\"width:30px;\" type=\"text\" name=\"banyak\" class=\"qty-selector\" id=\"qty-item-"+idItem+"\" idItem=\""+idItem+"\"></td>";
+	row += "<td width=\"5%\"><input style=\"width:30px;\" type=\"text\" name=\"item-qty-"+counter_item+"\" class=\"qty-selector\" id=\"qty-item-"+idItem+"\" idItem=\""+idItem+"\"></td>";
 	row += "<td width=\"20%\" id=\"harga-total-item-"+idItem+"\" class=\"total-item-price\">0</td>";
 	row += "<td width=\"5%\"><button type=\"button\" class=\"btn btn-danger btn-remove-item\" idItem=\""+idItem+"\">X</button></td>";
 	row += "</tr>";

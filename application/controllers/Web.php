@@ -20,7 +20,7 @@ class Web extends CI_Controller {
 	}
 	
 	public function login_post(){
-		$no_meja = $this->input->post('no_meja');
+		$no_meja = strtoupper($this->input->post('no_meja'));
 		
 		$this->load->model('Web_model'); // memuat kelas Web_model.php agat fungsi didalamnya bisa dipanggil di controller ini_get
 				
@@ -38,9 +38,18 @@ class Web extends CI_Controller {
 			echo "Meja tidak tersedia!";
 		}
 	}
+
+	public function logout(){
+		$this->session->unset_userdata(array('no_meja'=> '', 'id_pelanggan' => ''));
+		$this->load->view('home');
+	}
 	
 	public function dashboardpelanggan(){
+		if (!$this->session->has_userdata('no_meja')){
+			redirect('web/home');
+		}else{
 		$this->load->view('dashboardpelanggan');
+		}
 	}
 	
 	public function menu(){

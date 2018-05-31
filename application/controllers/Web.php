@@ -48,7 +48,7 @@ class Web extends CI_Controller {
 		if (!$this->session->has_userdata('no_meja')){
 			redirect('web/home');
 		}else{
-		$this->load->view('dashboardpelanggan');
+			$this->load->view('dashboardpelanggan');
 		}
 	}
 	
@@ -58,19 +58,20 @@ class Web extends CI_Controller {
 		}else{
 			$this->load->model('Menu_model');
 		
-		$items_makanan = $this->Menu_model->get_items_makanan();
-		$items_seafood = $this->Menu_model->get_items_seafood();
-		$items_sayuran = $this->Menu_model->get_items_sayuran();
-		$items_jus = $this->Menu_model->get_items_jus();
-		$items_minuman = $this->Menu_model->get_items_minuman();
-			$data = array(
-				"items_makanan" => $items_makanan,
-				"items_seafood" => $items_seafood,
-				"items_sayuran" => $items_sayuran,
-				"items_jus" => $items_jus,
-				"items_minuman" => $items_minuman,
-			);
-		$this->load->view('menu', $data);	
+			$items_makanan = $this->Menu_model->get_items_makanan();
+			$items_seafood = $this->Menu_model->get_items_seafood();
+			$items_sayuran = $this->Menu_model->get_items_sayuran();
+			$items_jus = $this->Menu_model->get_items_jus();
+			$items_minuman = $this->Menu_model->get_items_minuman();
+				$data = array(
+					"items_makanan" => $items_makanan,
+					"items_seafood" => $items_seafood,
+					"items_sayuran" => $items_sayuran,
+					"items_jus" => $items_jus,
+					"items_minuman" => $items_minuman,
+				);
+			$this->load->view('menu', $data);	
+		}
 	}
 	
 	public function input_pesanan() {

@@ -39,7 +39,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 											<div class="login-agileits-top"> 
 												<form action="<?php echo base_url('index.php/web/login_post'); ?>" method="post">
 													<p>Nomor Meja </p>
-													<input type="text" name="no_meja" placeholder="Contoh: M01" required=""/>
+													<input type="text" name="no_meja" placeholder="Contoh: M01" style="text-transform:uppercase;"  required=""/>
 													<input type="submit" value="LOGIN">
 												</form>  
 											</div>
@@ -100,7 +100,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					});
 				});
 			</script>
-			<!-- //ResponsiveTabs js -->					
+			<!-- //ResponsiveTabs js -->
+
+		<script src="<?php echo base_url('index.php/login/input_login');?>">
+		// assumes you're using jQuery
+			$(document).ready(function() {
+			$('.confirm-div').hide();
+				<?php if($this->session->flashdata('msg')){ ?>
+					$('.confirm-div').html('<?php echo $this->session->flashdata('msg'); ?>').show();
+				});
+			<?php } ?>
+		</script>	
 	</body>
 	
 </html>

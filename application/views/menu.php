@@ -319,11 +319,11 @@
 																<div class="media">
 																	<div class="media-body">
 																		<div style="float:left;">
-																			<h4 class="media-heading"><a href="#"><?php echo $item->nama_sayuran; ?></a></h4>
-																			<span class="mu-menu-price"><?php echo $item->harga_sayuran; ?></span>
+																			<h4 class="media-heading"><a href="#"><?php echo $item->nama_menu; ?></a></h4>
+																			<span class="mu-menu-price"><?php echo $item->harga_menu; ?></span>
 																		</div>
 																		
-																		<div class="button style-button-pesan" idItem="<?php echo $item->id_sayuran; ?>" namaItem="<?php echo $item->nama_sayuran; ?></" harga="<?php echo $item->harga_sayuran; ?>">
+																		<div class="button style-button-pesan" idItem="<?php echo $item->id_menu; ?>" namaItem="<?php echo $item->nama_sayuran; ?></" harga="<?php echo $item->harga_sayuran; ?>">
 																			<ul>
 																				<a href="#popup">Pesan</a>
 																			</ul>
@@ -353,11 +353,11 @@
 																<div class="media">
 																	<div class="media-body">
 																		<div style="float:left;">
-																			<h4 class="media-heading"><a href="#"><?php echo $item->nama_sayuran; ?></a></h4>
-																			<span class="mu-menu-price"><?php echo $item->harga_sayuran; ?></span>
+																			<h4 class="media-heading"><a href="#"><?php echo $item->nama_menu; ?></a></h4>
+																			<span class="mu-menu-price"><?php echo $item->harga_menu; ?></span>
 																		</div>
 																		
-																		<div class="button style-button-pesan" idItem="<?php echo $item->id_sayuran; ?>" namaItem="<?php echo $item->nama_sayuran; ?></" harga="<?php echo $item->harga_sayuran; ?>">
+																		<div class="button style-button-pesan" idItem="<?php echo $item->id_menu; ?>" namaItem="<?php echo $item->nama_sayuran; ?></" harga="<?php echo $item->harga_sayuran; ?>">
 																			<ul>
 																				<a href="#popup">Pesan</a>
 																			</ul>

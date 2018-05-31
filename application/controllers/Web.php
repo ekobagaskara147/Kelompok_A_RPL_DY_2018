@@ -48,7 +48,7 @@ class Web extends CI_Controller {
 		if (!$this->session->has_userdata('no_meja')){
 			redirect('web/home');
 		}else{
-			$this->load->view('dashboardpelanggan');
+		$this->load->view('dashboardpelanggan');
 		}
 	}
 	

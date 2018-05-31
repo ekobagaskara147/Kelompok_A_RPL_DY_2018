@@ -30,7 +30,10 @@ class Web extends CI_Controller {
 		//echo $this->Web_model->check_login($data);
 		$user_login = $this->Web_model->check_login($data);
 		if ($user_login){
-			$this->load->view('dashboardpelanggan');
+			$no = (int)explode("M", $no_meja)[1];
+			$this->session->set_userdata('no_meja', $no_meja);
+			$this->session->set_userdata('id_pelanggan', $no);
+			redirect('web/dashboardpelanggan');
 		} else {
 			echo "Meja tidak tersedia!";
 		}
@@ -41,7 +44,10 @@ class Web extends CI_Controller {
 	}
 	
 	public function menu(){
-		$this->load->model('Menu_model');
+		if (!$this->session->has_userdata('no_meja')){
+			redirect('web/home');
+		}else{
+			$this->load->model('Menu_model');
 		
 		$items_makanan = $this->Menu_model->get_items_makanan();
 		$items_seafood = $this->Menu_model->get_items_seafood();
@@ -56,5 +62,21 @@ class Web extends CI_Controller {
 				"items_minuman" => $items_minuman,
 			);
 		$this->load->view('menu', $data);	
+	}
+	
+	public function input_pesanan() {
+		$this->load->model('Menu_model');
+
+		$counter = $this->input->post('item_counter');
+		for($i=0; $i<$counter; $i++) {
+			if ($this->input->post('item-no-'.$i)){
+				$id_item = $this->input->post('item-no-'.$i);
+				$banyak = $this->input->post('item-qty-'.$i);
+				$items[] = array(
+					'id_item' => $id_item,
+					'jumlah' => $banyak
+				);
+			}
+		}
 	}
 }

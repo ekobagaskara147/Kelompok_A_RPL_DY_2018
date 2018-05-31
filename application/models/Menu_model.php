@@ -36,7 +36,7 @@ class Menu_model extends CI_Model {
 	}
 	
 	public function get_items_minuman(){
-		$qr = $this->db->query("SELECT id_minuman, nama_minuman, harga_minuman FROM menu_minuman;");
+		$qr = $this->db->query("SELECT id_menu, nama_menu, harga_menu FROM menu WHERE jenis_menu = 'minuman';");
 		return $qr->result();
 	}
 	

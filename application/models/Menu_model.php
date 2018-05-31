@@ -31,7 +31,7 @@ class Menu_model extends CI_Model {
 	}
 	
 	public function get_items_jus(){
-		$qr = $this->db->query("SELECT id_jus, nama_jus, harga_jus FROM menu_jus;");
+		$qr = $this->db->query("SELECT id_menu, nama_menu, harga_menu FROM menu WHERE jenis_menu = 'jus';");
 		return $qr->result();
 	}
 	

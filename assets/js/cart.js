@@ -14,6 +14,7 @@ function addCartItem(idItem, namaItem, harga){
 		return
 	} 
 	var row = "<tr id=\"row-item-"+idItem+"\">";
+	row += "<input type=\"hidden\" name=\"item-no-"+counter_item+"\" value=\""+idItem+"\">";
 	row += "<td width=\"50%\">"+namaItem+"</td>";
 	row += "<td width=\"20%\" id=\"harga-item-"+idItem+"\">"+harga+"</td> ";
 	row += "<td width=\"5%\"><input style=\"width:30px;\" type=\"text\" name=\"banyak\" class=\"qty-selector\" id=\"qty-item-"+idItem+"\" idItem=\""+idItem+"\"></td>";

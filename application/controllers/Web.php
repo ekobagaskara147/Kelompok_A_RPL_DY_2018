@@ -35,6 +35,11 @@ class Web extends CI_Controller {
 			echo "Meja tidak tersedia!";
 		}
 	}
+
+	public function logout(){
+		$this->session->unset_userdata(array('no_meja'=> '', 'id_pelanggan' => ''));
+		$this->load->view('home');
+	}
 	
 	public function dashboardpelanggan(){
 		$this->load->view('dashboardpelanggan');

@@ -735,7 +735,7 @@
 												<address>
 													<p><i class="fa fa-phone"></i> +6281269052498</p>
 													<p><i class="fa fa-envelope-o"></i>deliana@unsyiah.ac.id</p>
-													<p><i class="fa fa-map-marker"></i>Jl. T.Nyak Arief, Laboratorium Terpadu Unsyiah, Darussalam, Banda Aceh, Aceh</p>
+													<p><i class="fa fa-map-marker"></i>JL. T. Nyak Arief, No. 10, Darussalam Lamnyong Aceh, Lamgugob, Syiah Kuala, Kota Banda Aceh, Aceh 24415</p>
 												</address>
 											</div>
 											

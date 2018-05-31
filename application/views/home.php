@@ -332,14 +332,14 @@
             </div>
 
             <div class="mu-contact-content">
-              <div class="row">
-
-                <div class="col-md-6">
-                  <div class="mu-contact-left">
-                    <!-- Email message div -->
-                    <div id="form-messages"></div>
-                  </div>
-                </div>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="mu-contact-left">
+											<div class="mu-contact-left">     
+												<img src="<?php echo base_url('assets/');?>img/contact.png" alt="img">           
+											</div>
+										</div>
+									</div>
 
                 <div class="col-md-6">
                   <div class="mu-contact-right">

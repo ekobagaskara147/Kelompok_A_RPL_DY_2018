@@ -1,3 +1,5 @@
+var counter_item = 0;
+
 function calcAllTotal(){
 	var alltotal = 0;
 	var prices = document.getElementsByClassName("total-item-price");

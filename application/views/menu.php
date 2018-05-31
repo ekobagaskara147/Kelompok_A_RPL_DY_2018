@@ -100,7 +100,8 @@
 									<a href="#" class="close-button" title="Close">X</a>
 									<h1>Pesanan Anda</h1>
 									
-									<form method="POST" action="" >
+									<form method="POST" action="<?php echo base_url('index.php/web/input_pesanan'); ?>" >
+										<input type="hidden" name="item_counter" id="hitung" value="0">
 									<div class="panel panel-default pre-scrollable">
 										<div class="panel-body">
 											<table class="table">

@@ -102,3 +102,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <li><a href="<?php echo base_url ('index.php/dashboard/seafood');?>">Seafood</a></li>
                     </ul>
                 </li>
+				
+				<li>
+                    <a href="<?php echo base_url ('index.php/dashboard/datameja')?>">
+                        <i class="fa fa-dashboard"></i>
+                        <span>Meja</span>
+                    </a>
+                </li>

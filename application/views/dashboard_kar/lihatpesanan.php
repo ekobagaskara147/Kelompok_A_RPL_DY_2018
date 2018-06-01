@@ -451,3 +451,54 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="<?php echo base_url ('assets2/'); ?>js/jquery.nicescroll.js"></script>
 <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="<?php echo base_url ('assets2/'); ?>js/flot-chart/excanvas.min.js"></script><![endif]-->
 <script src="<?php echo base_url ('assets2/'); ?>js/jquery.scrollTo.js"></script>
+
+<script>
+	$(document).ready(function() {
+		
+		$('.btn-lihat-pesan').click(function() {
+			var idMeja = $(this).attr('idMeja');
+			var noMeja = $(this).attr('noMeja');
+			$('#nomor-meja').html(noMeja);
+			$('#menu-table').html('<p>Loading...</p>');
+			$('#all-total').html('0');
+			$('#btn-bayar').attr('idMeja', idMeja);
+			$.ajax({
+				url:'getDataPesanan?no_meja='+idMeja,
+				success: function(data){
+					var menu = JSON.parse(data);
+					var str = '';
+					var all_total = 0;
+					if (menu.length>0){
+						for (var i=0;i<menu.length;i++){
+							str += '<tr>';
+							str += '<td>'+menu[i]['nama_menu']+'</td>';
+							str += '<td>'+menu[i]['harga_menu']+'</td>';
+							str += '<td>'+menu[i]['jumlah_item']+'</td>';
+							var total = parseInt(menu[i]['harga_menu']) * parseInt(menu[i]['jumlah_item']);
+							all_total += total;
+							str += '<td>'+total+'</td>';
+							str += '</tr>';
+						}
+					} else {
+						str = '<p>Tidak ada data!</p>';
+					}
+					$('#menu-table').html(str);
+					$('#all-total').html(all_total);
+				}
+			});
+		});
+		
+		$('#btn-bayar').click(function(){
+			var idMeja = $(this).attr('idMeja');
+			var result = confirm('Apakah anda ingin membayar pesanan dengan nomor meja ini?');
+			if(result==true){
+				alert('meja '+idMeja+' sudah dibayar!');
+				location.replace('<?php echo base_url('index.php/dashboard/konfirmasiPembayaran');?>?no_meja='+idMeja);
+			}
+		});
+		
+	});
+</script>
+
+</body>
+</html>

@@ -33,7 +33,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="<?php echo base_url ('assets2/'); ?>js/morris.js"></script>
 </head>
 <body>
-<section id="container">
+<section id="container"
 <!--header start-->
 <header class="header fixed-top clearfix">
 <!--logo start-->
@@ -102,22 +102,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <li><a href="<?php echo base_url ('index.php/dashboard/seafood');?>">Seafood</a></li>
                     </ul>
                 </li>
-				
-				<li>
+                
+                <li>
                     <a href="<?php echo base_url ('index.php/dashboard/datameja')?>">
                         <i class="fa fa-dashboard"></i>
                         <span>Meja</span>
                     </a>
                 </li>
-				
-				<li>
+
+                <li>
                     <a href="<?php echo base_url ('index.php/dashboard/lihatpesanan')?>">
                         <i class="fa fa-dashboard"></i>
                         <span>Data pesanan</span>
                     </a>
                 </li>
-				
-			</ul>            
+     
+            </ul>            
 		</div>
         <!-- sidebar menu end-->
     </div>
@@ -184,7 +184,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>	
 		<!-- //market-->
 	<!--//agileinfo-grap-->
-	
+
 				</div>
 			</div>
 		</div>
@@ -247,7 +247,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="<?php echo base_url ('assets2/'); ?>js/flot-chart/excanvas.min.js"></script><![endif]-->
 <script src="<?php echo base_url ('assets2/'); ?>js/jquery.scrollTo.js"></script>
 <script src="<?php echo base_url ('assets2/'); ?>js/dashboard.js"></script>
-<!-- morris JavaScript -->
+<!-- morris JavaScript -->	
 <script>
 	$(document).ready(function() {
 		//BOX BUTTON SHOW AND CLOSE

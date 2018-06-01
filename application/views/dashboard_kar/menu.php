@@ -353,6 +353,38 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 	</section>
 	
+	<script>
+    $(document).ready(function() {
+        // Untuk sunting
+        $('#editMenu').on('show.bs.modal', function (event) {
+			<?php
+				$level = $this->session->userdata('level_login_id');
+				if ($level != 3){
+					echo "alert('Anda tidak punya akses untuk melakukan operasi ini!');";
+				} else {
+			?>
+            var div = $(event.relatedTarget) // Tombol dimana modal di tampilkan
+            var modal          = $(this)
+ 
+            // Isi nilai pada field
+            modal.find('#id_menu').attr("value",div.data('id_menu'));
+            modal.find('#nama_menu').attr("value",div.data('nama_menu'));
+            modal.find('#harga_menu').html(div.data('harga_menu'));
+			<?php } ?>
+        });
+		
+		$('.btn-edit-item').click(function(){
+			var idItem = $(this).attr('idItem');
+			$('#id_edit_menu').attr('value',idItem);
+		});
+		
+		$('.btn-hapus-item').on('click', function(){
+			var idItem = $(this).attr("idItem");
+			$('#id_hapus_menu').attr('value',idItem);
+		});
+		
+    });
+</script>
 </section>
 </section>
 </body>

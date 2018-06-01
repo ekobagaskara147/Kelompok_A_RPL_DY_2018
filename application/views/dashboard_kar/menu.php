@@ -168,7 +168,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
 </aside>
 <!--sidebar end-->
-
+<!--main content start-->
+<section id="main-content">
+	<section class="wrapper">
+		<div class="table-agile-info">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					Data Pemesanan <?php echo $jenis_menu; ?>
+				</div>
+				<div class="box-container">
+					<a href="#addMenu" class="btn btn-success btn-info pull-right" data-toggle="modal">
+						Tambah Data
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</section>
 </section>
 </body>
 </html>

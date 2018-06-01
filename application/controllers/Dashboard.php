@@ -67,4 +67,15 @@ class Dashboard extends CI_Controller {
 		);
 		$this->load->view('dashboard_kar/menu',$data);
 	}
+
+	public function jus()
+	{
+		$this->load->model('Menu_model');
+		$items=$this->Menu_model->get_items_jus();
+		$data=array(
+			"items"=>$items,
+			"jenis_menu"=>"jus"
+		);
+		$this->load->view('dashboard_kar/menu',$data);
+	}
 }

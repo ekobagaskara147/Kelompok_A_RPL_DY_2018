@@ -385,6 +385,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		
     });
 </script>
+<!-- footer -->
+		  <div class="footer">
+			<div class="wthree-copyright">
+			  <p>© 2018 ORDER NOW. All rights reserved</a></p>
+			</div>
+		  </div>
+  <!-- / footer -->
 </section>
 </section>
 </body>

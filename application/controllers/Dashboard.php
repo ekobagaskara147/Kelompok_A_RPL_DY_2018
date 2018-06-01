@@ -150,4 +150,14 @@ class Dashboard extends CI_Controller {
         $this->Menu_model->editMenu($data,$id_menu);
         redirect('dashboard/'.$redir_view);
     }
+
+    function hapusMenu(){
+		$redir_view = $this->input->post('view_jenis_menu');
+		$data = array (
+			'id_menu' => $this->input->post('id_menu')
+		);
+		$this->load->model ('Menu_model');
+		$this->Menu_model->hapusMenu($data);
+		redirect('dashboard/'.$redir_view);
+	}
 }

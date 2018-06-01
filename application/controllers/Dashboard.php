@@ -121,6 +121,8 @@ class Dashboard extends CI_Controller {
 		}
 		if (isset($listmenu)) {
 			print(json_encode($listmenu));
+		} else {
+			print('[]');
 		}
 	}
 }

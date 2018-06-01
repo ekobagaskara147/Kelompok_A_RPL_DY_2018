@@ -65,4 +65,9 @@ class Menu_model extends CI_Model {
         $this->db->update('menu', $data);
         return TRUE;
     }
+	
+	function hapusMenu($data){
+		$this->db->where($data);
+		$this->db->delete('menu');
+	}
 }

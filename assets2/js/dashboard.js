@@ -11,6 +11,10 @@ function refreshStatusMeja(){
 					if (!selmeja.hasClass("reservedtable")){
 						selmeja.addClass("reservedtable");
 					}
+				} else {
+					if (selmeja.hasClass("reservedtable")){
+						selmeja.removeClass("reservedtable");
+					}
 				}
 			}
 		}

@@ -215,3 +215,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 		<!-- //calendar -->
+		<div class="col-md-6 w3agile-notifications">
+
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+			<!-- tasks -->
+			
+				<div class="clearfix"> </div>
+			</div>
+		<!-- //tasks -->
+		
+					<div class="clearfix"> </div>
+				</div>
+</section>
+ <!-- footer -->
+		  <div class="footer">
+			<div class="wthree-copyright">
+			  <p>© 2018 ORDER NOW. All rights reserved </p>
+			</div>
+		  </div>
+  <!-- / footer -->

@@ -18,3 +18,15 @@ class Dashboard_model extends CI_Model {
 		return $qr;
 		
 	}
+	
+	public function kosonginMeja($idMeja){
+		$data = array(
+			'status' => '0', 
+			'id_pemesanan' => '0'
+		);
+		$this->db->where('no_meja',$idMeja);
+		$this->db->update('meja', $data);
+	
+	}
+	
+}

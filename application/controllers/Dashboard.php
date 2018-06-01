@@ -79,6 +79,11 @@ class Dashboard extends CI_Controller {
 		$this->load->view('dashboard_kar/menu',$data);
 	}
 
+	public function datameja()
+	{
+		$this->load->view('dashboard_kar/datameja');
+	}
+
 	public function lihatpesanan()
 	{
 		$this->load->view('dashboard_kar/lihatpesanan');

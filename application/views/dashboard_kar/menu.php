@@ -331,9 +331,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <th width="20%">Harga Menu</th>
 			<th width="20%"> </th>
           </tr>
-        </thead>
-		</div>
+        </thead><tbody>
+			<?php
+			$i = 1;
+			foreach($items as $entry){
+				$nama_menu=$entry->nama_menu;
+				$harga_menu=$entry->harga_menu;
+				$id=$entry->id_menu;
+				echo "<tr>";
+				echo "<td>$i</td>";
+				echo "<td>$nama_menu</td>";
+				echo "<td>$harga_menu</td>";
+				echo "<td><a href=\"#editMenu\" class=\"btn btn-info btn-edit-item\" idItem=\"$id\" data-toggle=\"modal\">Edit</a> <a href=\"#hapusMenu\" class=\"btn btn-danger btn-hapus-item\" idItem=\"$id\" data-toggle=\"modal\">Hapus</td>";
+				echo "</tr>";
+				$i++;
+			}?>
+        </tbody>		
+      </table>
+    </div>
+  </div>
+</div>
 	</section>
+	
 </section>
 </section>
 </body>

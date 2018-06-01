@@ -160,4 +160,11 @@ class Dashboard extends CI_Controller {
 		$this->Menu_model->hapusMenu($data);
 		redirect('dashboard/'.$redir_view);
 	}
+
+	function konfirmasiPembayaran(){
+		$idMeja = $this->input->get('no_meja');
+		$this->load->model('Dashboard_model');
+		$this->Dashboard_model->kosonginMeja($idMeja);
+		redirect('dashboard/lihatpesanan');
+	}
 }

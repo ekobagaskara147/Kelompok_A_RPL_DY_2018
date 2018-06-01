@@ -100,7 +100,8 @@
 									<a href="#" class="close-button" title="Close">X</a>
 									<h1>Pesanan Anda</h1>
 									
-									<form method="POST" action="" >
+									<form method="POST" action="<?php echo base_url('index.php/web/input_pesanan'); ?>" >
+										<input type="hidden" name="item_counter" id="hitung" value="0">
 									<div class="panel panel-default pre-scrollable">
 										<div class="panel-body">
 											<table class="table">
@@ -174,7 +175,7 @@
 																			<span class="mu-menu-price"><?php echo $item->harga_menu; ?></span>
 																		</div>
 																		
-																		<div class="button style-button-pesan" idItem="<?php echo $item->id_menu; ?>" namaItem="<?php echo $item->nama_makanan; ?></" harga="<?php echo $item->harga_makanan; ?>">
+																		<div class="button style-button-pesan" idItem="<?php echo $item->id_menu; ?>" namaItem="<?php echo $item->nama_menu; ?></" harga="<?php echo $item->harga_menu; ?>">
 																			<ul>
 																				<a href="#popup">Pesan</a>
 																			</ul>
@@ -208,7 +209,7 @@
 																			<span class="mu-menu-price"><?php echo $item->harga_menu; ?></span>
 																		</div>
 																		
-																		<div class="button style-button-pesan" idItem="<?php echo $item->id_menu; ?>" namaItem="<?php echo $item->nama_makanan; ?></" harga="<?php echo $item->harga_makanan; ?>">
+																		<div class="button style-button-pesan" idItem="<?php echo $item->id_menu; ?>" namaItem="<?php echo $item->nama_menu; ?></" harga="<?php echo $item->harga_menu; ?>">
 																			<ul>
 																				<a href="#popup">Pesan</a>
 																			</ul>
@@ -734,7 +735,7 @@
 												<address>
 													<p><i class="fa fa-phone"></i> +6281269052498</p>
 													<p><i class="fa fa-envelope-o"></i>deliana@unsyiah.ac.id</p>
-													<p><i class="fa fa-map-marker"></i>Jl. T.Nyak Arief, Laboratorium Terpadu Unsyiah, Darussalam, Banda Aceh, Aceh</p>
+													<p><i class="fa fa-map-marker"></i>JL. T. Nyak Arief, No. 10, Darussalam Lamnyong Aceh, Lamgugob, Syiah Kuala, Kota Banda Aceh, Aceh 24415</p>
 												</address>
 											</div>
 											

@@ -119,3 +119,49 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
 </aside>
 <!--sidebar end-->
+<!--main content start-->
+<section id="main-content">
+	<section class="wrapper">
+		<div class="table-agile-info">
+ <div class="panel panel-default">
+    <div class="panel-heading">
+     Data Meja
+    </div>
+    
+	<div class="container">
+		 		<form method="post">
+							<table class = "tabel">
+									<tr>
+									  <td id="meja-1" class="tablemeja" name="tabel1"> M01</td>
+									  <td id="meja-2" class="tablemeja" name="tabel2"> M02</td>
+									  <td id="meja-3" class="tablemeja" name="tabel3"> M03</td>
+									  <td id="meja-4" class="tablemeja" name="tabel4"> M04</td>
+									  <td id="meja-5" class="tablemeja" name="tabel5"> M05</td>
+									</tr>
+									<tr>
+									  <td id="meja-6" class="tablemeja" name="tabel6"> M06</td>
+									  <td id="meja-7" class="tablemeja" name="tabel7"> M07</td>
+									  <td id="meja-8" class="tablemeja" name="tabel8"> M08</td>
+									  <td id="meja-9" class="tablemeja" name="tabel9"> M09</td>
+									  <td id="meja-10" class="tablemeja" name="tabel10"> M10</td>
+									</tr>
+
+									<tr>
+									  <td id="meja-11" class="tablemeja" name="tabel11"> M11</td>
+									  <td id="meja-12" class="tablemeja" name="tabel12"> M12</td>
+									  <td id="meja-13" class="tablemeja" name="tabel13"> M13</td>
+									  <td id="meja-14" class="tablemeja" name="tabel14"> M14</td>
+									  <td id="meja-15" class="tablemeja" name="tabel15"> M15</td>
+									</tr>
+									<tr>
+									  <td id="meja-16" class="tablemeja" name="tabel16"> M16</td>
+									  <td id="meja-17" class="tablemeja" name="tabel17"> M17</td>
+									  <td id="meja-18" class="tablemeja" name="tabel18"> M18</td>
+									  <td id="meja-19" class="tablemeja" name="tabel19"> M19</td>
+									  <td id="meja-20" class="tablemeja" name="tabel20"> M20</td>
+									</tr>
+								</table>
+      
+</section>
+
+<!--main content end-->

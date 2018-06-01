@@ -120,3 +120,66 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
 </aside>
 <!--sidebar end-->
+<!--main content start-->
+<section id="main-content">
+	<section class="wrapper">
+		<div class="table-agile-info">
+ <div class="panel panel-default">
+    <div class="panel-heading">
+     Data Pemesanan
+    </div>
+	
+	<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="viewModal" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                        <h4 class="modal-title">Data Pemesanan</h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <form role="form">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">No Meja</label>
+												<p id="nomor-meja" class="help-block">M01</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputPassword1">Pesanan</label>
+                                            </div>
+											
+											<div>
+											<table class="table">
+												<thead>
+													<th width="75%">Item</td>
+													<th width="10%">Harga</td> 
+													<th width="5%">Qty</td>
+													<th width="10%">Total</td>
+												</thead>
+												<tbody id="menu-table">
+												</tbody>
+											</table>
+									
+											<table class="table">
+												<tr>
+													<td width="90%">Total</td>
+													<td width="10%" id="all-total">0</td>
+												</tr>
+												
+											</table>
+											</div>
+                                         
+                                        </form>
+                                    </div>
+									<div class="modal-footer">
+										<?php
+											$level = $this->session->userdata('level_login_id');
+											if ($level == 2){
+												echo '<button id="btn-bayar" class="btn btn-info" type="submit" idMeja="0">Bayar</button>';
+											}
+										?>
+										<button type="button" class="btn btn-warning" data-dismiss="modal">Tutup</button>
+							
+									</div>
+                                </div>
+                            </div>
+                        </div>

@@ -88,4 +88,18 @@ class Dashboard extends CI_Controller {
 	{
 		$this->load->view('dashboard_kar/lihatpesanan');
 	}
+
+	public function getStatusMeja()
+	{
+		$this->load->model('Dashboard_model');
+		
+		$data = $this->Dashboard_model->getStatusMeja();
+		foreach($data->result() as $row){
+			$rowdata = array(
+				"no_meja" => $row->no_meja,
+				"status" => $row->status
+			);
+			$listmeja[]= $rowdata;
+		}
+	}
 }

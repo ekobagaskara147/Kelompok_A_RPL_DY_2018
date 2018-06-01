@@ -71,3 +71,51 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!--search & user info end-->
 </div>
 </header>
+<!--header end-->
+<!--sidebar start-->
+<aside>
+    <div id="sidebar" class="nav-collapse">
+        <!-- sidebar menu start-->
+        <div class="leftside-navigation">
+            <ul class="sidebar-menu" id="nav-accordion">
+                <li>
+                    <a href="<?php echo base_url ('index.php/dashboard/index')?>">
+                        <i class="fa fa-dashboard"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                
+               <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-book"></i>
+                        <span>Menu</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a href="<?php echo base_url ('index.php/dashboard/makanan');?>">Makanan</a></li>
+                        <li><a href="<?php echo base_url ('index.php/dashboard/minuman');?>">Minuman</a></li>
+                        <li><a href="<?php echo base_url ('index.php/dashboard/sayuran');?>">Sayuran</a></li>
+                        <li><a href="<?php echo base_url ('index.php/dashboard/jus');?>">Jus</a></li>
+                        <li><a href="<?php echo base_url ('index.php/dashboard/seafood');?>">Seafood</a></li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="<?php echo base_url ('index.php/dashboard/datameja')?>">
+                        <i class="fa fa-dashboard"></i>
+                        <span>Meja</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="<?php echo base_url ('index.php/dashboard/lihatpesanan')?>">
+                        <i class="fa fa-dashboard"></i>
+                        <span>Data pesanan</span>
+                    </a>
+                </li>
+                
+            </ul>            
+		</div>
+        <!-- sidebar menu end-->
+    </div>
+</aside>
+<!--sidebar end-->

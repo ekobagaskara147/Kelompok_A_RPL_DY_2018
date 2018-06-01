@@ -60,4 +60,9 @@ class Menu_model extends CI_Model {
         $this->db->insert('menu', $data);
         return TRUE;
     }
+	function editMenu($data, $id_menu){
+        $this->db->where('id_menu',$id_menu);
+        $this->db->update('menu', $data);
+        return TRUE;
+    }
 }

@@ -41,3 +41,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
 </div>
 <!--logo end-->
+
+<div class="nav notify-row" id="top_menu">
+    <!--  notification start -->
+		<ul class="nav top-menu">
+    </ul>
+    <!--  notification end -->
+</div>
+<div class="top-nav clearfix">
+    <!--search & user info start-->
+    <ul class="nav pull-right top-menu">
+        <li>
+            <input type="text" class="form-control search" placeholder=" Search">
+        </li>
+        <!-- user login dropdown start-->
+        <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <img alt="" src="<?php echo base_url ('assets2/'); ?>images/2.png">
+                <span class="username"><?php echo $this->session->userdata('nama'); ?></span>
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu extended logout">
+                <li><a href="<?php echo base_url ('index.php/web/logout')?>"><i class="fa fa-key"></i> Log Out</a></li>
+            </ul>
+        </li>
+        <!-- user login dropdown end -->
+       
+    </ul>
+    <!--search & user info end-->
+</div>
+</header>
+<!--header end-->

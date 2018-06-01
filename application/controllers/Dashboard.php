@@ -23,4 +23,15 @@ class Dashboard extends CI_Controller {
 	{
 		$this->load->view('dashboard_kar/dash');
 	}
+
+	public function makanan()
+	{
+		$this->load->model('Menu_model');
+		$items=$this->Menu_model->get_items_makanan();
+		$data=array(
+			"items"=>$items,
+			"jenis_menu"=>"makanan"
+		);
+		$this->load->view('dashboard_kar/menu',$data);
+	}
 }

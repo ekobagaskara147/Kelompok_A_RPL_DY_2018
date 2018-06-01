@@ -14,6 +14,10 @@ class Web extends CI_Controller {
 	public function home(){
 		$this->load->view('home');
 	}
+
+	public function editmakanan(){
+		$this->load->view('editmakanan');
+	}
 	
 	public function login(){
 		$this->load->view('login');

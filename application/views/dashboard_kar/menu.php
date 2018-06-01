@@ -325,7 +325,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<?php } ?>
 		
 	</div>
-	
+	<tr>
+            <th width="10%" data-breakpoints="xs">No</th>
+            <th width="50%">Nama Menu</th>
+            <th width="20%">Harga Menu</th>
+			<th width="20%"> </th>
+          </tr>
+        </thead>
 		</div>
 	</section>
 </section>

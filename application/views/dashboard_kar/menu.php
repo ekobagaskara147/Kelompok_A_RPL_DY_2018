@@ -182,6 +182,150 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</a>
 				</div>
 			</div>
+			
+			<div>
+      <table class="table" ui-jq="footable" ui-options='{
+        "paging": {
+          "enabled": true
+        },
+        "filtering": {
+          "enabled": true
+        },
+        "sorting": {
+          "enabled": true
+        }}'>
+        <thead>
+		
+		<?php
+			$level = $this->session->userdata('level_login_id');
+			if ($level == 3){
+		?>
+		
+		<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="addMenu" class="modal fade">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+	                <h4 class="modal-title">Tambah Data</h4>
+	            </div>
+	            <form class="form-horizontal" action="<?php echo base_url('index.php/dashboard/addMenu')?>" method="post" enctype="multipart/form-data" role="form">
+				<input type="hidden" name="view_jenis_menu" value="<?php echo $jenis_menu;?>">
+		            <div class="modal-body">
+		                    <div class="form-group">
+		                        <label class="col-lg-3 control-label">Nama Menu</label>
+		                        <div>
+		                            <input type="text" class="form-control" name="nama_menu" placeholder="Tuliskan Nama">
+		                        </div>
+		                    </div>
+		                    <div class="form-group">
+		                        <label class="col-lg-3 control-label">Harga Menu</label>
+		                        <div>
+		                        	<input type="text" class="form-control" name="harga_menu" placeholder="Tuliskan Harga Menu">
+		                        </div>
+		                    </div> 
+							<div class="form-group">
+		                        <label class="col-lg-3 control-label">Jenis Menu</label>
+		                        <div>
+		                        	<select class="form-control" name="jenis_menu">
+											<option value="makanan">Makanan</option>
+											<option value="minuman">Minuman</option>
+											<option value="sayuran">Sayuran</option>
+											<option value="jus">Jus</option>
+											<option value="seafood">Seafood</option>
+									</select>
+		                        </div>
+		                    </div> 
+		                </div>
+						
+		                <div class="modal-footer">
+		                    <button class="btn btn-info" type="submit"> Simpan&nbsp;</button>
+		                    <button type="button" class="btn btn-warning" data-dismiss="modal"> Batal</button>
+							
+		                </div>
+	                </form>
+	            </div>
+	        </div>
+	    </div>
+		
+		<?php } ?>
+		
+	</div>
+	
+	<?php
+		$level = $this->session->userdata('level_login_id');
+		if ($level == 3){
+	?>
+	<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="editMenu" class="modal fade">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+	                <h4 class="modal-title">Edit Data</h4>
+	            </div>
+	            <form class="form-horizontal" action="<?php echo base_url('index.php/dashboard/editMenu')?>" method="post" enctype="multipart/form-data" role="form">
+				<input type="hidden" name="view_jenis_menu" value="<?php echo $jenis_menu;?>">
+				<input id="id_edit_menu" type="hidden" name="id_menu" value="0">
+		            <div class="modal-body">
+		                    <div class="form-group">
+		                        <label class="col-lg-3 control-label">Nama Menu</label>
+		                        <div>
+		                            <input type="text" class="form-control" name="nama_menu" placeholder="Tuliskan Nama">
+		                        </div>
+		                    </div>
+		                    <div class="form-group">
+		                        <label class="col-lg-3 control-label">Harga Menu</label>
+		                        <div>
+		                        	<input type="text" class="form-control" name="harga_menu" placeholder="Tuliskan Harga Menu">
+		                        </div>
+		                    </div> 
+		            </div>
+						
+		                <div class="modal-footer">
+		                    <button class="btn btn-info" type="submit"> Simpan&nbsp;</button>
+		                    <button type="button" class="btn btn-warning" data-dismiss="modal"> Batal</button>
+							
+		                </div>
+	                </form>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	
+	<?php } ?>
+	
+	<?php
+		$level = $this->session->userdata('level_login_id');
+		if ($level == 3){
+	?>
+	
+	<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="hapusMenu" class="modal fade">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+	                <h4 class="modal-title">Hapus Data</h4>
+	            </div>
+	            <form class="form-horizontal" action="<?php echo base_url('index.php/dashboard/hapusMenu')?>" method="post" enctype="multipart/form-data" role="form">
+				<input type="hidden" name="view_jenis_menu" value="<?php echo $jenis_menu;?>">
+				<input id="id_hapus_menu" type="hidden" name="id_menu" value="0">
+		            <div class="modal-body">
+		                   <p> Apakah anda ingin menghapus menu ini?</p>
+		            </div>
+						
+		                <div class="modal-footer">
+		                    <button class="btn btn-danger" type="submit"> Ya&nbsp;</button>
+		                    <button type="button" class="btn btn-info" data-dismiss="modal"> Batal</button>
+							
+		                </div>
+	                </form>
+	            </div>
+	        </div>
+	    </div>
+		
+		<?php } ?>
+		
+	</div>
+	
 		</div>
 	</section>
 </section>

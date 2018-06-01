@@ -308,3 +308,128 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           </tr>
 		  
 		  </tr>
+		  <tr>
+            <td>11</td>
+            <td>M11</td>
+            <td>
+                    <a href="#viewModal" data-toggle="modal" class="btn btn-success btn-lihat-pesan" idMeja="11" noMeja="M11">
+                         Lihat Pesanan
+                    </a>
+            
+			</td>
+          </tr>
+		  
+		  </tr>
+          <tr>
+            <td>12</td>
+            <td>M12</td>
+            <td>
+                    <a href="#viewModal" data-toggle="modal" class="btn btn-success btn-lihat-pesan" idMeja="12" noMeja="M12">
+                         Lihat Pesanan
+                    </a>
+            
+			</td>
+          </tr>
+		  
+		  </tr>
+          <tr>
+            <td>13</td>
+            <td>M13</td>
+            <td>
+                    <a href="#viewModal" data-toggle="modal" class="btn btn-success btn-lihat-pesan" idMeja="13" noMeja="M13">
+                         Lihat Pesanan
+                    </a>
+            
+			</td>
+          </tr>
+		  
+		  </tr>
+          <tr>
+            <td>14</td>
+            <td>M14</td>
+            <td>
+                    <a href="#viewModal" data-toggle="modal" class="btn btn-success btn-lihat-pesan" idMeja="14" noMeja="M14">
+                         Lihat Pesanan
+                    </a>
+            
+			</td>
+          </tr>
+		  
+		  
+          <tr>
+            <td>15</td>
+            <td>M15</td>
+            <td>
+                    <a href="#viewModal" data-toggle="modal" class="btn btn-success btn-lihat-pesan" idMeja="15" noMeja="M15">
+                         Lihat Pesanan
+                    </a>
+            
+			</td>
+          </tr>
+		  
+          <tr>
+            <td>16</td>
+            <td>M16</td>
+            <td>
+                    <a href="#viewModal" data-toggle="modal" class="btn btn-success btn-lihat-pesan" idMeja="16" noMeja="M16">
+                         Lihat Pesanan
+                    </a>
+            
+			</td>
+          </tr>
+		  
+		  
+          <tr>
+            <td>17</td>
+            <td>M17</td>
+            <td>
+                    <a href="#viewModal" data-toggle="modal" class="btn btn-success btn-lihat-pesan" idMeja="17" noMeja="M17">
+                         Lihat Pesanan
+                    </a>
+            
+			</td>
+          </tr>
+		  
+		  
+          <tr>
+            <td>18</td>
+            <td>M18</td>
+            <td>
+                    <a href="#viewModal" data-toggle="modal" class="btn btn-success btn-lihat-pesan" idMeja="18" noMeja="M18">
+                         Lihat Pesanan
+                    </a>
+            
+			</td>
+          </tr>
+		  
+		  
+          <tr>
+            <td>19</td>
+            <td>M19</td>
+            <td>
+                    <a href="#viewModal" data-toggle="modal" class="btn btn-success btn-lihat-pesan" idMeja="19" noMeja="M19">
+                         Lihat Pesanan
+                    </a>
+            
+			</td>
+          </tr>
+		  
+		  </tr>
+          <tr>
+            <td>20</td>
+            <td>M20</td>
+            <td>
+                    <a href="#viewModal" data-toggle="modal" class="btn btn-success btn-lihat-pesan" idMeja="20" noMeja="M20">
+                         Lihat Pesanan
+                    </a>
+            
+			</td>
+          </tr>
+		  
+		  
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</section>

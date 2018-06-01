@@ -20,4 +20,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //font-awesome icons -->
 <script src="<?php echo base_url ('assets2/'); ?>js/jquery2.0.3.min.js"></script>
 </head>
+<body>
+<section id="container">
+<!--header start-->
+<header class="header fixed-top clearfix">
+<!--logo start-->
+<div class="brand">
+
+    <a href="index.html" class="logo">
+        ORDER NOW
+    </a>
+    <div class="sidebar-toggle-box">
+        <div class="fa fa-bars"></div>
+    </div>
+</div>
+<!--logo end-->
+</header>
+</section>
+</body>
 </html>

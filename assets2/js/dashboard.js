@@ -21,3 +21,6 @@ function refreshStatusMeja(){
 	});
 	setTimeout(refreshStatusMeja, 1000);
 }
+$(document).ready(function() {
+	refreshStatusMeja();
+});

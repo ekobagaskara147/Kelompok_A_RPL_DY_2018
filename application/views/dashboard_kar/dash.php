@@ -109,3 +109,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <span>Meja</span>
                     </a>
                 </li>
+				
+				<li>
+                    <a href="<?php echo base_url ('index.php/dashboard/lihatpesanan')?>">
+                        <i class="fa fa-dashboard"></i>
+                        <span>Data pesanan</span>
+                    </a>
+                </li>

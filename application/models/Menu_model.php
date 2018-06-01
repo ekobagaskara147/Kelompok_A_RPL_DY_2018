@@ -55,4 +55,9 @@ class Menu_model extends CI_Model {
 			}
 		}
 	}
+	
+	function addMenu($data){
+        $this->db->insert('menu', $data);
+        return TRUE;
+    }
 }

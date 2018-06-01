@@ -101,5 +101,9 @@ class Dashboard extends CI_Controller {
 			);
 			$listmeja[]= $rowdata;
 		}
+		if (isset($listmeja)) {
+			print(json_encode($listmeja));
+		}
+		
 	}
 }

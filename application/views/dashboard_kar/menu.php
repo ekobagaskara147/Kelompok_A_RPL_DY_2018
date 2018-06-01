@@ -393,6 +393,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		  </div>
   <!-- / footer -->
 </section>
+<!--main content end-->
 </section>
+<script src="<?php echo base_url ('assets2/'); ?>js/bootstrap.js"></script>
+<script src="<?php echo base_url ('assets2/'); ?>js/jquery.dcjqaccordion.2.7.js"></script>
+<script src="<?php echo base_url ('assets2/'); ?>js/scripts.js"></script>
+<script src="<?php echo base_url ('assets2/'); ?>js/jquery.slimscroll.js"></script>
+<script src="<?php echo base_url ('assets2/'); ?>js/jquery.nicescroll.js"></script>
+<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="<?php echo base_url ('assets2/'); ?>js/flot-chart/excanvas.min.js"></script><![endif]-->
+<script src="<?php echo base_url ('assets2/'); ?>js/jquery.scrollTo.js"></script>
 </body>
 </html>

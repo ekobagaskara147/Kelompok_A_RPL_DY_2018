@@ -183,7 +183,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </div>
                             </div>
                         </div>
-	<div>
+	
+    <div>
       <table class="table" ui-jq="footable" ui-options='{
         "paging": {
           "enabled": true
@@ -308,7 +309,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           </tr>
 		  
 		  </tr>
-		  <tr>
+          <tr>
             <td>11</td>
             <td>M11</td>
             <td>
@@ -433,7 +434,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   </div>
 </div>
 </section>
-<!-- footer -->
+ <!-- footer -->
 		  <div class="footer">
 			<div class="wthree-copyright">
 			  <p>© 2018 ORDER NOW. All rights reserved</a></p>

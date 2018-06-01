@@ -40,6 +40,7 @@ class Menu_model extends CI_Model {
 		return $qr->result();
 	}
 	
+	
 	public function input_pesanan($id_pelanggan, $data){
 		$input_id_pelanggan = array ('id_pelanggan' => $id_pelanggan);
 		$qr = $this->db->insert('pemesanan', $input_id_pelanggan);
@@ -54,5 +55,20 @@ class Menu_model extends CI_Model {
 				$qr2 = $this->db->insert('menu_pesanan', $data_pesan);
 			}
 		}
+	}	
+	
+	function addMenu($data){
+        $this->db->insert('menu', $data);
+        return TRUE;
+    }
+    function editMenu($data, $id_menu){
+        $this->db->where('id_menu',$id_menu);
+        $this->db->update('menu', $data);
+        return TRUE;
+    }
+
+	function hapusMenu($data){
+		$this->db->where($data);
+		$this->db->delete('menu');
 	}
 }

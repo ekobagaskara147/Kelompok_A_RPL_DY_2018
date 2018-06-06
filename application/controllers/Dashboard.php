@@ -126,4 +126,17 @@ class Dashboard extends CI_Controller {
 			print('[]');
 		}
 	}
+
+	function addMenu(){
+		$redir_view = $this->input->post('view_jenis_menu');
+        $data = array(
+            'nama_menu'		=> $this->input->post('nama_menu'),
+            'harga_menu'	=> $this->input->post('harga_menu'),
+			'jenis_menu'	=> $this->input->post('jenis_menu')
+        );
+		$this->load->model('Menu_model');
+        $this->Menu_model->addMenu($data);
+        $this->session->set_flashdata('notif','<div class="alert alert-success" role="alert"> Data Berhasil ditambahkan <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+        redirect('dashboard/'.$redir_view);
+    }
 }

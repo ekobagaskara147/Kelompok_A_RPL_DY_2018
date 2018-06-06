@@ -119,7 +119,7 @@
 				<div class="table-agile-info">
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							Data Pemesanan <?php echo $jenis_menu; ?>
+							Data Menu <?php echo $jenis_menu; ?>
 						</div>
 						<div class="box-container">
 							<a href="#addMenu" class="btn btn-success btn-info pull-right" data-toggle="modal">

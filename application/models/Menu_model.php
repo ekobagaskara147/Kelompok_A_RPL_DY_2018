@@ -67,6 +67,16 @@ class Menu_model extends CI_Model {
 		}
 		return $list_pesanan;
 	}	
+
+	public function setPesananMeja($idMeja, $id_pesanan){
+		$data = array(
+			'id_pemesanan' => $id_pesanan
+		);
+		$this->db->where('no_meja',$idMeja);
+		$this->db->update('meja', $data);
+		echo $this->db->last_query();
+	
+	}
 	
 	function addMenu($data){
         $this->db->insert('menu', $data);

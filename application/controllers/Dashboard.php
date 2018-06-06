@@ -153,4 +153,14 @@ class Dashboard extends CI_Controller {
         $this->session->set_flashdata('notif','<div class="alert alert-success" role="alert"> Data Berhasil diubah <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
         redirect('dashboard/'.$redir_view);
     }
+
+    function hapusMenu(){
+		$redir_view = $this->input->post('view_jenis_menu');
+		$data = array (
+			'id_menu' => $this->input->post('id_menu')
+		);
+		$this->load->model ('Menu_model');
+		$this->Menu_model->hapusMenu($data);
+		redirect('dashboard/'.$redir_view);
+	}
 }

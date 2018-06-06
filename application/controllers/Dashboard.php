@@ -18,12 +18,12 @@ class Dashboard extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-
+	
 	public function index()
 	{
 		$this->load->view('dashboard_kar/dash');
 	}
-
+	
 	public function makanan()
 	{
 		$this->load->model('Menu_model');
@@ -34,7 +34,7 @@ class Dashboard extends CI_Controller {
 		);
 		$this->load->view('dashboard_kar/menu',$data);
 	}
-
+	
 	public function minuman()
 	{
 		$this->load->model('Menu_model');
@@ -45,7 +45,7 @@ class Dashboard extends CI_Controller {
 		);
 		$this->load->view('dashboard_kar/menu',$data);
 	}
-
+	
 	public function sayuran()
 	{
 		$this->load->model('Menu_model');
@@ -56,7 +56,7 @@ class Dashboard extends CI_Controller {
 		);
 		$this->load->view('dashboard_kar/menu',$data);
 	}
-
+	
 	public function seafood()
 	{
 		$this->load->model('Menu_model');
@@ -67,7 +67,7 @@ class Dashboard extends CI_Controller {
 		);
 		$this->load->view('dashboard_kar/menu',$data);
 	}
-
+	
 	public function jus()
 	{
 		$this->load->model('Menu_model');
@@ -78,7 +78,7 @@ class Dashboard extends CI_Controller {
 		);
 		$this->load->view('dashboard_kar/menu',$data);
 	}
-
+	
 	public function datameja()
 	{
 		$this->load->view('dashboard_kar/datameja');
@@ -88,7 +88,7 @@ class Dashboard extends CI_Controller {
 	{
 		$this->load->view('dashboard_kar/lihatpesanan');
 	}
-
+	
 	public function getStatusMeja()
 	{
 		$this->load->model('Dashboard_model');
@@ -106,7 +106,7 @@ class Dashboard extends CI_Controller {
 		}
 		
 	}
-
+	
 	public function getDataPesanan()
 	{
 		$this->load->model('Dashboard_model');
@@ -126,7 +126,7 @@ class Dashboard extends CI_Controller {
 			print('[]');
 		}
 	}
-
+	
 	function addMenu(){
 		$redir_view = $this->input->post('view_jenis_menu');
         $data = array(
@@ -139,8 +139,8 @@ class Dashboard extends CI_Controller {
         $this->session->set_flashdata('notif','<div class="alert alert-success" role="alert"> Data Berhasil ditambahkan <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
         redirect('dashboard/'.$redir_view);
     }
-
-    function editMenu(){
+	
+	function editMenu(){
     	$redir_view = $this->input->post('view_jenis_menu');
 		$id_menu = $this->input->post('id_menu');
         $data = array(
@@ -153,8 +153,8 @@ class Dashboard extends CI_Controller {
         $this->session->set_flashdata('notif','<div class="alert alert-success" role="alert"> Data Berhasil diubah <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
         redirect('dashboard/'.$redir_view);
     }
-
-    function hapusMenu(){
+	
+	function hapusMenu(){
 		$redir_view = $this->input->post('view_jenis_menu');
 		$data = array (
 			'id_menu' => $this->input->post('id_menu')
@@ -163,7 +163,7 @@ class Dashboard extends CI_Controller {
 		$this->Menu_model->hapusMenu($data);
 		redirect('dashboard/'.$redir_view);
 	}
-
+	
 	function konfirmasiPembayaran(){
 		$idMeja = $this->input->get('no_meja');
 		$this->load->model('Dashboard_model');
@@ -181,4 +181,5 @@ class Dashboard extends CI_Controller {
 		);
 		print(json_encode($items));
 	}
+ 
 }

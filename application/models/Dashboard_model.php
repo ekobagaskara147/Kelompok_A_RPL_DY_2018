@@ -21,6 +21,8 @@ class Dashboard_model extends CI_Model {
 	
 	public function kosonginMeja($idMeja){
 		$meja = $this->db->get_where('meja', array('no_meja =' => $idMeja))->row();
+		$this->db->where('id_pemesanan',$meja->id_pemesanan);
+		$this->db->delete('menu_pesanan');
 		$data = array(
 			'status' => '0', 
 			'id_pemesanan' => '0'

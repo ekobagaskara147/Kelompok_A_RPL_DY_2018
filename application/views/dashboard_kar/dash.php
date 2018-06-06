@@ -134,13 +134,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<i class="fa fa-eye"> </i>
 					</div>
 					 <div class="col-md-8 market-update-left">
-					 <h4>Visitors</h4>
-					<h3>20</h3>
+					 <h4>Pengunjung saat ini</h4>
+					<h3 id='jumlah_pengunjung'>20</h3>
 					<p></p>
 				  </div>
 				  <div class="clearfix"> </div>
 				</div>
 			</div>
+			
 			<div class="col-md-3 market-update-gd">
 				<div class="market-update-block clr-block-1">
 					<div class="col-md-4 market-update-right">

@@ -49,7 +49,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 											<div class="login-agileits-top"> 
 												<form action="<?php echo base_url('index.php/web/login_post_karyawan'); ?>" method="post">
 													<p>Username</p>
-													<input type="text" name="Masukkan Username Anda" placeholder="Username" required=""/>
+													<input type="text" name="username" placeholder="Masukkan username anda" required=""/>
 													<p>Password</p>
 													<input type="text" placeholder="Masukkan Password Anda" name="Password" required=""/> 
 													<input type="submit" value="LOGIN">

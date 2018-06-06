@@ -115,7 +115,9 @@ class Web extends CI_Controller {
 		}
 		if (isset($items)){
 			$id_pelanggan = $this->session->userdata('id_pelanggan');
-			$this->Menu_model->input_pesanan($id_pelanggan, $items);
+			$id_pesanan = $this->Menu_model->input_pesanan($id_pelanggan, $items);
+			$no_meja = $this->session->userdata('no_meja');
+			$this->Menu_model->setPesananMeja($id_pelanggan, $id_pesanan);
 			redirect('web/menu');
 		}
 	}

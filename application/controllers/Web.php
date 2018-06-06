@@ -14,11 +14,11 @@ class Web extends CI_Controller {
 	public function home(){
 		$this->load->view('home');
 	}
-
+	
 	public function login(){
 		$this->load->view('login');
-	}
-	
+	}	
+
 	public function login_post(){
 		$no_meja = strtoupper($this->input->post('no_meja'));
 		
@@ -61,11 +61,12 @@ class Web extends CI_Controller {
 		} else {
 			echo "password yang anda masukkan salah!";
 		}
+		
 	}
-
 
 	public function logout(){
 		$this->session->unset_userdata(array('no_meja'=> '', 'id_pelanggan' => '', 'list_pesanan' => ''));
+		//$this->session->destroy();
 		redirect('web/home');
 	}
 	
@@ -121,4 +122,5 @@ class Web extends CI_Controller {
 			redirect('web/menu');
 		}
 	}
+
 }

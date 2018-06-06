@@ -56,20 +56,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 												</form>  
 											</div>
 										</div>
-										
-										<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
-											<div class="login-agileits-top"> 
-												<div class="login-agileits-top"> 
-													<form action="#" method="post">
-														<p>Name</p>
-														<input type="text" name="Name" placeholder="Name" required=""/>
-														<p>Phone</p>
-														<input type="text" placeholder="Phone " name="User Name" required=""/> 
-														<input type="submit" value="Check Availability">
-													</form>  
-												</div>  
-											</div>
-										</div>
 									</div>
 						</div>
 					</div>

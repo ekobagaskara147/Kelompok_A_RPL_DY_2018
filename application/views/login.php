@@ -47,7 +47,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 										
 										<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
 											<div class="login-agileits-top"> 
-												<form action="#" method="post">
+												<form action="<?php echo base_url('index.php/web/login_post_karyawan'); ?>" method="post">
 													<p>Username</p>
 													<input type="text" name="Masukkan Username Anda" placeholder="Username" required=""/>
 													<p>Password</p>

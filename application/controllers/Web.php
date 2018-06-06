@@ -33,6 +33,7 @@ class Web extends CI_Controller {
 			$no = (int)explode("M", $no_meja)[1];
 			$this->session->set_userdata('no_meja', $no_meja);
 			$this->session->set_userdata('id_pelanggan', $no);
+			$this->Web_model->usetable($no);
 			redirect('web/dashboardpelanggan');
 		} else {
 			echo "Meja tidak tersedia!";

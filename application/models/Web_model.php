@@ -15,8 +15,8 @@ class Web_model extends CI_Model {
 	 * return $user, fungsi ini akan mengembalikan jumlah record yang terdapat di table user berdasarkan array data
 	 */
 	public function check_login($data){
-		$qr = $this->db->get_where('pelanggan', $data)->result(); // get_where adalah fungsi pada CI untuk mengambil data bedasarkan informasi tertentu
-		if (count($qr) > 0){
+		$qr = $this->db->select("*")->get_where('pelanggan', $data)->result(); // get_where adalah fungsi pada CI untuk mengambil data bedasarkan informasi tertentu
+		if (count($qr)){
 			return $data;
 		} else {
 			return false;
@@ -26,5 +26,11 @@ class Web_model extends CI_Model {
 	public function check_login_karyawan($data){
 		$qr = $this->db->select("*")->get_where('karyawan', $data);
 		return $qr;
+	}
+
+	public function usetable($no_meja){
+		$update = array('status' => '1');
+		$this->db->where('no_meja',$no_meja);
+		$this->db->update('meja',$update);
 	}
 }

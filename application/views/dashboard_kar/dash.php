@@ -218,6 +218,43 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="<?php echo base_url ('assets2/'); ?>js/flot-chart/excanvas.min.js"></script><![endif]-->
 <script src="<?php echo base_url ('assets2/'); ?>js/jquery.scrollTo.js"></script>
 <script src="<?php echo base_url ('assets2/'); ?>js/dashboard.js"></script>
+
+	<script>
+
+
+		function refreshStat(){
+			$.ajax({
+				url:"getStatusMeja",
+				success:function(data) {
+					var count = 0;
+					var meja=JSON.parse(data);
+					for(var i=0; i<meja.length; i++){
+						var statusmeja = parseInt(meja[i]["status"]);
+						if(statusmeja != 0){
+							count++;
+						}
+					}
+					$('#jumlah_pengunjung').html(count);
+				}
+			});
+			$.ajax({
+				url:"getStat",
+				success:function(data) {
+					var stat=JSON.parse(data);
+					$('#jumlah_transaksi').html(stat['pelanggan_bayar']);
+					$('#jumlah_menu').html(stat['jumlah_menu']);
+					$('#pemasukan').html(stat['pemasukan']);
+				}			
+			});
+			setTimeout(refreshStat, 1000);
+		}
+
+		$(document).ready(function(){
+			refreshStat();
+		});
+		
+	</script>
+	
 <!-- morris JavaScript -->	
 <script>
 	$(document).ready(function() {

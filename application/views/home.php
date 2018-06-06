@@ -105,7 +105,7 @@
           <!-- Top slider content -->
           <div class="mu-top-slider-content">
             <span class="mu-slider-small-title">Welcome</span>
-            <h2 class="mu-slider-title">ORDER NOW</h2>
+            <h2 class="mu-slider-title">MBAK MOEL</h2>
             <p>Sekarang pesan di tempat jadi lebih mudah!</p>           
             <a class="mu-readmore-btn" href="<?php echo base_url('index.php/web/login');?>">LOGIN</a>
           </div>

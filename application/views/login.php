@@ -51,7 +51,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 													<p>Username</p>
 													<input type="text" name="username" placeholder="Masukkan username anda" required=""/>
 													<p>Password</p>
-													<input type="text" placeholder="Masukkan Password Anda" name="Password" required=""/> 
+													<input type="text" placeholder="Masukkan Password Anda" name="password" required=""/> 
 													<input type="submit" value="LOGIN">
 												</form>  
 											</div>

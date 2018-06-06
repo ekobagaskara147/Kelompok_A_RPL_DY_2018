@@ -22,4 +22,9 @@ class Web_model extends CI_Model {
 			return false;
 		}
 	}
+
+	public function check_login_karyawan($data){
+		$qr = $this->db->select("*")->get_where('karyawan', $data);
+		return $qr;
+	}
 }

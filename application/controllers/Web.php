@@ -40,6 +40,30 @@ class Web extends CI_Controller {
 		}
 	}
 
+	public function login_post_karyawan(){
+		$username = strtoupper($this->input->post('username'));
+		$password = hash ('md5', $this->input->post('password'));
+		
+		$this->load->model('Web_model'); // memuat kelas Web_model.php agat fungsi didalamnya bisa dipanggil di controller ini_get
+				
+		$data = array(
+			"username =" => $username,
+			"password =" => $password
+		);
+
+		$user_login = $this->Web_model->check_login_karyawan($data);
+		if($user_login->result()) {
+			$this->session->set_userdata('username', $username);
+			$this->session->set_userdata('level_login_id', $user_login->row()->level_login_id);
+			$this->session->set_userdata('nama', $user_login->row()->nama);
+            redirect('dashboard');
+       
+		} else {
+			echo "password yang anda masukkan salah!";
+		}
+	}
+
+
 	public function logout(){
 		$this->session->unset_userdata(array('no_meja'=> '', 'id_pelanggan' => ''));
 		$this->load->view('home');

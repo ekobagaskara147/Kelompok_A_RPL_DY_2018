@@ -169,5 +169,16 @@ class Dashboard extends CI_Controller {
 		$this->Dashboard_model->kosonginMeja($idMeja);
 		redirect('dashboard/lihatpesanan');
 	}
+
+	function getStat(){
+		$this->load->model('Dashboard_model');
+		$data = $this->Dashboard_model->getStat();
+		$items = array(
+			'pelanggan_bayar' => $data->pelanggan_bayar,
+			'jumlah_menu' => $data->jumlah_menu,
+			'pemasukan' => $data->pemasukan
+		);
+		print(json_encode($items));
+	}
  
 }

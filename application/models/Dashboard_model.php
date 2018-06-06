@@ -31,5 +31,10 @@ class Dashboard_model extends CI_Model {
 		$this->db->update('meja', $data);
 	
 	}
+
+	public function getStat(){
+		$qr = $this->db->get('statistik')->row();
+		return $qr;
+	}
 	
 }

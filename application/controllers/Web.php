@@ -65,8 +65,8 @@ class Web extends CI_Controller {
 
 
 	public function logout(){
-		$this->session->unset_userdata(array('no_meja'=> '', 'id_pelanggan' => ''));
-		$this->load->view('home');
+		$this->session->unset_userdata(array('no_meja'=> '', 'id_pelanggan' => '', 'list_pesanan' => ''));
+		redirect('web/home');
 	}
 	
 	public function dashboardpelanggan(){

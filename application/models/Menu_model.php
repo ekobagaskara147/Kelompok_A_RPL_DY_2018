@@ -42,10 +42,20 @@ class Menu_model extends CI_Model {
 	
 	
 	public function input_pesanan($id_pelanggan, $data){
+		$list_pesanan = $this->session->userdata('list_pesanan');
+		if(!$this->session->userdata('list_pesanan')){
+			$list_pesanan = 0;
+		}
 		$input_id_pelanggan = array ('id_pelanggan' => $id_pelanggan);
-		$qr = $this->db->insert('pemesanan', $input_id_pelanggan);
-		if ($qr){
-			$list_pesanan = $this->db->insert_id();
+		if($list_pesanan==0) {
+			$qr = $this->db->insert('pemesanan', $input_id_pelanggan);
+		}
+		
+		if (isset($qr) || $list_pesanan!=0){
+			if($list_pesanan==0){
+				$list_pesanan = $this->db->insert_id();
+				$this->session->set_userdata('list_pesanan', $list_pesanan);
+			}
 			foreach ($data as $item) {
 				$data_pesan = array(
 					'id_pemesanan' => $list_pesanan,
@@ -55,6 +65,7 @@ class Menu_model extends CI_Model {
 				$qr2 = $this->db->insert('menu_pesanan', $data_pesan);
 			}
 		}
+		return $list_pesanan;
 	}	
 	
 	function addMenu($data){

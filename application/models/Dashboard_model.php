@@ -20,6 +20,9 @@ class Dashboard_model extends CI_Model {
 	}
 	
 	public function kosonginMeja($idMeja){
+		$meja = $this->db->get_where('meja', array('no_meja =' => $idMeja))->row();
+		$this->db->where('id_pemesanan',$meja->id_pemesanan);
+		$this->db->delete('menu_pesanan');
 		$data = array(
 			'status' => '0', 
 			'id_pemesanan' => '0'
@@ -27,6 +30,11 @@ class Dashboard_model extends CI_Model {
 		$this->db->where('no_meja',$idMeja);
 		$this->db->update('meja', $data);
 	
+	}
+
+	public function getStat(){
+		$qr = $this->db->get('statistik')->row();
+		return $qr;
 	}
 	
 }

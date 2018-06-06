@@ -15,10 +15,6 @@ class Web extends CI_Controller {
 		$this->load->view('home');
 	}
 
-	public function editmakanan(){
-		$this->load->view('editmakanan');
-	}
-	
 	public function login(){
 		$this->load->view('login');
 	}
@@ -37,15 +33,40 @@ class Web extends CI_Controller {
 			$no = (int)explode("M", $no_meja)[1];
 			$this->session->set_userdata('no_meja', $no_meja);
 			$this->session->set_userdata('id_pelanggan', $no);
+			$this->Web_model->usetable($no);
 			redirect('web/dashboardpelanggan');
 		} else {
 			echo "Meja tidak tersedia!";
 		}
 	}
 
+	public function login_post_karyawan(){
+		$username = strtoupper($this->input->post('username'));
+		$password = hash ('md5', $this->input->post('password'));
+		
+		$this->load->model('Web_model'); // memuat kelas Web_model.php agat fungsi didalamnya bisa dipanggil di controller ini_get
+				
+		$data = array(
+			"username =" => $username,
+			"password =" => $password
+		);
+
+		$user_login = $this->Web_model->check_login_karyawan($data);
+		if($user_login->result()) {
+			$this->session->set_userdata('username', $username);
+			$this->session->set_userdata('level_login_id', $user_login->row()->level_login_id);
+			$this->session->set_userdata('nama', $user_login->row()->nama);
+            redirect('dashboard');
+       
+		} else {
+			echo "password yang anda masukkan salah!";
+		}
+	}
+
+
 	public function logout(){
-		$this->session->unset_userdata(array('no_meja'=> '', 'id_pelanggan' => ''));
-		$this->load->view('home');
+		$this->session->unset_userdata(array('no_meja'=> '', 'id_pelanggan' => '', 'list_pesanan' => ''));
+		redirect('web/home');
 	}
 	
 	public function dashboardpelanggan(){
@@ -94,7 +115,9 @@ class Web extends CI_Controller {
 		}
 		if (isset($items)){
 			$id_pelanggan = $this->session->userdata('id_pelanggan');
-			$this->Menu_model->input_pesanan($id_pelanggan, $items);
+			$id_pesanan = $this->Menu_model->input_pesanan($id_pelanggan, $items);
+			$no_meja = $this->session->userdata('no_meja');
+			$this->Menu_model->setPesananMeja($id_pelanggan, $id_pesanan);
 			redirect('web/menu');
 		}
 	}

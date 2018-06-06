@@ -42,12 +42,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!--logo end-->
 
-<div class="nav notify-row" id="top_menu">
-    <!--  notification start -->
-      <ul class="nav top-menu">
-    </ul>
-    <!--  notification end -->
-</div>
 <div class="top-nav clearfix">
     <!--search & user info start-->
     <ul class="nav pull-right top-menu">

@@ -106,4 +106,24 @@ class Dashboard extends CI_Controller {
 		}
 		
 	}
+
+	public function getDataPesanan()
+	{
+		$this->load->model('Dashboard_model');
+		$no_meja = $this->input->get('no_meja');
+		$data = $this->Dashboard_model->getDataPesanan($no_meja);
+		foreach($data as $row){
+			$rowdata = array(
+				"nama_menu" => $row->nama_menu,
+				"harga_menu" => $row->harga_menu,
+				"jumlah_item" => $row->jumlah_item
+			);
+			$listmenu[]= $rowdata;
+		}
+		if (isset($listmenu)) {
+			print(json_encode($listmenu));
+		} else {
+			print('[]');
+		}
+	}
 }

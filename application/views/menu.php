@@ -100,7 +100,8 @@
 									<a href="#" class="close-button" title="Close">X</a>
 									<h1>Pesanan Anda</h1>
 									
-									<form method="POST" action="" >
+									<form method="POST" action="<?php echo base_url('index.php/web/input_pesanan'); ?>" >
+										<input type="hidden" name="item_counter" id="hitung" value="0">
 									<div class="panel panel-default pre-scrollable">
 										<div class="panel-body">
 											<table class="table">
@@ -170,11 +171,11 @@
 																<div class="media">
 																	<div class="media-body">
 																		<div style="float:left;">
-																			<h4 class="media-heading"><a href="#"><?php echo $item->nama_makanan; ?></a></h4>
-																			<span class="mu-menu-price"><?php echo $item->harga_makanan; ?></span>
+																			<h4 class="media-heading"><a href="#"><?php echo $item->nama_menu; ?></a></h4>
+																			<span class="mu-menu-price"><?php echo $item->harga_menu; ?></span>
 																		</div>
 																		
-																		<div class="button style-button-pesan" idItem="<?php echo $item->id_makanan; ?>" namaItem="<?php echo $item->nama_makanan; ?></" harga="<?php echo $item->harga_makanan; ?>">
+																		<div class="button style-button-pesan" idItem="<?php echo $item->id_menu; ?>" namaItem="<?php echo $item->nama_menu; ?></" harga="<?php echo $item->harga_menu; ?>">
 																			<ul>
 																				<a href="#popup">Pesan</a>
 																			</ul>
@@ -194,7 +195,7 @@
 												<div class="col-md-6">
 													<div class="mu-tab-content-right">
 														<ul class="mu-menu-item-nav">
-															<li>
+															<li> 
 																<?php
 																	$x = 0;
 																	foreach($items_makanan as $item){
@@ -204,11 +205,11 @@
 																<div class="media">
 																	<div class="media-body">
 																		<div style="float:left;">
-																			<h4 class="media-heading"><a href="#"><?php echo $item->nama_makanan; ?></a></h4>
-																			<span class="mu-menu-price"><?php echo $item->harga_makanan; ?></span>
+																			<h4 class="media-heading"><a href="#"><?php echo $item->nama_menu; ?></a></h4>
+																			<span class="mu-menu-price"><?php echo $item->harga_menu; ?></span>
 																		</div>
 																		
-																		<div class="button style-button-pesan" idItem="<?php echo $item->id_makanan; ?>" namaItem="<?php echo $item->nama_makanan; ?></" harga="<?php echo $item->harga_makanan; ?>">
+																		<div class="button style-button-pesan" idItem="<?php echo $item->id_menu; ?>" namaItem="<?php echo $item->nama_menu; ?></" harga="<?php echo $item->harga_menu; ?>">
 																			<ul>
 																				<a href="#popup">Pesan</a>
 																			</ul>
@@ -244,11 +245,11 @@
 																<div class="media">
 																	<div class="media-body">
 																		<div style="float:left;">
-																			<h4 class="media-heading"><a href="#"><?php echo $item->nama_seafood; ?></a></h4>
-																			<span class="mu-menu-price"><?php echo $item->harga_seafood; ?></span>
+																			<h4 class="media-heading"><a href="#"><?php echo $item->nama_menu; ?></a></h4>
+																			<span class="mu-menu-price"><?php echo $item->harga_menu; ?></span>
 																		</div>
 																		
-																		<div class="button style-button-pesan" idItem="<?php echo $item->id_seafood; ?>" namaItem="<?php echo $item->nama_seafood; ?></" harga="<?php echo $item->harga_seafood; ?>">
+																		<div class="button style-button-pesan" idItem="<?php echo $item->id_menu; ?>" namaItem="<?php echo $item->nama_menu; ?></" harga="<?php echo $item->harga_menu; ?>">
 																			<ul>
 																				<a href="#popup">Pesan</a>
 																			</ul>
@@ -278,11 +279,11 @@
 																<div class="media">
 																	<div class="media-body">
 																		<div style="float:left;">
-																			<h4 class="media-heading"><a href="#"><?php echo $item->nama_seafood; ?></a></h4>
-																			<span class="mu-menu-price"><?php echo $item->harga_seafood; ?></span>
+																			<h4 class="media-heading"><a href="#"><?php echo $item->nama_menu; ?></a></h4>
+																			<span class="mu-menu-price"><?php echo $item->harga_menu; ?></span>
 																		</div>
 																		
-																		<div class="button style-button-pesan" idItem="<?php echo $item->id_seafood; ?>" namaItem="<?php echo $item->nama_seafood; ?></" harga="<?php echo $item->harga_seafood; ?>">
+																		<div class="button style-button-pesan" idItem="<?php echo $item->id_menu; ?>" namaItem="<?php echo $item->nama_menu; ?></" harga="<?php echo $item->harga_menu; ?>">
 																			<ul>
 																				<a href="#popup">Pesan</a>
 																			</ul>
@@ -319,11 +320,11 @@
 																<div class="media">
 																	<div class="media-body">
 																		<div style="float:left;">
-																			<h4 class="media-heading"><a href="#"><?php echo $item->nama_sayuran; ?></a></h4>
-																			<span class="mu-menu-price"><?php echo $item->harga_sayuran; ?></span>
+																			<h4 class="media-heading"><a href="#"><?php echo $item->nama_menu; ?></a></h4>
+																			<span class="mu-menu-price"><?php echo $item->harga_menu; ?></span>
 																		</div>
 																		
-																		<div class="button style-button-pesan" idItem="<?php echo $item->id_sayuran; ?>" namaItem="<?php echo $item->nama_sayuran; ?></" harga="<?php echo $item->harga_sayuran; ?>">
+																		<div class="button style-button-pesan" idItem="<?php echo $item->id_menu; ?>" namaItem="<?php echo $item->nama_menu; ?></" harga="<?php echo $item->harga_menu; ?>">
 																			<ul>
 																				<a href="#popup">Pesan</a>
 																			</ul>
@@ -353,11 +354,11 @@
 																<div class="media">
 																	<div class="media-body">
 																		<div style="float:left;">
-																			<h4 class="media-heading"><a href="#"><?php echo $item->nama_sayuran; ?></a></h4>
-																			<span class="mu-menu-price"><?php echo $item->harga_sayuran; ?></span>
+																			<h4 class="media-heading"><a href="#"><?php echo $item->nama_menu; ?></a></h4>
+																			<span class="mu-menu-price"><?php echo $item->harga_menu; ?></span>
 																		</div>
 																		
-																		<div class="button style-button-pesan" idItem="<?php echo $item->id_sayuran; ?>" namaItem="<?php echo $item->nama_sayuran; ?></" harga="<?php echo $item->harga_sayuran; ?>">
+																		<div class="button style-button-pesan" idItem="<?php echo $item->id_menu; ?>" namaItem="<?php echo $item->nama_menu; ?></" harga="<?php echo $item->harga_menu; ?>">
 																			<ul>
 																				<a href="#popup">Pesan</a>
 																			</ul>
@@ -394,11 +395,11 @@
 																<div class="media">
 																	<div class="media-body">
 																		<div style="float:left;">
-																			<h4 class="media-heading"><a href="#"><?php echo $item->nama_jus; ?></a></h4>
-																			<span class="mu-menu-price"><?php echo $item->harga_jus; ?></span>
+																			<h4 class="media-heading"><a href="#"><?php echo $item->nama_menu; ?></a></h4>
+																			<span class="mu-menu-price"><?php echo $item->harga_menu; ?></span>
 																		</div>
 																		
-																		<div class="button style-button-pesan" idItem="<?php echo $item->id_jus; ?>" namaItem="<?php echo $item->nama_jus; ?></" harga="<?php echo $item->harga_jus; ?>">
+																		<div class="button style-button-pesan" idItem="<?php echo $item->id_menu; ?>" namaItem="<?php echo $item->nama_menu; ?></" harga="<?php echo $item->harga_menu; ?>">
 																			<ul>
 																				<a href="#popup">Pesan</a>
 																			</ul>
@@ -428,11 +429,11 @@
 																<div class="media">
 																	<div class="media-body">
 																		<div style="float:left;">
-																			<h4 class="media-heading"><a href="#"><?php echo $item->nama_jus; ?></a></h4>
-																			<span class="mu-menu-price"><?php echo $item->harga_jus; ?></span>
+																			<h4 class="media-heading"><a href="#"><?php echo $item->nama_menu; ?></a></h4>
+																			<span class="mu-menu-price"><?php echo $item->harga_menu; ?></span>
 																		</div>
 																		
-																		<div class="button style-button-pesan" idItem="<?php echo $item->id_jus; ?>" namaItem="<?php echo $item->nama_jus; ?></" harga="<?php echo $item->harga_jus; ?>">
+																		<div class="button style-button-pesan" idItem="<?php echo $item->id_menu; ?>" namaItem="<?php echo $item->nama_menu; ?></" harga="<?php echo $item->harga_menu; ?>">
 																			<ul>
 																				<a href="#popup">Pesan</a>
 																			</ul>
@@ -469,11 +470,11 @@
 																<div class="media">
 																	<div class="media-body">
 																		<div style="float:left;">
-																			<h4 class="media-heading"><a href="#"><?php echo $item->nama_minuman; ?></a></h4>
-																			<span class="mu-menu-price"><?php echo $item->harga_minuman; ?></span>
+																			<h4 class="media-heading"><a href="#"><?php echo $item->nama_menu; ?></a></h4>
+																			<span class="mu-menu-price"><?php echo $item->harga_menu; ?></span>
 																		</div>
 																		
-																		<div class="button style-button-pesan" idItem="<?php echo $item->id_minuman; ?>" namaItem="<?php echo $item->nama_minuman; ?></" harga="<?php echo $item->harga_minuman; ?>">
+																		<div class="button style-button-pesan" idItem="<?php echo $item->id_menu; ?>" namaItem="<?php echo $item->nama_menu; ?></" harga="<?php echo $item->harga_menu; ?>">
 																			<ul>
 																				<a href="#popup">Pesan</a>
 																			</ul>
@@ -503,11 +504,11 @@
 																<div class="media">
 																	<div class="media-body">
 																		<div style="float:left;">
-																			<h4 class="media-heading"><a href="#"><?php echo $item->nama_minuman; ?></a></h4>
-																			<span class="mu-menu-price"><?php echo $item->harga_minuman; ?></span>
+																			<h4 class="media-heading"><a href="#"><?php echo $item->nama_menu; ?></a></h4>
+																			<span class="mu-menu-price"><?php echo $item->harga_menu; ?></span>
 																		</div>
 																		
-																		<div class="button style-button-pesan" idItem="<?php echo $item->id_minuman; ?>" namaItem="<?php echo $item->nama_minuman; ?></" harga="<?php echo $item->harga_minuman; ?>">
+																		<div class="button style-button-pesan" idItem="<?php echo $item->id_menu; ?>" namaItem="<?php echo $item->nama_menu; ?></" harga="<?php echo $item->harga_menu; ?>">
 																			<ul>
 																				<a href="#popup">Pesan</a>
 																			</ul>
@@ -733,8 +734,8 @@
 												
 												<address>
 													<p><i class="fa fa-phone"></i> +6281269052498</p>
-													<p><i class="fa fa-envelope-o"></i>deliana@unsyiah.ac.id</p>
-													<p><i class="fa fa-map-marker"></i>Jl. T.Nyak Arief, Laboratorium Terpadu Unsyiah, Darussalam, Banda Aceh, Aceh</p>
+													<p><i class="fa fa-envelope-o"></i>mbakmoel@gmail.com</p>
+													<p><i class="fa fa-map-marker"></i>JL. T. Nyak Arief, No. 10, Darussalam Lamnyong Aceh, Lamgugob, Syiah Kuala, Kota Banda Aceh, Aceh 24415</p>
 												</address>
 											</div>
 											

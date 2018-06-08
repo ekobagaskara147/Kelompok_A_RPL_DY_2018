@@ -134,56 +134,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<i class="fa fa-eye"> </i>
 					</div>
 					 <div class="col-md-8 market-update-left">
-					 <h4>Visitors</h4>
-					<h3>20</h3>
+					 <h4>Pengunjung saat ini</h4>
+					<h3 id='jumlah_pengunjung'>20</h3>
 					<p></p>
 				  </div>
 				  <div class="clearfix"> </div>
 				</div>
 			</div>
-			<div class="col-md-3 market-update-gd">
-				<div class="market-update-block clr-block-1">
-					<div class="col-md-4 market-update-right">
-						<i class="fa fa-users" ></i>
-					</div>
-					<div class="col-md-8 market-update-left">
-					<h4>Users</h4>
-						<h3>15</h3>
-						<p></p>
-					</div>
-				  <div class="clearfix"> </div>
-				</div>
-			</div>
+			
 			<div class="col-md-3 market-update-gd">
 				<div class="market-update-block clr-block-3">
 					<div class="col-md-4 market-update-right">
-						<i class="fa fa-usd"></i>
+						<i class="fa fa-shopping-cart"></i>
 					</div>
 					<div class="col-md-8 market-update-left">
-						<h4>Sales</h4>
-						<h3>30</h3>
+						<h4>Jumlah Menu</h4>
+						<h3 id='jumlah_menu'>30</h3>
 						<p></p>
 					</div>
 				  <div class="clearfix"> </div>
 				</div>
 			</div>
-			<div class="col-md-3 market-update-gd">
-				<div class="market-update-block clr-block-4">
-					<div class="col-md-4 market-update-right">
-						<i class="fa fa-shopping-cart" aria-hidden="true"></i>
-					</div>
-					<div class="col-md-8 market-update-left">
-						<h4>Orders</h4>
-						<h3>30</h3>
-						<p></p>
-					</div>
-				  <div class="clearfix"> </div>
-				</div>
-			</div>
-		   <div class="clearfix"> </div>
-		</div>	
-		<!-- //market-->
-	<!--//agileinfo-grap-->
 
 				</div>
 			</div>
@@ -247,6 +218,44 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="<?php echo base_url ('assets2/'); ?>js/flot-chart/excanvas.min.js"></script><![endif]-->
 <script src="<?php echo base_url ('assets2/'); ?>js/jquery.scrollTo.js"></script>
 <script src="<?php echo base_url ('assets2/'); ?>js/dashboard.js"></script>
+
+
+	<script>
+
+
+		function refreshStat(){
+			$.ajax({
+				url:"getStatusMeja",
+				success:function(data) {
+					var count = 0;
+					var meja=JSON.parse(data);
+					for(var i=0; i<meja.length; i++){
+						var statusmeja = parseInt(meja[i]["status"]);
+						if(statusmeja != 0){
+							count++;
+						}
+					}
+					$('#jumlah_pengunjung').html(count);
+				}
+			});
+			$.ajax({
+				url:"getStat",
+				success:function(data) {
+					var stat=JSON.parse(data);
+					$('#jumlah_transaksi').html(stat['pelanggan_bayar']);
+					$('#jumlah_menu').html(stat['jumlah_menu']);
+					$('#pemasukan').html(stat['pemasukan']);
+				}			
+			});
+			setTimeout(refreshStat, 1000);
+		}
+
+		$(document).ready(function(){
+			refreshStat();
+		});
+		
+	</script>
+
 <!-- morris JavaScript -->	
 <script>
 	$(document).ready(function() {
@@ -335,5 +344,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		});
 	</script>
 	<!-- //calendar -->
+
 </body>
 </html>

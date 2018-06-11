@@ -99,7 +99,7 @@
 						<!-- Top slider content -->
 						<div class="mu-top-slider-content">
 							<span class="mu-slider-small-title">Welcome</span>
-							<h2 class="mu-slider-title">ORDER NOW</h2>
+							<h2 class="mu-slider-title">MBAK MOEL</h2>
 							<p>Sekarang pesan di tempat jadi lebih mudah!</p>           
 							<a class="mu-readmore-btn" href="<?php echo base_url('index.php/web/menu');?>">LIHAT MENU</a>
 						</div>
@@ -348,8 +348,8 @@
 												
 												<address>
 													<p><i class="fa fa-phone"></i> +6281269052498</p>
-													<p><i class="fa fa-envelope-o"></i>deliana@unsyiah.ac.id</p>
-													<p><i class="fa fa-map-marker"></i>Jl. T.Nyak Arief, Laboratorium Terpadu Unsyiah, Darussalam, Banda Aceh, Aceh</p>
+													<p><i class="fa fa-envelope-o"></i>mbakmoel@gmail.com</p>
+													<p><i class="fa fa-map-marker"></i>JL. T. Nyak Arief, No. 10, Darussalam Lamnyong Aceh, Lamgugob, Syiah Kuala, Kota Banda Aceh, Aceh 24415</p>
 												</address>
 											</div>
 											

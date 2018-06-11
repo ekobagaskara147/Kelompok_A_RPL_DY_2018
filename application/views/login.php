@@ -47,27 +47,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 										
 										<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
 											<div class="login-agileits-top"> 
-												<form action="#" method="post">
+												<form action="<?php echo base_url('index.php/web/login_post_karyawan'); ?>" method="post">
 													<p>Username</p>
-													<input type="text" name="Masukkan Username Anda" placeholder="Username" required=""/>
+													<input type="text" name="username" placeholder="Masukkan username anda" required=""/>
 													<p>Password</p>
-													<input type="text" placeholder="Masukkan Password Anda" name="Password" required=""/> 
+													<input type="text" placeholder="Masukkan Password Anda" name="password" required=""/> 
 													<input type="submit" value="LOGIN">
 												</form>  
-											</div>
-										</div>
-										
-										<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
-											<div class="login-agileits-top"> 
-												<div class="login-agileits-top"> 
-													<form action="#" method="post">
-														<p>Name</p>
-														<input type="text" name="Name" placeholder="Name" required=""/>
-														<p>Phone</p>
-														<input type="text" placeholder="Phone " name="User Name" required=""/> 
-														<input type="submit" value="Check Availability">
-													</form>  
-												</div>  
 											</div>
 										</div>
 									</div>
